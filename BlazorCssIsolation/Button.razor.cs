@@ -18,4 +18,9 @@ public partial class Button
 
     [Parameter]
     public string? Text { get; set; }
+
+    private string GetCssClass()
+    {
+        return $"ant-btn --{Type}";
+    }
 }
