@@ -1,23 +1,62 @@
-﻿using NJsonSchema.CodeGeneration.CSharp;
+﻿using NJsonSchema;
+using NJsonSchema.CodeGeneration.CSharp;
 
-var schemaJsonFilePath = Path.GetFullPath("../../../schema.json");
-
-Console.WriteLine($"********Reading Json Schema from {schemaJsonFilePath}********");
-
-var schema = await NJsonSchema.JsonSchema.FromFileAsync(schemaJsonFilePath);
-var generator = new CSharpGenerator(schema, new CSharpGeneratorSettings
+class Program
 {
-    SchemaType = NJsonSchema.SchemaType.JsonSchema,
-    Namespace = "BlazorCssIsolation",
-    GenerateDataAnnotations = false,
-    GenerateNativeRecords = true,
-    JsonLibrary = CSharpJsonLibrary.SystemTextJson,
-    GenerateOptionalPropertiesAsNullable = true,
-});
-var file = generator.GenerateFile();
+    public static async Task Main(string[] args)
+    {
+        var baseInputFolder = "../../../schemas";
+        var baseOutputFolder = "../../../../BlazorCssIsolation/Generated";
+        var jsonFiles = Directory.GetFiles(baseInputFolder, "*.json");
+        foreach (var f in jsonFiles)
+        {
+            var fileName = Path.GetFileNameWithoutExtension(f);
+            await GenerateTokens(
+                inputPath: f, 
+                outputPath: Path.Combine(baseOutputFolder, $"{fileName}.cs"),
+                outputTypeNamespace: $"BlazorCssIsolation.Tokens",
+                fileName);
+        }
+    }
 
-var outputFilePath = Path.GetFullPath("../../../../BlazorCssIsolation/AntTokens.cs");
+    private static async Task GenerateTokens(
+        string inputPath, 
+        string outputPath, 
+        string outputTypeNamespace,
+        string outputTypeName)
+    {
+        Console.WriteLine($"********Reading Json Schema from {inputPath}********");
 
-Console.WriteLine($"********Writting C# File to {outputFilePath}********");
+        var schema = await NJsonSchema.JsonSchema.FromFileAsync(inputPath);
+        var generator = new CSharpGenerator(schema, new CSharpGeneratorSettings
+        {
+            Namespace = outputTypeNamespace,
+            SchemaType = NJsonSchema.SchemaType.JsonSchema,
+            JsonLibrary = CSharpJsonLibrary.SystemTextJson,
+            GenerateDataAnnotations = false,
+            GenerateNativeRecords = true,
+            GenerateOptionalPropertiesAsNullable = true,
+            TypeNameGenerator = new StaticTypeNameGenerator(outputTypeName),
+        });
+        var file = generator.GenerateFile();
 
-await File.WriteAllTextAsync(outputFilePath, file);
+        Console.WriteLine($"********Writting C# File to {outputPath}********");
+
+        await File.WriteAllTextAsync(outputPath, file);
+    }
+
+    private class StaticTypeNameGenerator : DefaultTypeNameGenerator
+    {
+        public StaticTypeNameGenerator(string typeName)
+        {
+            TypeName = typeName;
+        }
+
+        public string TypeName { get; }
+
+        protected override string Generate(JsonSchema schema, string typeNameHint)
+        {
+            return TypeName;
+        }
+    }
+}

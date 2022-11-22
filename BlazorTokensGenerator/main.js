@@ -1,5 +1,21 @@
 const generateJsonSchema = require("./generateJsonSchema");
 const sanitizeTokens = require("./sanitizeTokens");
-const file = "./schema.json";
-generateJsonSchema(file);
-sanitizeTokens(file);
+
+const types = [
+  "SeedToken",
+  "ColorPalettes",
+  "ColorMapToken",
+  "SizeMapToken",
+  "HeightMapToken",
+  "CommonMapToken",
+  'NeutralColorMapToken',
+  'MapToken',
+  'AliasToken'
+];
+
+types.forEach((t) => {
+  const file = `./schemas/${t}.json`;
+
+  generateJsonSchema(file, t);
+  sanitizeTokens(file);
+});

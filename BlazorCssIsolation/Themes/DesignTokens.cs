@@ -1,3 +1,4 @@
+using BlazorCssIsolation.Tokens;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -62,7 +63,7 @@ public interface ISeedTokens : IPresetColors
     bool Wireframe { get; set; }
 }
 
-public abstract record DesignTokens : Anonymous
+public abstract record DesignTokens : AliasToken
 {
     private const string VAR_PREFIX = "--ant";
 

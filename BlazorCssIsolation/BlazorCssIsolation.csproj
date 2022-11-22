@@ -20,6 +20,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Folder Include="Generated\" />
 	  <Folder Include="Themes\Default\" />
 	</ItemGroup>
 
