@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "jsx": "react",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "useDefineForClassFields": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "experimentalDecorators": true,
+    "lib": [ "ESNext", "DOM" ],
+    "baseUrl": "./",
+    "paths": {
+      "@/theme": [ "node_modules/@ant-design/cssinjs/lib/theme/*" ]
+    }
+  },
+  "include": [ "./node_modules/antd/**/*.d.ts", "./node_modules/@ant-design/cssinjs/**/*.d.ts" ]
+}

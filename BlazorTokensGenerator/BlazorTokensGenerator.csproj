@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="NJsonSchema.CodeGeneration" Version="10.8.0" />
+		<PackageReference Include="NJsonSchema.CodeGeneration.CSharp" Version="10.8.0" />
+	</ItemGroup>
+
+
+	<Target Name="EnsureNodeEnv" BeforeTargets="GenerateJsonSchema" Condition="'$(Configuration)' == 'Debug'">
+		<!-- Ensure Node.js is installed -->
+		<Exec Command="node --version" ContinueOnError="true">
+			<Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
+		</Exec>
+		<Error Condition="'$(ErrorCode)' != '0'" Text="Node.js is required to build and run this project. To continue, please install Node.js from https://nodejs.org/, and then restart your command prompt or IDE." />
+	</Target>
+
+	<Target Name="GenerateJsonSchema" BeforeTargets="Build">
+		<Exec WorkingDirectory="$(MSBuildProjectDirectory)" Command="npm install" Condition="!Exists('$(MSBuildProjectDirectory)/node_modules')" />
+		<Exec WorkingDirectory="$(MSBuildProjectDirectory)" Command="npm run generate" />
+	</Target>
+</Project>
