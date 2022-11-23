@@ -9,6 +9,7 @@ namespace BlazorCssIsolation.Themes
 
     public class ThemeGenerator : IThemeGenerator
     {
+        //TODO: Consider to move these settings into ThemeGenerationOptions
         private const int hueStep = 2; // 色相阶梯
         private const int saturationStep = 16; // 饱和度阶梯，浅色部分
         private const int saturationStep2 = 5; // 饱和度阶梯，深色部分

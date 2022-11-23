@@ -12,65 +12,92 @@ namespace BlazorCssIsolation.Tokens
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.8.0.0 (Newtonsoft.Json v9.0.0.0)")]
     public partial record CommonMapToken
     {
+        [System.Text.Json.Serialization.JsonConstructor]
 
+        public CommonMapToken(double @borderRadiusLG, double @borderRadiusOuter, double @borderRadiusSM, double @borderRadiusXS, System.Collections.Generic.ICollection<double> @fontSizes, System.Collections.Generic.ICollection<double> @lineHeights, double @lineWidthBold, string @motionDurationFast, string @motionDurationMid, string @motionDurationSlow)
+
+
+        {
+
+            this.FontSizes = @fontSizes;
+
+            this.LineHeights = @lineHeights;
+
+            this.LineWidthBold = @lineWidthBold;
+
+            this.MotionDurationFast = @motionDurationFast;
+
+            this.MotionDurationMid = @motionDurationMid;
+
+            this.MotionDurationSlow = @motionDurationSlow;
+
+            this.BorderRadiusXS = @borderRadiusXS;
+
+            this.BorderRadiusSM = @borderRadiusSM;
+
+            this.BorderRadiusLG = @borderRadiusLG;
+
+            this.BorderRadiusOuter = @borderRadiusOuter;
+
+        }
         [System.Text.Json.Serialization.JsonPropertyName("fontSizes")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public System.Collections.Generic.ICollection<double> FontSizes { get; set; } = new System.Collections.ObjectModel.Collection<double>();
+        public System.Collections.Generic.ICollection<double> FontSizes { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("lineHeights")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public System.Collections.Generic.ICollection<double> LineHeights { get; set; } = new System.Collections.ObjectModel.Collection<double>();
+        public System.Collections.Generic.ICollection<double> LineHeights { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("lineWidthBold")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double LineWidthBold { get; set; }
+        public double LineWidthBold { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("motionDurationFast")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string MotionDurationFast { get; set; }
+        public string MotionDurationFast { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("motionDurationMid")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string MotionDurationMid { get; set; }
+        public string MotionDurationMid { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("motionDurationSlow")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string MotionDurationSlow { get; set; }
+        public string MotionDurationSlow { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("borderRadiusXS")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double BorderRadiusXS { get; set; }
+        public double BorderRadiusXS { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("borderRadiusSM")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double BorderRadiusSM { get; set; }
+        public double BorderRadiusSM { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("borderRadiusLG")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double BorderRadiusLG { get; set; }
+        public double BorderRadiusLG { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("borderRadiusOuter")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double BorderRadiusOuter { get; set; }
+        public double BorderRadiusOuter { get; init; }
 
 
     }

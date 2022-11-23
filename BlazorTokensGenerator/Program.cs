@@ -37,6 +37,7 @@ class Program
             GenerateNativeRecords = true,
             GenerateOptionalPropertiesAsNullable = true,
             TypeNameGenerator = new StaticTypeNameGenerator(outputTypeName),
+            ClassStyle = CSharpClassStyle.Record
         });
         var file = generator.GenerateFile();
 

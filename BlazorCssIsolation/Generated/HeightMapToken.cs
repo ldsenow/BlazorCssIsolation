@@ -12,23 +12,36 @@ namespace BlazorCssIsolation.Tokens
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.8.0.0 (Newtonsoft.Json v9.0.0.0)")]
     public partial record HeightMapToken
     {
+        [System.Text.Json.Serialization.JsonConstructor]
 
+        public HeightMapToken(double @controlHeightLG, double @controlHeightSM, double @controlHeightXS)
+
+
+        {
+
+            this.ControlHeightXS = @controlHeightXS;
+
+            this.ControlHeightSM = @controlHeightSM;
+
+            this.ControlHeightLG = @controlHeightLG;
+
+        }
         [System.Text.Json.Serialization.JsonPropertyName("controlHeightXS")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double ControlHeightXS { get; set; }
+        public double ControlHeightXS { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("controlHeightSM")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double ControlHeightSM { get; set; }
+        public double ControlHeightSM { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("controlHeightLG")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double ControlHeightLG { get; set; }
+        public double ControlHeightLG { get; init; }
 
 
     }

@@ -12,107 +12,836 @@ namespace BlazorCssIsolation.Tokens
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.8.0.0 (Newtonsoft.Json v9.0.0.0)")]
     public partial record AliasToken
     {
+        [System.Text.Json.Serialization.JsonConstructor]
 
+        public AliasToken(string @blue, string @blue1, string @blue10, string @blue2, string @blue3, string @blue4, string @blue5, string @blue6, string @blue7, string @blue8, string @blue9, double @borderRadius, double @borderRadiusLG, double @borderRadiusOuter, double @borderRadiusSM, double @borderRadiusXS, string @boxShadow, string @boxShadowCard, string @boxShadowDrawerDown, string @boxShadowDrawerLeft, string @boxShadowDrawerRight, string @boxShadowDrawerUp, string @boxShadowPopoverArrow, string @boxShadowSecondary, string @boxShadowTabsOverflowBottom, string @boxShadowTabsOverflowLeft, string @boxShadowTabsOverflowRight, string @boxShadowTabsOverflowTop, string @colorBgBase, string @colorBgContainer, string @colorBgContainerDisabled, string @colorBgElevated, string @colorBgLayout, string @colorBgMask, string @colorBgSpotlight, string @colorBgTextActive, string @colorBgTextHover, string @colorBorder, string @colorBorderBg, string @colorBorderSecondary, string @colorError, string @colorErrorActive, string @colorErrorBg, string @colorErrorBgHover, string @colorErrorBorder, string @colorErrorBorderHover, string @colorErrorHover, string @colorErrorOutline, string @colorErrorText, string @colorErrorTextActive, string @colorErrorTextHover, string @colorFill, string @colorFillAlter, string @colorFillContent, string @colorFillContentHover, string @colorFillQuaternary, string @colorFillSecondary, string @colorFillTertiary, string @colorHighlight, string @colorIcon, string @colorIconHover, string @colorInfo, string @colorInfoActive, string @colorInfoBg, string @colorInfoBgHover, string @colorInfoBorder, string @colorInfoBorderHover, string @colorInfoHover, string @colorInfoText, string @colorInfoTextActive, string @colorInfoTextHover, string @colorLink, string @colorLinkActive, string @colorLinkHover, string @colorPrimary, string @colorPrimaryActive, string @colorPrimaryBg, string @colorPrimaryBgHover, string @colorPrimaryBorder, string @colorPrimaryBorderHover, string @colorPrimaryHover, string @colorPrimaryText, string @colorPrimaryTextActive, string @colorPrimaryTextHover, string @colorSplit, string @colorSuccess, string @colorSuccessActive, string @colorSuccessBg, string @colorSuccessBgHover, string @colorSuccessBorder, string @colorSuccessBorderHover, string @colorSuccessHover, string @colorSuccessText, string @colorSuccessTextActive, string @colorSuccessTextHover, string @colorText, string @colorTextBase, string @colorTextDescription, string @colorTextDisabled, string @colorTextHeading, string @colorTextLabel, string @colorTextLightSolid, string @colorTextPlaceholder, string @colorTextQuaternary, string @colorTextSecondary, string @colorTextTertiary, string @colorWarning, string @colorWarningActive, string @colorWarningBg, string @colorWarningBgHover, string @colorWarningBorder, string @colorWarningBorderHover, string @colorWarningHover, string @colorWarningOutline, string @colorWarningText, string @colorWarningTextActive, string @colorWarningTextHover, string @colorWhite, double @controlHeight, double @controlHeightLG, double @controlHeightSM, double @controlHeightXS, double @controlInteractiveSize, string @controlItemBgActive, string @controlItemBgActiveDisabled, string @controlItemBgActiveHover, string @controlItemBgHover, string @controlOutline, double @controlOutlineWidth, double @controlPaddingHorizontal, double @controlPaddingHorizontalSM, string @controlTmpOutline, string @cyan, string @cyan1, string @cyan10, string @cyan2, string @cyan3, string @cyan4, string @cyan5, string @cyan6, string @cyan7, string @cyan8, string @cyan9, string @fontFamily, double @fontSize, double @fontSizeHeading1, double @fontSizeHeading2, double @fontSizeHeading3, double @fontSizeHeading4, double @fontSizeHeading5, double @fontSizeIcon, double @fontSizeLG, System.Collections.Generic.ICollection<double> @fontSizes, double @fontSizeSM, double @fontSizeXL, double @fontWeightStrong, string @geekblue, string @geekblue1, string @geekblue10, string @geekblue2, string @geekblue3, string @geekblue4, string @geekblue5, string @geekblue6, string @geekblue7, string @geekblue8, string @geekblue9, string @gold, string @gold1, string @gold10, string @gold2, string @gold3, string @gold4, string @gold5, string @gold6, string @gold7, string @gold8, string @gold9, string @green, string @green1, string @green10, string @green2, string @green3, string @green4, string @green5, string @green6, string @green7, string @green8, string @green9, string @lime, string @lime1, string @lime10, string @lime2, string @lime3, string @lime4, string @lime5, string @lime6, string @lime7, string @lime8, string @lime9, double @lineHeight, double @lineHeightHeading1, double @lineHeightHeading2, double @lineHeightHeading3, double @lineHeightHeading4, double @lineHeightHeading5, double @lineHeightLG, System.Collections.Generic.ICollection<double> @lineHeights, double @lineHeightSM, string @lineType, double @lineWidth, double @lineWidthBold, string @linkDecoration, string @linkFocusDecoration, string @linkHoverDecoration, string @magenta, string @magenta1, string @magenta10, string @magenta2, string @magenta3, string @magenta4, string @magenta5, string @magenta6, string @magenta7, string @magenta8, string @magenta9, double @margin, double @marginLG, double @marginMD, double @marginSM, double @marginXL, double @marginXS, double @marginXXL, double @marginXXS, double @motionBase, string @motionDurationFast, string @motionDurationMid, string @motionDurationSlow, string @motionEaseInBack, string @motionEaseInOut, string @motionEaseInOutCirc, string @motionEaseInQuint, string @motionEaseOut, string @motionEaseOutBack, string @motionEaseOutCirc, string @motionEaseOutQuint, double @motionUnit, double @opacityImage, double @opacityLoading, string @orange, string @orange1, string @orange10, string @orange2, string @orange3, string @orange4, string @orange5, string @orange6, string @orange7, string @orange8, string @orange9, double @padding, double @paddingContentHorizontal, double @paddingContentHorizontalLG, double @paddingContentHorizontalSM, double @paddingContentVertical, double @paddingContentVerticalLG, double @paddingContentVerticalSM, double @paddingLG, double @paddingMD, double @paddingSM, double @paddingXL, double @paddingXS, double @paddingXXS, string @pink, string @pink1, string @pink10, string @pink2, string @pink3, string @pink4, string @pink5, string @pink6, string @pink7, string @pink8, string @pink9, string @purple, string @purple1, string @purple10, string @purple2, string @purple3, string @purple4, string @purple5, string @purple6, string @purple7, string @purple8, string @purple9, string @red, string @red1, string @red10, string @red2, string @red3, string @red4, string @red5, string @red6, string @red7, string @red8, string @red9, double @screenLG, double @screenLGMax, double @screenLGMin, double @screenMD, double @screenMDMax, double @screenMDMin, double @screenSM, double @screenSMMax, double @screenSMMin, double @screenXL, double @screenXLMax, double @screenXLMin, double @screenXS, double @screenXSMax, double @screenXSMin, double @screenXXL, double @screenXXLMax, double @screenXXLMin, double @size, double @sizeLG, double @sizeMD, double @sizeMS, double @sizePopupArrow, double @sizeSM, double @sizeStep, double @sizeUnit, double @sizeXL, double @sizeXS, double @sizeXXL, double @sizeXXS, string @volcano, string @volcano1, string @volcano10, string @volcano2, string @volcano3, string @volcano4, string @volcano5, string @volcano6, string @volcano7, string @volcano8, string @volcano9, bool @wireframe, string @yellow, string @yellow1, string @yellow10, string @yellow2, string @yellow3, string @yellow4, string @yellow5, string @yellow6, string @yellow7, string @yellow8, string @yellow9, double @zIndexBase, double @zIndexPopupBase)
+
+
+        {
+
+            this.FontSizes = @fontSizes;
+
+            this.LineHeights = @lineHeights;
+
+            this.LineWidthBold = @lineWidthBold;
+
+            this.MotionDurationFast = @motionDurationFast;
+
+            this.MotionDurationMid = @motionDurationMid;
+
+            this.MotionDurationSlow = @motionDurationSlow;
+
+            this.BorderRadiusXS = @borderRadiusXS;
+
+            this.BorderRadiusSM = @borderRadiusSM;
+
+            this.BorderRadiusLG = @borderRadiusLG;
+
+            this.BorderRadiusOuter = @borderRadiusOuter;
+
+            this.ControlHeightXS = @controlHeightXS;
+
+            this.ControlHeightSM = @controlHeightSM;
+
+            this.ControlHeightLG = @controlHeightLG;
+
+            this.SizeXXL = @sizeXXL;
+
+            this.SizeXL = @sizeXL;
+
+            this.SizeLG = @sizeLG;
+
+            this.SizeMD = @sizeMD;
+
+            this.SizeMS = @sizeMS;
+
+            this.Size = @size;
+
+            this.SizeSM = @sizeSM;
+
+            this.SizeXS = @sizeXS;
+
+            this.SizeXXS = @sizeXXS;
+
+            this.ColorTextBase = @colorTextBase;
+
+            this.ColorBgBase = @colorBgBase;
+
+            this.ColorText = @colorText;
+
+            this.ColorTextSecondary = @colorTextSecondary;
+
+            this.ColorTextTertiary = @colorTextTertiary;
+
+            this.ColorTextQuaternary = @colorTextQuaternary;
+
+            this.ColorFill = @colorFill;
+
+            this.ColorFillSecondary = @colorFillSecondary;
+
+            this.ColorFillTertiary = @colorFillTertiary;
+
+            this.ColorFillQuaternary = @colorFillQuaternary;
+
+            this.ColorBgContainer = @colorBgContainer;
+
+            this.ColorBgElevated = @colorBgElevated;
+
+            this.ColorBgLayout = @colorBgLayout;
+
+            this.ColorBgSpotlight = @colorBgSpotlight;
+
+            this.ColorBorder = @colorBorder;
+
+            this.ColorBorderSecondary = @colorBorderSecondary;
+
+            this.ColorPrimaryBg = @colorPrimaryBg;
+
+            this.ColorPrimaryBgHover = @colorPrimaryBgHover;
+
+            this.ColorPrimaryBorder = @colorPrimaryBorder;
+
+            this.ColorPrimaryBorderHover = @colorPrimaryBorderHover;
+
+            this.ColorPrimaryHover = @colorPrimaryHover;
+
+            this.ColorPrimary = @colorPrimary;
+
+            this.ColorPrimaryActive = @colorPrimaryActive;
+
+            this.ColorPrimaryTextHover = @colorPrimaryTextHover;
+
+            this.ColorPrimaryText = @colorPrimaryText;
+
+            this.ColorPrimaryTextActive = @colorPrimaryTextActive;
+
+            this.ColorSuccessBg = @colorSuccessBg;
+
+            this.ColorSuccessBgHover = @colorSuccessBgHover;
+
+            this.ColorSuccessBorder = @colorSuccessBorder;
+
+            this.ColorSuccessBorderHover = @colorSuccessBorderHover;
+
+            this.ColorSuccessHover = @colorSuccessHover;
+
+            this.ColorSuccess = @colorSuccess;
+
+            this.ColorSuccessActive = @colorSuccessActive;
+
+            this.ColorSuccessTextHover = @colorSuccessTextHover;
+
+            this.ColorSuccessText = @colorSuccessText;
+
+            this.ColorSuccessTextActive = @colorSuccessTextActive;
+
+            this.ColorWarningBg = @colorWarningBg;
+
+            this.ColorWarningBgHover = @colorWarningBgHover;
+
+            this.ColorWarningBorder = @colorWarningBorder;
+
+            this.ColorWarningBorderHover = @colorWarningBorderHover;
+
+            this.ColorWarningHover = @colorWarningHover;
+
+            this.ColorWarning = @colorWarning;
+
+            this.ColorWarningActive = @colorWarningActive;
+
+            this.ColorWarningTextHover = @colorWarningTextHover;
+
+            this.ColorWarningText = @colorWarningText;
+
+            this.ColorWarningTextActive = @colorWarningTextActive;
+
+            this.ColorErrorBg = @colorErrorBg;
+
+            this.ColorErrorBgHover = @colorErrorBgHover;
+
+            this.ColorErrorBorder = @colorErrorBorder;
+
+            this.ColorErrorBorderHover = @colorErrorBorderHover;
+
+            this.ColorErrorHover = @colorErrorHover;
+
+            this.ColorError = @colorError;
+
+            this.ColorErrorActive = @colorErrorActive;
+
+            this.ColorErrorTextHover = @colorErrorTextHover;
+
+            this.ColorErrorText = @colorErrorText;
+
+            this.ColorErrorTextActive = @colorErrorTextActive;
+
+            this.ColorInfoBg = @colorInfoBg;
+
+            this.ColorInfoBgHover = @colorInfoBgHover;
+
+            this.ColorInfoBorder = @colorInfoBorder;
+
+            this.ColorInfoBorderHover = @colorInfoBorderHover;
+
+            this.ColorInfoHover = @colorInfoHover;
+
+            this.ColorInfo = @colorInfo;
+
+            this.ColorInfoActive = @colorInfoActive;
+
+            this.ColorInfoTextHover = @colorInfoTextHover;
+
+            this.ColorInfoText = @colorInfoText;
+
+            this.ColorInfoTextActive = @colorInfoTextActive;
+
+            this.ColorBgMask = @colorBgMask;
+
+            this.ColorWhite = @colorWhite;
+
+            this.Blue1 = @blue1;
+
+            this.Blue2 = @blue2;
+
+            this.Blue3 = @blue3;
+
+            this.Blue4 = @blue4;
+
+            this.Blue5 = @blue5;
+
+            this.Blue6 = @blue6;
+
+            this.Blue7 = @blue7;
+
+            this.Blue8 = @blue8;
+
+            this.Blue9 = @blue9;
+
+            this.Blue10 = @blue10;
+
+            this.Purple1 = @purple1;
+
+            this.Purple2 = @purple2;
+
+            this.Purple3 = @purple3;
+
+            this.Purple4 = @purple4;
+
+            this.Purple5 = @purple5;
+
+            this.Purple6 = @purple6;
+
+            this.Purple7 = @purple7;
+
+            this.Purple8 = @purple8;
+
+            this.Purple9 = @purple9;
+
+            this.Purple10 = @purple10;
+
+            this.Cyan1 = @cyan1;
+
+            this.Cyan2 = @cyan2;
+
+            this.Cyan3 = @cyan3;
+
+            this.Cyan4 = @cyan4;
+
+            this.Cyan5 = @cyan5;
+
+            this.Cyan6 = @cyan6;
+
+            this.Cyan7 = @cyan7;
+
+            this.Cyan8 = @cyan8;
+
+            this.Cyan9 = @cyan9;
+
+            this.Cyan10 = @cyan10;
+
+            this.Green1 = @green1;
+
+            this.Green2 = @green2;
+
+            this.Green3 = @green3;
+
+            this.Green4 = @green4;
+
+            this.Green5 = @green5;
+
+            this.Green6 = @green6;
+
+            this.Green7 = @green7;
+
+            this.Green8 = @green8;
+
+            this.Green9 = @green9;
+
+            this.Green10 = @green10;
+
+            this.Magenta1 = @magenta1;
+
+            this.Magenta2 = @magenta2;
+
+            this.Magenta3 = @magenta3;
+
+            this.Magenta4 = @magenta4;
+
+            this.Magenta5 = @magenta5;
+
+            this.Magenta6 = @magenta6;
+
+            this.Magenta7 = @magenta7;
+
+            this.Magenta8 = @magenta8;
+
+            this.Magenta9 = @magenta9;
+
+            this.Magenta10 = @magenta10;
+
+            this.Pink1 = @pink1;
+
+            this.Pink2 = @pink2;
+
+            this.Pink3 = @pink3;
+
+            this.Pink4 = @pink4;
+
+            this.Pink5 = @pink5;
+
+            this.Pink6 = @pink6;
+
+            this.Pink7 = @pink7;
+
+            this.Pink8 = @pink8;
+
+            this.Pink9 = @pink9;
+
+            this.Pink10 = @pink10;
+
+            this.Red1 = @red1;
+
+            this.Red2 = @red2;
+
+            this.Red3 = @red3;
+
+            this.Red4 = @red4;
+
+            this.Red5 = @red5;
+
+            this.Red6 = @red6;
+
+            this.Red7 = @red7;
+
+            this.Red8 = @red8;
+
+            this.Red9 = @red9;
+
+            this.Red10 = @red10;
+
+            this.Orange1 = @orange1;
+
+            this.Orange2 = @orange2;
+
+            this.Orange3 = @orange3;
+
+            this.Orange4 = @orange4;
+
+            this.Orange5 = @orange5;
+
+            this.Orange6 = @orange6;
+
+            this.Orange7 = @orange7;
+
+            this.Orange8 = @orange8;
+
+            this.Orange9 = @orange9;
+
+            this.Orange10 = @orange10;
+
+            this.Yellow1 = @yellow1;
+
+            this.Yellow2 = @yellow2;
+
+            this.Yellow3 = @yellow3;
+
+            this.Yellow4 = @yellow4;
+
+            this.Yellow5 = @yellow5;
+
+            this.Yellow6 = @yellow6;
+
+            this.Yellow7 = @yellow7;
+
+            this.Yellow8 = @yellow8;
+
+            this.Yellow9 = @yellow9;
+
+            this.Yellow10 = @yellow10;
+
+            this.Volcano1 = @volcano1;
+
+            this.Volcano2 = @volcano2;
+
+            this.Volcano3 = @volcano3;
+
+            this.Volcano4 = @volcano4;
+
+            this.Volcano5 = @volcano5;
+
+            this.Volcano6 = @volcano6;
+
+            this.Volcano7 = @volcano7;
+
+            this.Volcano8 = @volcano8;
+
+            this.Volcano9 = @volcano9;
+
+            this.Volcano10 = @volcano10;
+
+            this.Geekblue1 = @geekblue1;
+
+            this.Geekblue2 = @geekblue2;
+
+            this.Geekblue3 = @geekblue3;
+
+            this.Geekblue4 = @geekblue4;
+
+            this.Geekblue5 = @geekblue5;
+
+            this.Geekblue6 = @geekblue6;
+
+            this.Geekblue7 = @geekblue7;
+
+            this.Geekblue8 = @geekblue8;
+
+            this.Geekblue9 = @geekblue9;
+
+            this.Geekblue10 = @geekblue10;
+
+            this.Lime1 = @lime1;
+
+            this.Lime2 = @lime2;
+
+            this.Lime3 = @lime3;
+
+            this.Lime4 = @lime4;
+
+            this.Lime5 = @lime5;
+
+            this.Lime6 = @lime6;
+
+            this.Lime7 = @lime7;
+
+            this.Lime8 = @lime8;
+
+            this.Lime9 = @lime9;
+
+            this.Lime10 = @lime10;
+
+            this.Gold1 = @gold1;
+
+            this.Gold2 = @gold2;
+
+            this.Gold3 = @gold3;
+
+            this.Gold4 = @gold4;
+
+            this.Gold5 = @gold5;
+
+            this.Gold6 = @gold6;
+
+            this.Gold7 = @gold7;
+
+            this.Gold8 = @gold8;
+
+            this.Gold9 = @gold9;
+
+            this.Gold10 = @gold10;
+
+            this.Blue = @blue;
+
+            this.Purple = @purple;
+
+            this.Cyan = @cyan;
+
+            this.Green = @green;
+
+            this.Magenta = @magenta;
+
+            this.Pink = @pink;
+
+            this.Red = @red;
+
+            this.Orange = @orange;
+
+            this.Yellow = @yellow;
+
+            this.Volcano = @volcano;
+
+            this.Geekblue = @geekblue;
+
+            this.Lime = @lime;
+
+            this.Gold = @gold;
+
+            this.FontFamily = @fontFamily;
+
+            this.FontSize = @fontSize;
+
+            this.LineWidth = @lineWidth;
+
+            this.LineType = @lineType;
+
+            this.MotionUnit = @motionUnit;
+
+            this.MotionBase = @motionBase;
+
+            this.MotionEaseOutCirc = @motionEaseOutCirc;
+
+            this.MotionEaseInOutCirc = @motionEaseInOutCirc;
+
+            this.MotionEaseInOut = @motionEaseInOut;
+
+            this.MotionEaseOutBack = @motionEaseOutBack;
+
+            this.MotionEaseInBack = @motionEaseInBack;
+
+            this.MotionEaseInQuint = @motionEaseInQuint;
+
+            this.MotionEaseOutQuint = @motionEaseOutQuint;
+
+            this.MotionEaseOut = @motionEaseOut;
+
+            this.BorderRadius = @borderRadius;
+
+            this.SizeUnit = @sizeUnit;
+
+            this.SizeStep = @sizeStep;
+
+            this.SizePopupArrow = @sizePopupArrow;
+
+            this.ControlHeight = @controlHeight;
+
+            this.ZIndexBase = @zIndexBase;
+
+            this.ZIndexPopupBase = @zIndexPopupBase;
+
+            this.OpacityImage = @opacityImage;
+
+            this.Wireframe = @wireframe;
+
+            this.ColorFillContentHover = @colorFillContentHover;
+
+            this.ColorFillAlter = @colorFillAlter;
+
+            this.ColorBgContainerDisabled = @colorBgContainerDisabled;
+
+            this.ColorFillContent = @colorFillContent;
+
+            this.ColorBorderBg = @colorBorderBg;
+
+            this.ColorSplit = @colorSplit;
+
+            this.ColorTextPlaceholder = @colorTextPlaceholder;
+
+            this.ColorTextDisabled = @colorTextDisabled;
+
+            this.ColorTextHeading = @colorTextHeading;
+
+            this.ColorTextLabel = @colorTextLabel;
+
+            this.ColorTextDescription = @colorTextDescription;
+
+            this.ColorTextLightSolid = @colorTextLightSolid;
+
+            this.ColorBgTextHover = @colorBgTextHover;
+
+            this.ColorBgTextActive = @colorBgTextActive;
+
+            this.ColorIcon = @colorIcon;
+
+            this.ColorIconHover = @colorIconHover;
+
+            this.ColorLink = @colorLink;
+
+            this.ColorLinkHover = @colorLinkHover;
+
+            this.ColorLinkActive = @colorLinkActive;
+
+            this.ColorHighlight = @colorHighlight;
+
+            this.ControlOutline = @controlOutline;
+
+            this.ColorWarningOutline = @colorWarningOutline;
+
+            this.ColorErrorOutline = @colorErrorOutline;
+
+            this.FontSizeSM = @fontSizeSM;
+
+            this.FontSizeLG = @fontSizeLG;
+
+            this.FontSizeXL = @fontSizeXL;
+
+            this.FontSizeIcon = @fontSizeIcon;
+
+            this.FontSizeHeading1 = @fontSizeHeading1;
+
+            this.FontSizeHeading2 = @fontSizeHeading2;
+
+            this.FontSizeHeading3 = @fontSizeHeading3;
+
+            this.FontSizeHeading4 = @fontSizeHeading4;
+
+            this.FontSizeHeading5 = @fontSizeHeading5;
+
+            this.FontWeightStrong = @fontWeightStrong;
+
+            this.LineHeight = @lineHeight;
+
+            this.LineHeightLG = @lineHeightLG;
+
+            this.LineHeightSM = @lineHeightSM;
+
+            this.LineHeightHeading1 = @lineHeightHeading1;
+
+            this.LineHeightHeading2 = @lineHeightHeading2;
+
+            this.LineHeightHeading3 = @lineHeightHeading3;
+
+            this.LineHeightHeading4 = @lineHeightHeading4;
+
+            this.LineHeightHeading5 = @lineHeightHeading5;
+
+            this.ControlOutlineWidth = @controlOutlineWidth;
+
+            this.ControlItemBgHover = @controlItemBgHover;
+
+            this.ControlItemBgActive = @controlItemBgActive;
+
+            this.ControlItemBgActiveHover = @controlItemBgActiveHover;
+
+            this.ControlInteractiveSize = @controlInteractiveSize;
+
+            this.ControlItemBgActiveDisabled = @controlItemBgActiveDisabled;
+
+            this.PaddingXXS = @paddingXXS;
+
+            this.PaddingXS = @paddingXS;
+
+            this.PaddingSM = @paddingSM;
+
+            this.Padding = @padding;
+
+            this.PaddingMD = @paddingMD;
+
+            this.PaddingLG = @paddingLG;
+
+            this.PaddingXL = @paddingXL;
+
+            this.PaddingContentHorizontalLG = @paddingContentHorizontalLG;
+
+            this.PaddingContentHorizontal = @paddingContentHorizontal;
+
+            this.PaddingContentHorizontalSM = @paddingContentHorizontalSM;
+
+            this.PaddingContentVerticalLG = @paddingContentVerticalLG;
+
+            this.PaddingContentVertical = @paddingContentVertical;
+
+            this.PaddingContentVerticalSM = @paddingContentVerticalSM;
+
+            this.MarginXXS = @marginXXS;
+
+            this.MarginXS = @marginXS;
+
+            this.MarginSM = @marginSM;
+
+            this.Margin = @margin;
+
+            this.MarginMD = @marginMD;
+
+            this.MarginLG = @marginLG;
+
+            this.MarginXL = @marginXL;
+
+            this.MarginXXL = @marginXXL;
+
+            this.OpacityLoading = @opacityLoading;
+
+            this.BoxShadow = @boxShadow;
+
+            this.BoxShadowSecondary = @boxShadowSecondary;
+
+            this.LinkDecoration = @linkDecoration;
+
+            this.LinkHoverDecoration = @linkHoverDecoration;
+
+            this.LinkFocusDecoration = @linkFocusDecoration;
+
+            this.ControlPaddingHorizontal = @controlPaddingHorizontal;
+
+            this.ControlPaddingHorizontalSM = @controlPaddingHorizontalSM;
+
+            this.ScreenXS = @screenXS;
+
+            this.ScreenXSMin = @screenXSMin;
+
+            this.ScreenXSMax = @screenXSMax;
+
+            this.ScreenSM = @screenSM;
+
+            this.ScreenSMMin = @screenSMMin;
+
+            this.ScreenSMMax = @screenSMMax;
+
+            this.ScreenMD = @screenMD;
+
+            this.ScreenMDMin = @screenMDMin;
+
+            this.ScreenMDMax = @screenMDMax;
+
+            this.ScreenLG = @screenLG;
+
+            this.ScreenLGMin = @screenLGMin;
+
+            this.ScreenLGMax = @screenLGMax;
+
+            this.ScreenXL = @screenXL;
+
+            this.ScreenXLMin = @screenXLMin;
+
+            this.ScreenXLMax = @screenXLMax;
+
+            this.ScreenXXL = @screenXXL;
+
+            this.ScreenXXLMin = @screenXXLMin;
+
+            this.ScreenXXLMax = @screenXXLMax;
+
+            this.ControlTmpOutline = @controlTmpOutline;
+
+            this.BoxShadowPopoverArrow = @boxShadowPopoverArrow;
+
+            this.BoxShadowCard = @boxShadowCard;
+
+            this.BoxShadowDrawerRight = @boxShadowDrawerRight;
+
+            this.BoxShadowDrawerLeft = @boxShadowDrawerLeft;
+
+            this.BoxShadowDrawerUp = @boxShadowDrawerUp;
+
+            this.BoxShadowDrawerDown = @boxShadowDrawerDown;
+
+            this.BoxShadowTabsOverflowLeft = @boxShadowTabsOverflowLeft;
+
+            this.BoxShadowTabsOverflowRight = @boxShadowTabsOverflowRight;
+
+            this.BoxShadowTabsOverflowTop = @boxShadowTabsOverflowTop;
+
+            this.BoxShadowTabsOverflowBottom = @boxShadowTabsOverflowBottom;
+
+        }
         [System.Text.Json.Serialization.JsonPropertyName("fontSizes")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public System.Collections.Generic.ICollection<double> FontSizes { get; set; } = new System.Collections.ObjectModel.Collection<double>();
+        public System.Collections.Generic.ICollection<double> FontSizes { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("lineHeights")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public System.Collections.Generic.ICollection<double> LineHeights { get; set; } = new System.Collections.ObjectModel.Collection<double>();
+        public System.Collections.Generic.ICollection<double> LineHeights { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("lineWidthBold")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double LineWidthBold { get; set; }
+        public double LineWidthBold { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("motionDurationFast")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string MotionDurationFast { get; set; }
+        public string MotionDurationFast { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("motionDurationMid")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string MotionDurationMid { get; set; }
+        public string MotionDurationMid { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("motionDurationSlow")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string MotionDurationSlow { get; set; }
+        public string MotionDurationSlow { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("borderRadiusXS")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double BorderRadiusXS { get; set; }
+        public double BorderRadiusXS { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("borderRadiusSM")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double BorderRadiusSM { get; set; }
+        public double BorderRadiusSM { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("borderRadiusLG")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double BorderRadiusLG { get; set; }
+        public double BorderRadiusLG { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("borderRadiusOuter")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double BorderRadiusOuter { get; set; }
+        public double BorderRadiusOuter { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("controlHeightXS")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double ControlHeightXS { get; set; }
+        public double ControlHeightXS { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("controlHeightSM")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double ControlHeightSM { get; set; }
+        public double ControlHeightSM { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("controlHeightLG")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double ControlHeightLG { get; set; }
+        public double ControlHeightLG { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("sizeXXL")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double SizeXXL { get; set; }
+        public double SizeXXL { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("sizeXL")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double SizeXL { get; set; }
+        public double SizeXL { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("sizeLG")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double SizeLG { get; set; }
+        public double SizeLG { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("sizeMD")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double SizeMD { get; set; }
+        public double SizeMD { get; init; }
 
         /// <summary>
         /// Same as size by default, but could be larger in compact mode
@@ -121,37 +850,37 @@ namespace BlazorCssIsolation.Tokens
         [System.Text.Json.Serialization.JsonPropertyName("sizeMS")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double SizeMS { get; set; }
+        public double SizeMS { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("size")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double Size { get; set; }
+        public double Size { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("sizeSM")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double SizeSM { get; set; }
+        public double SizeSM { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("sizeXS")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double SizeXS { get; set; }
+        public double SizeXS { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("sizeXXS")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double SizeXXS { get; set; }
+        public double SizeXXS { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorTextBase")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorTextBase { get; set; }
+        public string ColorTextBase { get; init; }
 
         /// <summary>
         /// Base component background color. Will derivative container background color with this
@@ -160,1273 +889,1273 @@ namespace BlazorCssIsolation.Tokens
         [System.Text.Json.Serialization.JsonPropertyName("colorBgBase")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorBgBase { get; set; }
+        public string ColorBgBase { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorText")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorText { get; set; }
+        public string ColorText { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorTextSecondary")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorTextSecondary { get; set; }
+        public string ColorTextSecondary { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorTextTertiary")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorTextTertiary { get; set; }
+        public string ColorTextTertiary { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorTextQuaternary")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorTextQuaternary { get; set; }
+        public string ColorTextQuaternary { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorFill")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorFill { get; set; }
+        public string ColorFill { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorFillSecondary")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorFillSecondary { get; set; }
+        public string ColorFillSecondary { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorFillTertiary")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorFillTertiary { get; set; }
+        public string ColorFillTertiary { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorFillQuaternary")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorFillQuaternary { get; set; }
+        public string ColorFillQuaternary { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorBgContainer")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorBgContainer { get; set; }
+        public string ColorBgContainer { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorBgElevated")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorBgElevated { get; set; }
+        public string ColorBgElevated { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorBgLayout")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorBgLayout { get; set; }
+        public string ColorBgLayout { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorBgSpotlight")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorBgSpotlight { get; set; }
+        public string ColorBgSpotlight { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorBorder")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorBorder { get; set; }
+        public string ColorBorder { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorBorderSecondary")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorBorderSecondary { get; set; }
+        public string ColorBorderSecondary { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorPrimaryBg")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorPrimaryBg { get; set; }
+        public string ColorPrimaryBg { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorPrimaryBgHover")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorPrimaryBgHover { get; set; }
+        public string ColorPrimaryBgHover { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorPrimaryBorder")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorPrimaryBorder { get; set; }
+        public string ColorPrimaryBorder { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorPrimaryBorderHover")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorPrimaryBorderHover { get; set; }
+        public string ColorPrimaryBorderHover { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorPrimaryHover")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorPrimaryHover { get; set; }
+        public string ColorPrimaryHover { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorPrimary")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorPrimary { get; set; }
+        public string ColorPrimary { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorPrimaryActive")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorPrimaryActive { get; set; }
+        public string ColorPrimaryActive { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorPrimaryTextHover")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorPrimaryTextHover { get; set; }
+        public string ColorPrimaryTextHover { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorPrimaryText")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorPrimaryText { get; set; }
+        public string ColorPrimaryText { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorPrimaryTextActive")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorPrimaryTextActive { get; set; }
+        public string ColorPrimaryTextActive { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorSuccessBg")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorSuccessBg { get; set; }
+        public string ColorSuccessBg { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorSuccessBgHover")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorSuccessBgHover { get; set; }
+        public string ColorSuccessBgHover { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorSuccessBorder")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorSuccessBorder { get; set; }
+        public string ColorSuccessBorder { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorSuccessBorderHover")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorSuccessBorderHover { get; set; }
+        public string ColorSuccessBorderHover { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorSuccessHover")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorSuccessHover { get; set; }
+        public string ColorSuccessHover { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorSuccess")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorSuccess { get; set; }
+        public string ColorSuccess { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorSuccessActive")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorSuccessActive { get; set; }
+        public string ColorSuccessActive { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorSuccessTextHover")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorSuccessTextHover { get; set; }
+        public string ColorSuccessTextHover { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorSuccessText")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorSuccessText { get; set; }
+        public string ColorSuccessText { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorSuccessTextActive")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorSuccessTextActive { get; set; }
+        public string ColorSuccessTextActive { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorWarningBg")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorWarningBg { get; set; }
+        public string ColorWarningBg { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorWarningBgHover")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorWarningBgHover { get; set; }
+        public string ColorWarningBgHover { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorWarningBorder")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorWarningBorder { get; set; }
+        public string ColorWarningBorder { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorWarningBorderHover")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorWarningBorderHover { get; set; }
+        public string ColorWarningBorderHover { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorWarningHover")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorWarningHover { get; set; }
+        public string ColorWarningHover { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorWarning")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorWarning { get; set; }
+        public string ColorWarning { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorWarningActive")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorWarningActive { get; set; }
+        public string ColorWarningActive { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorWarningTextHover")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorWarningTextHover { get; set; }
+        public string ColorWarningTextHover { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorWarningText")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorWarningText { get; set; }
+        public string ColorWarningText { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorWarningTextActive")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorWarningTextActive { get; set; }
+        public string ColorWarningTextActive { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorErrorBg")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorErrorBg { get; set; }
+        public string ColorErrorBg { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorErrorBgHover")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorErrorBgHover { get; set; }
+        public string ColorErrorBgHover { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorErrorBorder")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorErrorBorder { get; set; }
+        public string ColorErrorBorder { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorErrorBorderHover")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorErrorBorderHover { get; set; }
+        public string ColorErrorBorderHover { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorErrorHover")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorErrorHover { get; set; }
+        public string ColorErrorHover { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorError")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorError { get; set; }
+        public string ColorError { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorErrorActive")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorErrorActive { get; set; }
+        public string ColorErrorActive { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorErrorTextHover")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorErrorTextHover { get; set; }
+        public string ColorErrorTextHover { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorErrorText")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorErrorText { get; set; }
+        public string ColorErrorText { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorErrorTextActive")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorErrorTextActive { get; set; }
+        public string ColorErrorTextActive { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorInfoBg")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorInfoBg { get; set; }
+        public string ColorInfoBg { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorInfoBgHover")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorInfoBgHover { get; set; }
+        public string ColorInfoBgHover { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorInfoBorder")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorInfoBorder { get; set; }
+        public string ColorInfoBorder { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorInfoBorderHover")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorInfoBorderHover { get; set; }
+        public string ColorInfoBorderHover { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorInfoHover")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorInfoHover { get; set; }
+        public string ColorInfoHover { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorInfo")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorInfo { get; set; }
+        public string ColorInfo { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorInfoActive")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorInfoActive { get; set; }
+        public string ColorInfoActive { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorInfoTextHover")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorInfoTextHover { get; set; }
+        public string ColorInfoTextHover { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorInfoText")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorInfoText { get; set; }
+        public string ColorInfoText { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorInfoTextActive")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorInfoTextActive { get; set; }
+        public string ColorInfoTextActive { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorBgMask")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorBgMask { get; set; }
+        public string ColorBgMask { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorWhite")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorWhite { get; set; }
+        public string ColorWhite { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("blue-1")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Blue1 { get; set; }
+        public string Blue1 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("blue-2")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Blue2 { get; set; }
+        public string Blue2 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("blue-3")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Blue3 { get; set; }
+        public string Blue3 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("blue-4")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Blue4 { get; set; }
+        public string Blue4 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("blue-5")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Blue5 { get; set; }
+        public string Blue5 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("blue-6")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Blue6 { get; set; }
+        public string Blue6 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("blue-7")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Blue7 { get; set; }
+        public string Blue7 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("blue-8")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Blue8 { get; set; }
+        public string Blue8 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("blue-9")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Blue9 { get; set; }
+        public string Blue9 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("blue-10")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Blue10 { get; set; }
+        public string Blue10 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("purple-1")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Purple1 { get; set; }
+        public string Purple1 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("purple-2")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Purple2 { get; set; }
+        public string Purple2 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("purple-3")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Purple3 { get; set; }
+        public string Purple3 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("purple-4")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Purple4 { get; set; }
+        public string Purple4 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("purple-5")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Purple5 { get; set; }
+        public string Purple5 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("purple-6")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Purple6 { get; set; }
+        public string Purple6 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("purple-7")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Purple7 { get; set; }
+        public string Purple7 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("purple-8")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Purple8 { get; set; }
+        public string Purple8 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("purple-9")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Purple9 { get; set; }
+        public string Purple9 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("purple-10")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Purple10 { get; set; }
+        public string Purple10 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("cyan-1")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Cyan1 { get; set; }
+        public string Cyan1 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("cyan-2")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Cyan2 { get; set; }
+        public string Cyan2 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("cyan-3")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Cyan3 { get; set; }
+        public string Cyan3 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("cyan-4")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Cyan4 { get; set; }
+        public string Cyan4 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("cyan-5")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Cyan5 { get; set; }
+        public string Cyan5 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("cyan-6")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Cyan6 { get; set; }
+        public string Cyan6 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("cyan-7")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Cyan7 { get; set; }
+        public string Cyan7 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("cyan-8")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Cyan8 { get; set; }
+        public string Cyan8 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("cyan-9")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Cyan9 { get; set; }
+        public string Cyan9 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("cyan-10")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Cyan10 { get; set; }
+        public string Cyan10 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("green-1")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Green1 { get; set; }
+        public string Green1 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("green-2")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Green2 { get; set; }
+        public string Green2 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("green-3")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Green3 { get; set; }
+        public string Green3 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("green-4")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Green4 { get; set; }
+        public string Green4 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("green-5")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Green5 { get; set; }
+        public string Green5 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("green-6")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Green6 { get; set; }
+        public string Green6 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("green-7")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Green7 { get; set; }
+        public string Green7 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("green-8")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Green8 { get; set; }
+        public string Green8 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("green-9")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Green9 { get; set; }
+        public string Green9 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("green-10")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Green10 { get; set; }
+        public string Green10 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("magenta-1")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Magenta1 { get; set; }
+        public string Magenta1 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("magenta-2")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Magenta2 { get; set; }
+        public string Magenta2 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("magenta-3")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Magenta3 { get; set; }
+        public string Magenta3 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("magenta-4")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Magenta4 { get; set; }
+        public string Magenta4 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("magenta-5")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Magenta5 { get; set; }
+        public string Magenta5 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("magenta-6")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Magenta6 { get; set; }
+        public string Magenta6 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("magenta-7")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Magenta7 { get; set; }
+        public string Magenta7 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("magenta-8")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Magenta8 { get; set; }
+        public string Magenta8 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("magenta-9")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Magenta9 { get; set; }
+        public string Magenta9 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("magenta-10")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Magenta10 { get; set; }
+        public string Magenta10 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("pink-1")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Pink1 { get; set; }
+        public string Pink1 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("pink-2")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Pink2 { get; set; }
+        public string Pink2 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("pink-3")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Pink3 { get; set; }
+        public string Pink3 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("pink-4")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Pink4 { get; set; }
+        public string Pink4 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("pink-5")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Pink5 { get; set; }
+        public string Pink5 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("pink-6")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Pink6 { get; set; }
+        public string Pink6 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("pink-7")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Pink7 { get; set; }
+        public string Pink7 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("pink-8")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Pink8 { get; set; }
+        public string Pink8 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("pink-9")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Pink9 { get; set; }
+        public string Pink9 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("pink-10")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Pink10 { get; set; }
+        public string Pink10 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("red-1")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Red1 { get; set; }
+        public string Red1 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("red-2")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Red2 { get; set; }
+        public string Red2 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("red-3")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Red3 { get; set; }
+        public string Red3 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("red-4")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Red4 { get; set; }
+        public string Red4 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("red-5")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Red5 { get; set; }
+        public string Red5 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("red-6")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Red6 { get; set; }
+        public string Red6 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("red-7")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Red7 { get; set; }
+        public string Red7 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("red-8")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Red8 { get; set; }
+        public string Red8 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("red-9")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Red9 { get; set; }
+        public string Red9 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("red-10")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Red10 { get; set; }
+        public string Red10 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("orange-1")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Orange1 { get; set; }
+        public string Orange1 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("orange-2")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Orange2 { get; set; }
+        public string Orange2 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("orange-3")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Orange3 { get; set; }
+        public string Orange3 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("orange-4")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Orange4 { get; set; }
+        public string Orange4 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("orange-5")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Orange5 { get; set; }
+        public string Orange5 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("orange-6")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Orange6 { get; set; }
+        public string Orange6 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("orange-7")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Orange7 { get; set; }
+        public string Orange7 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("orange-8")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Orange8 { get; set; }
+        public string Orange8 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("orange-9")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Orange9 { get; set; }
+        public string Orange9 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("orange-10")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Orange10 { get; set; }
+        public string Orange10 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("yellow-1")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Yellow1 { get; set; }
+        public string Yellow1 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("yellow-2")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Yellow2 { get; set; }
+        public string Yellow2 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("yellow-3")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Yellow3 { get; set; }
+        public string Yellow3 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("yellow-4")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Yellow4 { get; set; }
+        public string Yellow4 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("yellow-5")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Yellow5 { get; set; }
+        public string Yellow5 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("yellow-6")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Yellow6 { get; set; }
+        public string Yellow6 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("yellow-7")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Yellow7 { get; set; }
+        public string Yellow7 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("yellow-8")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Yellow8 { get; set; }
+        public string Yellow8 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("yellow-9")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Yellow9 { get; set; }
+        public string Yellow9 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("yellow-10")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Yellow10 { get; set; }
+        public string Yellow10 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("volcano-1")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Volcano1 { get; set; }
+        public string Volcano1 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("volcano-2")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Volcano2 { get; set; }
+        public string Volcano2 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("volcano-3")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Volcano3 { get; set; }
+        public string Volcano3 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("volcano-4")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Volcano4 { get; set; }
+        public string Volcano4 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("volcano-5")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Volcano5 { get; set; }
+        public string Volcano5 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("volcano-6")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Volcano6 { get; set; }
+        public string Volcano6 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("volcano-7")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Volcano7 { get; set; }
+        public string Volcano7 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("volcano-8")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Volcano8 { get; set; }
+        public string Volcano8 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("volcano-9")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Volcano9 { get; set; }
+        public string Volcano9 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("volcano-10")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Volcano10 { get; set; }
+        public string Volcano10 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("geekblue-1")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Geekblue1 { get; set; }
+        public string Geekblue1 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("geekblue-2")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Geekblue2 { get; set; }
+        public string Geekblue2 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("geekblue-3")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Geekblue3 { get; set; }
+        public string Geekblue3 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("geekblue-4")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Geekblue4 { get; set; }
+        public string Geekblue4 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("geekblue-5")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Geekblue5 { get; set; }
+        public string Geekblue5 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("geekblue-6")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Geekblue6 { get; set; }
+        public string Geekblue6 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("geekblue-7")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Geekblue7 { get; set; }
+        public string Geekblue7 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("geekblue-8")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Geekblue8 { get; set; }
+        public string Geekblue8 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("geekblue-9")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Geekblue9 { get; set; }
+        public string Geekblue9 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("geekblue-10")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Geekblue10 { get; set; }
+        public string Geekblue10 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("lime-1")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Lime1 { get; set; }
+        public string Lime1 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("lime-2")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Lime2 { get; set; }
+        public string Lime2 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("lime-3")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Lime3 { get; set; }
+        public string Lime3 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("lime-4")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Lime4 { get; set; }
+        public string Lime4 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("lime-5")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Lime5 { get; set; }
+        public string Lime5 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("lime-6")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Lime6 { get; set; }
+        public string Lime6 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("lime-7")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Lime7 { get; set; }
+        public string Lime7 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("lime-8")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Lime8 { get; set; }
+        public string Lime8 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("lime-9")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Lime9 { get; set; }
+        public string Lime9 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("lime-10")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Lime10 { get; set; }
+        public string Lime10 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("gold-1")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Gold1 { get; set; }
+        public string Gold1 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("gold-2")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Gold2 { get; set; }
+        public string Gold2 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("gold-3")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Gold3 { get; set; }
+        public string Gold3 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("gold-4")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Gold4 { get; set; }
+        public string Gold4 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("gold-5")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Gold5 { get; set; }
+        public string Gold5 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("gold-6")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Gold6 { get; set; }
+        public string Gold6 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("gold-7")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Gold7 { get; set; }
+        public string Gold7 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("gold-8")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Gold8 { get; set; }
+        public string Gold8 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("gold-9")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Gold9 { get; set; }
+        public string Gold9 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("gold-10")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Gold10 { get; set; }
+        public string Gold10 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("blue")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Blue { get; set; }
+        public string Blue { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("purple")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Purple { get; set; }
+        public string Purple { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("cyan")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Cyan { get; set; }
+        public string Cyan { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("green")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Green { get; set; }
+        public string Green { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("magenta")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Magenta { get; set; }
+        public string Magenta { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("pink")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Pink { get; set; }
+        public string Pink { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("red")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Red { get; set; }
+        public string Red { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("orange")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Orange { get; set; }
+        public string Orange { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("yellow")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Yellow { get; set; }
+        public string Yellow { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("volcano")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Volcano { get; set; }
+        public string Volcano { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("geekblue")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Geekblue { get; set; }
+        public string Geekblue { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("lime")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Lime { get; set; }
+        public string Lime { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("gold")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string Gold { get; set; }
+        public string Gold { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("fontFamily")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string FontFamily { get; set; }
+        public string FontFamily { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("fontSize")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double FontSize { get; set; }
+        public double FontSize { get; init; }
 
         /// <summary>
         /// Border width of base components
@@ -1435,103 +2164,103 @@ namespace BlazorCssIsolation.Tokens
         [System.Text.Json.Serialization.JsonPropertyName("lineWidth")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double LineWidth { get; set; }
+        public double LineWidth { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("lineType")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string LineType { get; set; }
+        public string LineType { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("motionUnit")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double MotionUnit { get; set; }
+        public double MotionUnit { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("motionBase")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double MotionBase { get; set; }
+        public double MotionBase { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("motionEaseOutCirc")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string MotionEaseOutCirc { get; set; }
+        public string MotionEaseOutCirc { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("motionEaseInOutCirc")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string MotionEaseInOutCirc { get; set; }
+        public string MotionEaseInOutCirc { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("motionEaseInOut")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string MotionEaseInOut { get; set; }
+        public string MotionEaseInOut { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("motionEaseOutBack")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string MotionEaseOutBack { get; set; }
+        public string MotionEaseOutBack { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("motionEaseInBack")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string MotionEaseInBack { get; set; }
+        public string MotionEaseInBack { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("motionEaseInQuint")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string MotionEaseInQuint { get; set; }
+        public string MotionEaseInQuint { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("motionEaseOutQuint")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string MotionEaseOutQuint { get; set; }
+        public string MotionEaseOutQuint { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("motionEaseOut")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string MotionEaseOut { get; set; }
+        public string MotionEaseOut { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("borderRadius")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double BorderRadius { get; set; }
+        public double BorderRadius { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("sizeUnit")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double SizeUnit { get; set; }
+        public double SizeUnit { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("sizeStep")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double SizeStep { get; set; }
+        public double SizeStep { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("sizePopupArrow")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double SizePopupArrow { get; set; }
+        public double SizePopupArrow { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("controlHeight")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double ControlHeight { get; set; }
+        public double ControlHeight { get; init; }
 
         /// <summary>
         /// Base zIndex of component like BackTop, Affix which can be cover by large popup
@@ -1540,7 +2269,7 @@ namespace BlazorCssIsolation.Tokens
         [System.Text.Json.Serialization.JsonPropertyName("zIndexBase")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double ZIndexBase { get; set; }
+        public double ZIndexBase { get; init; }
 
         /// <summary>
         /// Base popup component zIndex
@@ -1549,7 +2278,7 @@ namespace BlazorCssIsolation.Tokens
         [System.Text.Json.Serialization.JsonPropertyName("zIndexPopupBase")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double ZIndexPopupBase { get; set; }
+        public double ZIndexPopupBase { get; init; }
 
         /// <summary>
         /// Define default Image opacity. Useful when in dark-like theme
@@ -1558,97 +2287,97 @@ namespace BlazorCssIsolation.Tokens
         [System.Text.Json.Serialization.JsonPropertyName("opacityImage")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double OpacityImage { get; set; }
+        public double OpacityImage { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("wireframe")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public bool Wireframe { get; set; }
+        public bool Wireframe { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorFillContentHover")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorFillContentHover { get; set; }
+        public string ColorFillContentHover { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorFillAlter")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorFillAlter { get; set; }
+        public string ColorFillAlter { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorBgContainerDisabled")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorBgContainerDisabled { get; set; }
+        public string ColorBgContainerDisabled { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorFillContent")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorFillContent { get; set; }
+        public string ColorFillContent { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorBorderBg")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorBorderBg { get; set; }
+        public string ColorBorderBg { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorSplit")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorSplit { get; set; }
+        public string ColorSplit { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorTextPlaceholder")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorTextPlaceholder { get; set; }
+        public string ColorTextPlaceholder { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorTextDisabled")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorTextDisabled { get; set; }
+        public string ColorTextDisabled { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorTextHeading")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorTextHeading { get; set; }
+        public string ColorTextHeading { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorTextLabel")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorTextLabel { get; set; }
+        public string ColorTextLabel { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorTextDescription")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorTextDescription { get; set; }
+        public string ColorTextDescription { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorTextLightSolid")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorTextLightSolid { get; set; }
+        public string ColorTextLightSolid { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorBgTextHover")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorBgTextHover { get; set; }
+        public string ColorBgTextHover { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorBgTextActive")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorBgTextActive { get; set; }
+        public string ColorBgTextActive { get; init; }
 
         /// <summary>
         /// Weak action. Such as `allowClear` or Alert close button
@@ -1657,7 +2386,7 @@ namespace BlazorCssIsolation.Tokens
         [System.Text.Json.Serialization.JsonPropertyName("colorIcon")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorIcon { get; set; }
+        public string ColorIcon { get; init; }
 
         /// <summary>
         /// Weak action hover color. Such as `allowClear` or Alert close button
@@ -1666,67 +2395,67 @@ namespace BlazorCssIsolation.Tokens
         [System.Text.Json.Serialization.JsonPropertyName("colorIconHover")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorIconHover { get; set; }
+        public string ColorIconHover { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorLink")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorLink { get; set; }
+        public string ColorLink { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorLinkHover")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorLinkHover { get; set; }
+        public string ColorLinkHover { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorLinkActive")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorLinkActive { get; set; }
+        public string ColorLinkActive { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorHighlight")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorHighlight { get; set; }
+        public string ColorHighlight { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("controlOutline")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ControlOutline { get; set; }
+        public string ControlOutline { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorWarningOutline")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorWarningOutline { get; set; }
+        public string ColorWarningOutline { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorErrorOutline")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorErrorOutline { get; set; }
+        public string ColorErrorOutline { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("fontSizeSM")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double FontSizeSM { get; set; }
+        public double FontSizeSM { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("fontSizeLG")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double FontSizeLG { get; set; }
+        public double FontSizeLG { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("fontSizeXL")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double FontSizeXL { get; set; }
+        public double FontSizeXL { get; init; }
 
         /// <summary>
         /// Operation icon in Select, Cascader, etc. icon fontSize. Normal is same as fontSizeSM
@@ -1735,37 +2464,37 @@ namespace BlazorCssIsolation.Tokens
         [System.Text.Json.Serialization.JsonPropertyName("fontSizeIcon")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double FontSizeIcon { get; set; }
+        public double FontSizeIcon { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("fontSizeHeading1")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double FontSizeHeading1 { get; set; }
+        public double FontSizeHeading1 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("fontSizeHeading2")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double FontSizeHeading2 { get; set; }
+        public double FontSizeHeading2 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("fontSizeHeading3")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double FontSizeHeading3 { get; set; }
+        public double FontSizeHeading3 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("fontSizeHeading4")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double FontSizeHeading4 { get; set; }
+        public double FontSizeHeading4 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("fontSizeHeading5")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double FontSizeHeading5 { get; set; }
+        public double FontSizeHeading5 { get; init; }
 
         /// <summary>
         /// For heading like h1, h2, h3 or option selected item
@@ -1774,235 +2503,235 @@ namespace BlazorCssIsolation.Tokens
         [System.Text.Json.Serialization.JsonPropertyName("fontWeightStrong")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double FontWeightStrong { get; set; }
+        public double FontWeightStrong { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("lineHeight")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double LineHeight { get; set; }
+        public double LineHeight { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("lineHeightLG")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double LineHeightLG { get; set; }
+        public double LineHeightLG { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("lineHeightSM")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double LineHeightSM { get; set; }
+        public double LineHeightSM { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("lineHeightHeading1")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double LineHeightHeading1 { get; set; }
+        public double LineHeightHeading1 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("lineHeightHeading2")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double LineHeightHeading2 { get; set; }
+        public double LineHeightHeading2 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("lineHeightHeading3")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double LineHeightHeading3 { get; set; }
+        public double LineHeightHeading3 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("lineHeightHeading4")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double LineHeightHeading4 { get; set; }
+        public double LineHeightHeading4 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("lineHeightHeading5")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double LineHeightHeading5 { get; set; }
+        public double LineHeightHeading5 { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("controlOutlineWidth")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double ControlOutlineWidth { get; set; }
+        public double ControlOutlineWidth { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("controlItemBgHover")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ControlItemBgHover { get; set; }
+        public string ControlItemBgHover { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("controlItemBgActive")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ControlItemBgActive { get; set; }
+        public string ControlItemBgActive { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("controlItemBgActiveHover")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ControlItemBgActiveHover { get; set; }
+        public string ControlItemBgActiveHover { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("controlInteractiveSize")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double ControlInteractiveSize { get; set; }
+        public double ControlInteractiveSize { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("controlItemBgActiveDisabled")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ControlItemBgActiveDisabled { get; set; }
+        public string ControlItemBgActiveDisabled { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("paddingXXS")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double PaddingXXS { get; set; }
+        public double PaddingXXS { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("paddingXS")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double PaddingXS { get; set; }
+        public double PaddingXS { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("paddingSM")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double PaddingSM { get; set; }
+        public double PaddingSM { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("padding")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double Padding { get; set; }
+        public double Padding { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("paddingMD")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double PaddingMD { get; set; }
+        public double PaddingMD { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("paddingLG")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double PaddingLG { get; set; }
+        public double PaddingLG { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("paddingXL")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double PaddingXL { get; set; }
+        public double PaddingXL { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("paddingContentHorizontalLG")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double PaddingContentHorizontalLG { get; set; }
+        public double PaddingContentHorizontalLG { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("paddingContentHorizontal")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double PaddingContentHorizontal { get; set; }
+        public double PaddingContentHorizontal { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("paddingContentHorizontalSM")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double PaddingContentHorizontalSM { get; set; }
+        public double PaddingContentHorizontalSM { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("paddingContentVerticalLG")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double PaddingContentVerticalLG { get; set; }
+        public double PaddingContentVerticalLG { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("paddingContentVertical")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double PaddingContentVertical { get; set; }
+        public double PaddingContentVertical { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("paddingContentVerticalSM")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double PaddingContentVerticalSM { get; set; }
+        public double PaddingContentVerticalSM { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("marginXXS")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double MarginXXS { get; set; }
+        public double MarginXXS { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("marginXS")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double MarginXS { get; set; }
+        public double MarginXS { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("marginSM")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double MarginSM { get; set; }
+        public double MarginSM { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("margin")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double Margin { get; set; }
+        public double Margin { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("marginMD")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double MarginMD { get; set; }
+        public double MarginMD { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("marginLG")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double MarginLG { get; set; }
+        public double MarginLG { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("marginXL")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double MarginXL { get; set; }
+        public double MarginXL { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("marginXXL")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double MarginXXL { get; set; }
+        public double MarginXXL { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("opacityLoading")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double OpacityLoading { get; set; }
+        public double OpacityLoading { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("boxShadow")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string BoxShadow { get; set; }
+        public string BoxShadow { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("boxShadowSecondary")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string BoxShadowSecondary { get; set; }
+        public string BoxShadowSecondary { get; init; }
 
         /// <summary>
         /// The **`text-decoration`** shorthand CSS property sets the appearance of decorative lines on text. It is a shorthand for `text-decoration-line`, `text-decoration-color`, `text-decoration-style`, and the newer `text-decoration-thickness` property.
@@ -2015,7 +2744,7 @@ namespace BlazorCssIsolation.Tokens
         [System.Text.Json.Serialization.JsonPropertyName("linkDecoration")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingDefault)]   
-        public string LinkDecoration { get; set; }
+        public string LinkDecoration { get; init; }
 
         /// <summary>
         /// The **`text-decoration`** shorthand CSS property sets the appearance of decorative lines on text. It is a shorthand for `text-decoration-line`, `text-decoration-color`, `text-decoration-style`, and the newer `text-decoration-thickness` property.
@@ -2028,7 +2757,7 @@ namespace BlazorCssIsolation.Tokens
         [System.Text.Json.Serialization.JsonPropertyName("linkHoverDecoration")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingDefault)]   
-        public string LinkHoverDecoration { get; set; }
+        public string LinkHoverDecoration { get; init; }
 
         /// <summary>
         /// The **`text-decoration`** shorthand CSS property sets the appearance of decorative lines on text. It is a shorthand for `text-decoration-line`, `text-decoration-color`, `text-decoration-style`, and the newer `text-decoration-thickness` property.
@@ -2041,127 +2770,127 @@ namespace BlazorCssIsolation.Tokens
         [System.Text.Json.Serialization.JsonPropertyName("linkFocusDecoration")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingDefault)]   
-        public string LinkFocusDecoration { get; set; }
+        public string LinkFocusDecoration { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("controlPaddingHorizontal")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double ControlPaddingHorizontal { get; set; }
+        public double ControlPaddingHorizontal { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("controlPaddingHorizontalSM")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double ControlPaddingHorizontalSM { get; set; }
+        public double ControlPaddingHorizontalSM { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("screenXS")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double ScreenXS { get; set; }
+        public double ScreenXS { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("screenXSMin")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double ScreenXSMin { get; set; }
+        public double ScreenXSMin { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("screenXSMax")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double ScreenXSMax { get; set; }
+        public double ScreenXSMax { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("screenSM")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double ScreenSM { get; set; }
+        public double ScreenSM { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("screenSMMin")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double ScreenSMMin { get; set; }
+        public double ScreenSMMin { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("screenSMMax")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double ScreenSMMax { get; set; }
+        public double ScreenSMMax { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("screenMD")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double ScreenMD { get; set; }
+        public double ScreenMD { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("screenMDMin")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double ScreenMDMin { get; set; }
+        public double ScreenMDMin { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("screenMDMax")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double ScreenMDMax { get; set; }
+        public double ScreenMDMax { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("screenLG")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double ScreenLG { get; set; }
+        public double ScreenLG { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("screenLGMin")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double ScreenLGMin { get; set; }
+        public double ScreenLGMin { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("screenLGMax")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double ScreenLGMax { get; set; }
+        public double ScreenLGMax { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("screenXL")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double ScreenXL { get; set; }
+        public double ScreenXL { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("screenXLMin")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double ScreenXLMin { get; set; }
+        public double ScreenXLMin { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("screenXLMax")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double ScreenXLMax { get; set; }
+        public double ScreenXLMax { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("screenXXL")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double ScreenXXL { get; set; }
+        public double ScreenXXL { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("screenXXLMin")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double ScreenXXLMin { get; set; }
+        public double ScreenXXLMin { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("screenXXLMax")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double ScreenXXLMax { get; set; }
+        public double ScreenXXLMax { get; init; }
 
         /// <summary>
         /// Used for DefaultButton, Switch which has default outline
@@ -2170,67 +2899,67 @@ namespace BlazorCssIsolation.Tokens
         [System.Text.Json.Serialization.JsonPropertyName("controlTmpOutline")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ControlTmpOutline { get; set; }
+        public string ControlTmpOutline { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("boxShadowPopoverArrow")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string BoxShadowPopoverArrow { get; set; }
+        public string BoxShadowPopoverArrow { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("boxShadowCard")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string BoxShadowCard { get; set; }
+        public string BoxShadowCard { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("boxShadowDrawerRight")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string BoxShadowDrawerRight { get; set; }
+        public string BoxShadowDrawerRight { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("boxShadowDrawerLeft")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string BoxShadowDrawerLeft { get; set; }
+        public string BoxShadowDrawerLeft { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("boxShadowDrawerUp")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string BoxShadowDrawerUp { get; set; }
+        public string BoxShadowDrawerUp { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("boxShadowDrawerDown")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string BoxShadowDrawerDown { get; set; }
+        public string BoxShadowDrawerDown { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("boxShadowTabsOverflowLeft")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string BoxShadowTabsOverflowLeft { get; set; }
+        public string BoxShadowTabsOverflowLeft { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("boxShadowTabsOverflowRight")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string BoxShadowTabsOverflowRight { get; set; }
+        public string BoxShadowTabsOverflowRight { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("boxShadowTabsOverflowTop")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string BoxShadowTabsOverflowTop { get; set; }
+        public string BoxShadowTabsOverflowTop { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("boxShadowTabsOverflowBottom")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string BoxShadowTabsOverflowBottom { get; set; }
+        public string BoxShadowTabsOverflowBottom { get; init; }
 
 
     }
