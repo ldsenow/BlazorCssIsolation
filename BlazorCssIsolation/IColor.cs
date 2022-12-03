@@ -4,8 +4,31 @@ namespace BlazorCssIsolation;
 
 //https://github.com/iamartyom/ColorHelper/blob/master/ColorHelper/Converter/ColorConverter.cs
 
+//TODO: Support alpha?
 public interface IColor : IConvertToHex, IConvertToHsv, IConvertToRgb, IConvertToHsl
 {
+    /// <summary>
+    /// Sets the alpha value on the current color.
+    /// </summary>
+    /// <param name="alpha">Valid between 0 and 1.</param>
+    /// <returns>A new color</returns>
+    IColor ApplyAlpha(double alpha);
+
+    /// <summary>
+    /// Lighten the color a given amount, from 0 to 100. Providing 100 will always return white.
+    /// </summary>
+    /// <param name="brightness">Valid between 1 and 100</param>
+    /// <returns>A new color</returns>
+    IColor Lighten(int brightness);
+
+    /// <summary>
+    /// Darken the color a given amount, from 0 to 100. Providing 100 will always return black.
+    /// </summary>
+    /// <param name="brightness">Valid between 1 and 100</param>
+    /// <returns>A new color</returns>
+    IColor Darken(int brightness);
+
+    string AsString();
 }
 
 public interface IConvertToHex
@@ -31,9 +54,11 @@ public interface IConvertToHsl
 /// <summary>
 /// Alpha is not supported at this stage
 /// </summary>
-public record HEX : IColor
+public partial record HEX : IColor
 {
-    private static readonly Regex HexRegex = new("^([a-fA-F0-9]{3,6})$", RegexOptions.Compiled);
+    [GeneratedRegex("^([a-fA-F0-9]{3,4,6,8})$", RegexOptions.Compiled)]
+    private static partial Regex HexPatternRegex();
+    private static readonly Regex HexRegex = HexPatternRegex();
 
     public HEX(string value)
     {
@@ -62,14 +87,9 @@ public record HEX : IColor
         var value = Convert.ToInt32(Value, 16);
 
         return new RGB(
-            (value >> 16) & 255,
-            (value >> 8) & 255,
+            value >> 16 & 255,
+            value >> 8 & 255,
             value & 255);
-    }
-
-    public override string ToString()
-    {
-        return $"#{Value}";
     }
 
     private static string Parse(string value)
@@ -78,13 +98,37 @@ public record HEX : IColor
 
         var v = value.StartsWith("#") ? value[1..] : value;
 
-        if (!HexRegex.IsMatch(v)) throw new ArgumentException("Only the three-value and six-value syntax are supported");
+        if (!HexRegex.IsMatch(v))
+            throw new ArgumentException("Only the three-value and six-value syntax are supported");
 
-        v = v.Length == 3
-            ? $"{v[0]}{v[0]}{v[1]}{v[1]}{v[2]}{v[2]}"
-            : v;
+        v = v.Length switch
+        {
+            3 => $"{v[0]}{v[0]}{v[1]}{v[1]}{v[2]}{v[2]}",
+            4 => $"{v[0]}{v[0]}{v[1]}{v[1]}{v[2]}{v[2]}{v[3]}{v[3]}",
+            _ => v,
+        };
 
-        return v.ToUpperInvariant();
+        return v.ToLowerInvariant();
+    }
+
+    public IColor ApplyAlpha(double alpha)
+    {
+        throw new NotImplementedException();
+    }
+
+    public IColor Lighten(int brightness)
+    {
+        throw new NotImplementedException();
+    }
+
+    public IColor Darken(int brightness)
+    {
+        throw new NotImplementedException();
+    }
+
+    public string AsString()
+    {
+        return $"#{Value}";
     }
 }
 
@@ -96,24 +140,43 @@ public record RGB : IColor
     /// <param name="r">Red value from 0 to 255</param>
     /// <param name="g">Green value from 0 to 255</param>
     /// <param name="b">Blue value from 0 to 255</param>
-    public RGB(int r, int g, int b)
+    /// <param name="a">Alpha value from 0 to 1</param>
+    public RGB(int r, int g, int b, double? a = default)
     {
         if (r < 0 || r > 255) throw new ArgumentException(nameof(r));
         if (g < 0 || g > 255) throw new ArgumentException(nameof(g));
         if (b < 0 || b > 255) throw new ArgumentException(nameof(b));
+        if (a < 0 || a > 1) throw new ArgumentException(nameof(a));
 
         R = r;
         G = g;
         B = b;
+        A = a;
     }
 
     public int R { get; }
     public int G { get; }
     public int B { get; }
+    public double? A { get; }
+
+    public IColor Darken(int brightness)
+    {
+        throw new NotImplementedException();
+    }
+
+    public IColor Lighten(int brightness)
+    {
+        throw new NotImplementedException();
+    }
+
+    public IColor ApplyAlpha(double alpha)
+    {
+        throw new NotImplementedException();
+    }
 
     public HEX ToHEX()
     {
-        return new HEX($"{R:X2}{G:X2}{B:X2}");
+        return new HEX($"{R:x2}{G:x2}{B:x2}");
     }
 
     public HSL ToHSL()
@@ -182,7 +245,7 @@ public record RGB : IColor
         return this;
     }
 
-    public override string ToString()
+    public string AsString()
     {
         return $"rgb({R}, {G}, {B})";
     }
@@ -210,6 +273,21 @@ public record HSV : IColor
     public int H { get; }
     public int S { get; }
     public int V { get; }
+
+    public IColor Darken(int brightness)
+    {
+        throw new NotImplementedException();
+    }
+
+    public IColor Lighten(int brightness)
+    {
+        throw new NotImplementedException();
+    }
+
+    public IColor ApplyAlpha(double alpha)
+    {
+        throw new NotImplementedException();
+    }
 
     public HEX ToHEX()
     {
@@ -239,7 +317,7 @@ public record HSV : IColor
         return ToHSL().ToRGB();
     }
 
-    public override string ToString()
+    public string AsString()
     {
         return $"hsl({H} {S}% {V}%)";
     }
@@ -310,7 +388,22 @@ public record HSL : IColor
         return new RGB((int)Math.Round(r * 255), (int)Math.Round(g * 255), (int)Math.Round(b * 255));
     }
 
-    public override string ToString()
+    public IColor ApplyAlpha(double alpha)
+    {
+        throw new NotImplementedException();
+    }
+
+    public IColor Lighten(int brightness)
+    {
+        throw new NotImplementedException();
+    }
+
+    public IColor Darken(int brightness)
+    {
+        throw new NotImplementedException();
+    }
+
+    public string AsString()
     {
         return $"hsv({H} {S}% {L}%)";
     }

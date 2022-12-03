@@ -8,7 +8,7 @@
     "generate": "node ./main.js"
   },
   "dependencies": {
-    "antd": "^5.0.0",
+    "antd": "^5.0.1",
     "ts-json-schema-generator": "^1.1.2"
   },
   "devDependencies": {

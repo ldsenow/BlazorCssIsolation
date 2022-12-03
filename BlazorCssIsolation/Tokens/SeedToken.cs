@@ -1,0 +1,51 @@
+﻿namespace BlazorCssIsolation.Tokens;
+
+public partial record SeedToken : TokenBase
+{
+    //TODO: find a way to extract these default seed from TS if possible
+    //e.g. export from seed.ts as json with the values
+    public static readonly SeedToken Default = new(
+        blue: "#1677ff",
+        borderRadius: 6,
+        colorBgBase: "",
+        colorError: "#f5222d",
+        colorInfo: "#1677ff",
+        colorPrimary: "#1677ff",
+        colorSuccess: "#52c41a",
+        colorTextBase: "",
+        colorWarning: "#faad14",
+        controlHeight: 32,
+        cyan: "#13c2c2",
+        fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'",
+        fontSize: 14,
+        geekblue: "#2f54eb",
+        gold: "#faad14",
+        green: "#52c41a",
+        lime: "#a0d911",
+        lineType: "solid",
+        lineWidth: 1,
+        magenta: "#eb2F96",
+        motionBase: 0,
+        motionEaseInBack: "cubic-bezier(0.71, -0.46, 0.88, 0.6)",
+        motionEaseInOut: "cubic-bezier(0.645, 0.045, 0.355, 1)",
+        motionEaseInOutCirc: "cubic-bezier(0.78, 0.14, 0.15, 0.86)",
+        motionEaseInQuint: "cubic-bezier(0.645, 0.045, 0.355, 1)",
+        motionEaseOut: "cubic-bezier(0.215, 0.61, 0.355, 1)",
+        motionEaseOutBack: "cubic-bezier(0.12, 0.4, 0.29, 1.46)",
+        motionEaseOutCirc: "cubic-bezier(0.08, 0.82, 0.17, 1)",
+        motionEaseOutQuint: "cubic-bezier(0.23, 1, 0.32, 1)",
+        motionUnit: 0.1,
+        opacityImage: 1,
+        orange: "#fa8c16",
+        pink: "#eb2f96",
+        purple: "#722ed1",
+        red: "#f5222d",
+        sizePopupArrow: 16,
+        sizeStep: 4,
+        sizeUnit: 4,
+        volcano: "#fa541c",
+        wireframe: false,
+        yellow: "#fadb14",
+        zIndexBase: 0,
+        zIndexPopupBase: 1000);
+}

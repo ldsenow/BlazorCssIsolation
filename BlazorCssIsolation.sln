@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorCssIsolation", "Blazo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp", "BlazorApp\BlazorApp.csproj", "{26108B2F-DF55-4098-82B1-A90F25F73C8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorTokensGenerator", "BlazorTokensGenerator\BlazorTokensGenerator.csproj", "{E520A3B7-0F9F-4714-ABC0-C90DAE142A41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorTokensGenerator", "BlazorTokensGenerator\BlazorTokensGenerator.csproj", "{E520A3B7-0F9F-4714-ABC0-C90DAE142A41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorCssIsolation.Tests", "BlazorCssIsolation.Tests\BlazorCssIsolation.Tests.csproj", "{87848011-E0A1-4464-A94E-B8D43909FF9E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{E520A3B7-0F9F-4714-ABC0-C90DAE142A41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E520A3B7-0F9F-4714-ABC0-C90DAE142A41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E520A3B7-0F9F-4714-ABC0-C90DAE142A41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87848011-E0A1-4464-A94E-B8D43909FF9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87848011-E0A1-4464-A94E-B8D43909FF9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87848011-E0A1-4464-A94E-B8D43909FF9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87848011-E0A1-4464-A94E-B8D43909FF9E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -21,7 +21,8 @@
 
 	<ItemGroup>
 	  <Folder Include="Generated\" />
-	  <Folder Include="Themes\Default\" />
+	  <Folder Include="Themes\Algorithms\" />
+	  <Folder Include="Themes\Decorators\" />
 	</ItemGroup>
 
 </Project>

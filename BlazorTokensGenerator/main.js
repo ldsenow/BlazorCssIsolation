@@ -2,6 +2,7 @@ const generateJsonSchema = require("./generateJsonSchema");
 const sanitizeTokens = require("./sanitizeTokens");
 
 const types = [
+  'PresetColorType',
   "SeedToken",
   "ColorPalettes",
   "ColorMapToken",
