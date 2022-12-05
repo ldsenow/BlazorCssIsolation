@@ -1,0 +1,3 @@
+[submodule "BlazorTokensGenerator/ant-design"]
+	path = BlazorTokensGenerator/ant-design
+	url = https://github.com/ant-design/ant-design.git

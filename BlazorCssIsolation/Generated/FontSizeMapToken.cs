@@ -10,11 +10,11 @@ namespace BlazorCssIsolation.Tokens
     #pragma warning disable // Disable all warnings
 
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.8.0.0 (Newtonsoft.Json v9.0.0.0)")]
-    public partial record HeightMapToken
+    public partial record FontSizeMapToken
     {
         [System.Text.Json.Serialization.JsonConstructor]
 
-        public HeightMapToken()
+        public FontSizeMapToken()
 
 
         {

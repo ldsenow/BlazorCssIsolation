@@ -81,10 +81,7 @@ public class DefaultThemeTokenGenerator : IThemeTokenGenerator
                 var colorBgBase = new HEX(x.bgBaseColor ?? "#fff");
                 var colorTextBase = new HEX(x.textBaseColor ?? "#000");
 
-                return new NeutralColorMapToken(
-                    colorBgBase: colorBgBase.AsString(),
-                    colorTextBase: colorTextBase.AsString(),
-
+                return new ColorNeutralMapToken(
                     colorText: colorTextBase.ApplyAlpha(0.88).AsString(),
                     colorTextSecondary: colorTextBase.ApplyAlpha(0.65).AsString(),
                     colorTextTertiary: colorTextBase.ApplyAlpha(0.45).AsString(),

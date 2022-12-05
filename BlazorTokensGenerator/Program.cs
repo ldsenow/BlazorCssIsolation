@@ -6,7 +6,12 @@ class Program
     public static async Task Main(string[] args)
     {
         var baseInputFolder = "../../../schemas";
+        //var baseInputFolder = "../../../generated";
         var baseOutputFolder = "../../../../BlazorCssIsolation/Generated";
+
+        //Delete existing files first
+        Directory.GetFiles(baseOutputFolder, "*.cs").ToList().ForEach(File.Delete);
+
         var jsonFiles = Directory.GetFiles(baseInputFolder, "*.json");
         foreach (var f in jsonFiles)
         {

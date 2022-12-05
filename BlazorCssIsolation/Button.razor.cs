@@ -1,6 +1,5 @@
 using BlazorCssIsolation.Themes;
 using Microsoft.AspNetCore.Components;
-using System.Text;
 
 namespace BlazorCssIsolation;
 

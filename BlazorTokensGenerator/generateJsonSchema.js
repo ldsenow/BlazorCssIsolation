@@ -1,15 +1,15 @@
-const tsj = require("ts-json-schema-generator");
-const fs = require("fs");
+import tsj from "ts-json-schema-generator";
+import { writeFileSync } from "fs";
 
-module.exports = function (outputPath, type) {
+export default function (outputPath, type) {
   /** @type {import('ts-json-schema-generator/dist/src/Config').Config} */
   const config = {
-    path: "./node_modules/antd/es/theme/interface.d.ts",
+    path: "./node_modules/antd/es/theme/interface/index.d.ts",
     tsconfig: "./tsconfig.json",
     type: type, // Or <type-name> if you want to generate schema for that one type only
   };
 
   const schema = tsj.createGenerator(config).createSchema(config.type);
   const schemaString = JSON.stringify(schema, null, 2);
-  fs.writeFileSync(outputPath, schemaString);
-};
+  writeFileSync(outputPath, schemaString);
+}

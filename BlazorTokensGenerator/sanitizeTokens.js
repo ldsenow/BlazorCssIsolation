@@ -1,6 +1,6 @@
-const { writeFileSync, readFileSync } = require("fs");
+import { writeFileSync, readFileSync } from "fs";
 
-module.exports = function (fileToProcess) {
+export default function (fileToProcess) {
   const contents = readFileSync(fileToProcess, { encoding: "utf-8" });
 
   const replacedContents = contents.replace(

@@ -14,22 +14,12 @@ namespace BlazorCssIsolation.Tokens
     {
         [System.Text.Json.Serialization.JsonConstructor]
 
-        public AliasToken(string @blue, string @blue1, string @blue10, string @blue2, string @blue3, string @blue4, string @blue5, string @blue6, string @blue7, string @blue8, string @blue9, double @borderRadius, double @borderRadiusLG, double @borderRadiusOuter, double @borderRadiusSM, double @borderRadiusXS, string @boxShadow, string @boxShadowCard, string @boxShadowDrawerDown, string @boxShadowDrawerLeft, string @boxShadowDrawerRight, string @boxShadowDrawerUp, string @boxShadowPopoverArrow, string @boxShadowSecondary, string @boxShadowTabsOverflowBottom, string @boxShadowTabsOverflowLeft, string @boxShadowTabsOverflowRight, string @boxShadowTabsOverflowTop, string @colorBgBase, string @colorBgContainer, string @colorBgContainerDisabled, string @colorBgElevated, string @colorBgLayout, string @colorBgMask, string @colorBgSpotlight, string @colorBgTextActive, string @colorBgTextHover, string @colorBorder, string @colorBorderBg, string @colorBorderSecondary, string @colorError, string @colorErrorActive, string @colorErrorBg, string @colorErrorBgHover, string @colorErrorBorder, string @colorErrorBorderHover, string @colorErrorHover, string @colorErrorOutline, string @colorErrorText, string @colorErrorTextActive, string @colorErrorTextHover, string @colorFill, string @colorFillAlter, string @colorFillContent, string @colorFillContentHover, string @colorFillQuaternary, string @colorFillSecondary, string @colorFillTertiary, string @colorHighlight, string @colorIcon, string @colorIconHover, string @colorInfo, string @colorInfoActive, string @colorInfoBg, string @colorInfoBgHover, string @colorInfoBorder, string @colorInfoBorderHover, string @colorInfoHover, string @colorInfoText, string @colorInfoTextActive, string @colorInfoTextHover, string @colorLink, string @colorLinkActive, string @colorLinkHover, string @colorPrimary, string @colorPrimaryActive, string @colorPrimaryBg, string @colorPrimaryBgHover, string @colorPrimaryBorder, string @colorPrimaryBorderHover, string @colorPrimaryHover, string @colorPrimaryText, string @colorPrimaryTextActive, string @colorPrimaryTextHover, string @colorSplit, string @colorSuccess, string @colorSuccessActive, string @colorSuccessBg, string @colorSuccessBgHover, string @colorSuccessBorder, string @colorSuccessBorderHover, string @colorSuccessHover, string @colorSuccessText, string @colorSuccessTextActive, string @colorSuccessTextHover, string @colorText, string @colorTextBase, string @colorTextDescription, string @colorTextDisabled, string @colorTextHeading, string @colorTextLabel, string @colorTextLightSolid, string @colorTextPlaceholder, string @colorTextQuaternary, string @colorTextSecondary, string @colorTextTertiary, string @colorWarning, string @colorWarningActive, string @colorWarningBg, string @colorWarningBgHover, string @colorWarningBorder, string @colorWarningBorderHover, string @colorWarningHover, string @colorWarningOutline, string @colorWarningText, string @colorWarningTextActive, string @colorWarningTextHover, string @colorWhite, double @controlHeight, double @controlHeightLG, double @controlHeightSM, double @controlHeightXS, double @controlInteractiveSize, string @controlItemBgActive, string @controlItemBgActiveDisabled, string @controlItemBgActiveHover, string @controlItemBgHover, string @controlOutline, double @controlOutlineWidth, double @controlPaddingHorizontal, double @controlPaddingHorizontalSM, string @controlTmpOutline, string @cyan, string @cyan1, string @cyan10, string @cyan2, string @cyan3, string @cyan4, string @cyan5, string @cyan6, string @cyan7, string @cyan8, string @cyan9, string @fontFamily, double @fontSize, double @fontSizeHeading1, double @fontSizeHeading2, double @fontSizeHeading3, double @fontSizeHeading4, double @fontSizeHeading5, double @fontSizeIcon, double @fontSizeLG, System.Collections.Generic.ICollection<double> @fontSizes, double @fontSizeSM, double @fontSizeXL, double @fontWeightStrong, string @geekblue, string @geekblue1, string @geekblue10, string @geekblue2, string @geekblue3, string @geekblue4, string @geekblue5, string @geekblue6, string @geekblue7, string @geekblue8, string @geekblue9, string @gold, string @gold1, string @gold10, string @gold2, string @gold3, string @gold4, string @gold5, string @gold6, string @gold7, string @gold8, string @gold9, string @green, string @green1, string @green10, string @green2, string @green3, string @green4, string @green5, string @green6, string @green7, string @green8, string @green9, string @lime, string @lime1, string @lime10, string @lime2, string @lime3, string @lime4, string @lime5, string @lime6, string @lime7, string @lime8, string @lime9, double @lineHeight, double @lineHeightHeading1, double @lineHeightHeading2, double @lineHeightHeading3, double @lineHeightHeading4, double @lineHeightHeading5, double @lineHeightLG, System.Collections.Generic.ICollection<double> @lineHeights, double @lineHeightSM, string @lineType, double @lineWidth, double @lineWidthBold, string @linkDecoration, string @linkFocusDecoration, string @linkHoverDecoration, string @magenta, string @magenta1, string @magenta10, string @magenta2, string @magenta3, string @magenta4, string @magenta5, string @magenta6, string @magenta7, string @magenta8, string @magenta9, double @margin, double @marginLG, double @marginMD, double @marginSM, double @marginXL, double @marginXS, double @marginXXL, double @marginXXS, double @motionBase, string @motionDurationFast, string @motionDurationMid, string @motionDurationSlow, string @motionEaseInBack, string @motionEaseInOut, string @motionEaseInOutCirc, string @motionEaseInQuint, string @motionEaseOut, string @motionEaseOutBack, string @motionEaseOutCirc, string @motionEaseOutQuint, double @motionUnit, double @opacityImage, double @opacityLoading, string @orange, string @orange1, string @orange10, string @orange2, string @orange3, string @orange4, string @orange5, string @orange6, string @orange7, string @orange8, string @orange9, double @padding, double @paddingContentHorizontal, double @paddingContentHorizontalLG, double @paddingContentHorizontalSM, double @paddingContentVertical, double @paddingContentVerticalLG, double @paddingContentVerticalSM, double @paddingLG, double @paddingMD, double @paddingSM, double @paddingXL, double @paddingXS, double @paddingXXS, string @pink, string @pink1, string @pink10, string @pink2, string @pink3, string @pink4, string @pink5, string @pink6, string @pink7, string @pink8, string @pink9, string @purple, string @purple1, string @purple10, string @purple2, string @purple3, string @purple4, string @purple5, string @purple6, string @purple7, string @purple8, string @purple9, string @red, string @red1, string @red10, string @red2, string @red3, string @red4, string @red5, string @red6, string @red7, string @red8, string @red9, double @screenLG, double @screenLGMax, double @screenLGMin, double @screenMD, double @screenMDMax, double @screenMDMin, double @screenSM, double @screenSMMax, double @screenSMMin, double @screenXL, double @screenXLMax, double @screenXLMin, double @screenXS, double @screenXSMax, double @screenXSMin, double @screenXXL, double @screenXXLMax, double @screenXXLMin, double @size, double @sizeLG, double @sizeMD, double @sizeMS, double @sizePopupArrow, double @sizeSM, double @sizeStep, double @sizeUnit, double @sizeXL, double @sizeXS, double @sizeXXL, double @sizeXXS, string @volcano, string @volcano1, string @volcano10, string @volcano2, string @volcano3, string @volcano4, string @volcano5, string @volcano6, string @volcano7, string @volcano8, string @volcano9, bool @wireframe, string @yellow, string @yellow1, string @yellow10, string @yellow2, string @yellow3, string @yellow4, string @yellow5, string @yellow6, string @yellow7, string @yellow8, string @yellow9, double @zIndexBase, double @zIndexPopupBase)
+        public AliasToken(string @blue, string @blue1, string @blue10, string @blue2, string @blue3, string @blue4, string @blue5, string @blue6, string @blue7, string @blue8, string @blue9, double @borderRadius, double @borderRadiusLG, double @borderRadiusSM, double @borderRadiusXS, string @boxShadow, string @boxShadowSecondary, string @colorBgBase, string @colorBgContainer, string @colorBgContainerDisabled, string @colorBgElevated, string @colorBgLayout, string @colorBgMask, string @colorBgSpotlight, string @colorBgTextActive, string @colorBgTextHover, string @colorBorder, string @colorBorderBg, string @colorBorderSecondary, string @colorError, string @colorErrorActive, string @colorErrorBg, string @colorErrorBgHover, string @colorErrorBorder, string @colorErrorBorderHover, string @colorErrorHover, string @colorErrorOutline, string @colorErrorText, string @colorErrorTextActive, string @colorErrorTextHover, string @colorFill, string @colorFillAlter, string @colorFillContent, string @colorFillContentHover, string @colorFillQuaternary, string @colorFillSecondary, string @colorFillTertiary, string @colorHighlight, string @colorIcon, string @colorIconHover, string @colorInfo, string @colorInfoActive, string @colorInfoBg, string @colorInfoBgHover, string @colorInfoBorder, string @colorInfoBorderHover, string @colorInfoHover, string @colorInfoText, string @colorInfoTextActive, string @colorInfoTextHover, string @colorLink, string @colorLinkActive, string @colorLinkHover, string @colorPrimary, string @colorPrimaryActive, string @colorPrimaryBg, string @colorPrimaryBgHover, string @colorPrimaryBorder, string @colorPrimaryBorderHover, string @colorPrimaryHover, string @colorPrimaryText, string @colorPrimaryTextActive, string @colorPrimaryTextHover, string @colorSplit, string @colorSuccess, string @colorSuccessActive, string @colorSuccessBg, string @colorSuccessBgHover, string @colorSuccessBorder, string @colorSuccessBorderHover, string @colorSuccessHover, string @colorSuccessText, string @colorSuccessTextActive, string @colorSuccessTextHover, string @colorText, string @colorTextBase, string @colorTextDescription, string @colorTextDisabled, string @colorTextHeading, string @colorTextLabel, string @colorTextLightSolid, string @colorTextPlaceholder, string @colorTextQuaternary, string @colorTextSecondary, string @colorTextTertiary, string @colorWarning, string @colorWarningActive, string @colorWarningBg, string @colorWarningBgHover, string @colorWarningBorder, string @colorWarningBorderHover, string @colorWarningHover, string @colorWarningOutline, string @colorWarningText, string @colorWarningTextActive, string @colorWarningTextHover, string @colorWhite, double @controlHeight, double @controlInteractiveSize, string @controlItemBgActive, string @controlItemBgActiveDisabled, string @controlItemBgActiveHover, string @controlItemBgHover, string @controlOutline, double @controlOutlineWidth, double @controlPaddingHorizontal, double @controlPaddingHorizontalSM, string @controlTmpOutline, string @cyan, string @cyan1, string @cyan10, string @cyan2, string @cyan3, string @cyan4, string @cyan5, string @cyan6, string @cyan7, string @cyan8, string @cyan9, string @fontFamily, double @fontSize, double @fontSizeHeading1, double @fontSizeHeading2, double @fontSizeHeading3, double @fontSizeHeading4, double @fontSizeHeading5, double @fontSizeIcon, double @fontSizeLG, double @fontSizeSM, double @fontSizeXL, double @fontWeightStrong, string @geekblue, string @geekblue1, string @geekblue10, string @geekblue2, string @geekblue3, string @geekblue4, string @geekblue5, string @geekblue6, string @geekblue7, string @geekblue8, string @geekblue9, string @gold, string @gold1, string @gold10, string @gold2, string @gold3, string @gold4, string @gold5, string @gold6, string @gold7, string @gold8, string @gold9, string @green, string @green1, string @green10, string @green2, string @green3, string @green4, string @green5, string @green6, string @green7, string @green8, string @green9, string @lime, string @lime1, string @lime10, string @lime2, string @lime3, string @lime4, string @lime5, string @lime6, string @lime7, string @lime8, string @lime9, double @lineHeight, double @lineHeightHeading1, double @lineHeightHeading2, double @lineHeightHeading3, double @lineHeightHeading4, double @lineHeightHeading5, double @lineHeightLG, double @lineHeightSM, string @lineType, double @lineWidth, double @lineWidthBold, string @linkDecoration, string @linkFocusDecoration, string @linkHoverDecoration, string @magenta, string @magenta1, string @magenta10, string @magenta2, string @magenta3, string @magenta4, string @magenta5, string @magenta6, string @magenta7, string @magenta8, string @magenta9, double @margin, double @marginLG, double @marginMD, double @marginSM, double @marginXL, double @marginXS, double @marginXXL, double @marginXXS, string @motionDurationFast, string @motionDurationMid, string @motionDurationSlow, double @motionUnit, double @opacityLoading, string @orange, string @orange1, string @orange10, string @orange2, string @orange3, string @orange4, string @orange5, string @orange6, string @orange7, string @orange8, string @orange9, double @padding, double @paddingContentHorizontal, double @paddingContentHorizontalLG, double @paddingContentHorizontalSM, double @paddingContentVertical, double @paddingContentVerticalLG, double @paddingContentVerticalSM, double @paddingLG, double @paddingMD, double @paddingSM, double @paddingXL, double @paddingXS, double @paddingXXS, string @pink, string @pink1, string @pink10, string @pink2, string @pink3, string @pink4, string @pink5, string @pink6, string @pink7, string @pink8, string @pink9, string @purple, string @purple1, string @purple10, string @purple2, string @purple3, string @purple4, string @purple5, string @purple6, string @purple7, string @purple8, string @purple9, string @red, string @red1, string @red10, string @red2, string @red3, string @red4, string @red5, string @red6, string @red7, string @red8, string @red9, double @screenLG, double @screenLGMax, double @screenLGMin, double @screenMD, double @screenMDMax, double @screenMDMin, double @screenSM, double @screenSMMax, double @screenSMMin, double @screenXL, double @screenXLMax, double @screenXLMin, double @screenXS, double @screenXSMax, double @screenXSMin, double @screenXXL, double @screenXXLMax, double @screenXXLMin, double @size, double @sizeLG, double @sizeMD, double @sizeMS, double @sizeSM, double @sizeStep, double @sizeUnit, double @sizeXL, double @sizeXS, double @sizeXXL, double @sizeXXS, string @volcano, string @volcano1, string @volcano10, string @volcano2, string @volcano3, string @volcano4, string @volcano5, string @volcano6, string @volcano7, string @volcano8, string @volcano9, bool @wireframe, string @yellow, string @yellow1, string @yellow10, string @yellow2, string @yellow3, string @yellow4, string @yellow5, string @yellow6, string @yellow7, string @yellow8, string @yellow9, double @zIndexBase, double @zIndexPopupBase)
 
 
         {
 
-            this.FontSizes = @fontSizes;
-
-            this.LineHeights = @lineHeights;
-
             this.LineWidthBold = @lineWidthBold;
-
-            this.MotionDurationFast = @motionDurationFast;
-
-            this.MotionDurationMid = @motionDurationMid;
-
-            this.MotionDurationSlow = @motionDurationSlow;
 
             this.BorderRadiusXS = @borderRadiusXS;
 
@@ -37,13 +27,11 @@ namespace BlazorCssIsolation.Tokens
 
             this.BorderRadiusLG = @borderRadiusLG;
 
-            this.BorderRadiusOuter = @borderRadiusOuter;
+            this.MotionDurationFast = @motionDurationFast;
 
-            this.ControlHeightXS = @controlHeightXS;
+            this.MotionDurationMid = @motionDurationMid;
 
-            this.ControlHeightSM = @controlHeightSM;
-
-            this.ControlHeightLG = @controlHeightLG;
+            this.MotionDurationSlow = @motionDurationSlow;
 
             this.SizeXXL = @sizeXXL;
 
@@ -62,118 +50,6 @@ namespace BlazorCssIsolation.Tokens
             this.SizeXS = @sizeXS;
 
             this.SizeXXS = @sizeXXS;
-
-            this.ColorTextBase = @colorTextBase;
-
-            this.ColorBgBase = @colorBgBase;
-
-            this.ColorText = @colorText;
-
-            this.ColorTextSecondary = @colorTextSecondary;
-
-            this.ColorTextTertiary = @colorTextTertiary;
-
-            this.ColorTextQuaternary = @colorTextQuaternary;
-
-            this.ColorFill = @colorFill;
-
-            this.ColorFillSecondary = @colorFillSecondary;
-
-            this.ColorFillTertiary = @colorFillTertiary;
-
-            this.ColorFillQuaternary = @colorFillQuaternary;
-
-            this.ColorBgContainer = @colorBgContainer;
-
-            this.ColorBgElevated = @colorBgElevated;
-
-            this.ColorBgLayout = @colorBgLayout;
-
-            this.ColorBgSpotlight = @colorBgSpotlight;
-
-            this.ColorBorder = @colorBorder;
-
-            this.ColorBorderSecondary = @colorBorderSecondary;
-
-            this.ColorPrimaryBg = @colorPrimaryBg;
-
-            this.ColorPrimaryBgHover = @colorPrimaryBgHover;
-
-            this.ColorPrimaryBorder = @colorPrimaryBorder;
-
-            this.ColorPrimaryBorderHover = @colorPrimaryBorderHover;
-
-            this.ColorPrimaryHover = @colorPrimaryHover;
-
-            this.ColorPrimary = @colorPrimary;
-
-            this.ColorPrimaryActive = @colorPrimaryActive;
-
-            this.ColorPrimaryTextHover = @colorPrimaryTextHover;
-
-            this.ColorPrimaryText = @colorPrimaryText;
-
-            this.ColorPrimaryTextActive = @colorPrimaryTextActive;
-
-            this.ColorSuccessBg = @colorSuccessBg;
-
-            this.ColorSuccessBgHover = @colorSuccessBgHover;
-
-            this.ColorSuccessBorder = @colorSuccessBorder;
-
-            this.ColorSuccessBorderHover = @colorSuccessBorderHover;
-
-            this.ColorSuccessHover = @colorSuccessHover;
-
-            this.ColorSuccess = @colorSuccess;
-
-            this.ColorSuccessActive = @colorSuccessActive;
-
-            this.ColorSuccessTextHover = @colorSuccessTextHover;
-
-            this.ColorSuccessText = @colorSuccessText;
-
-            this.ColorSuccessTextActive = @colorSuccessTextActive;
-
-            this.ColorWarningBg = @colorWarningBg;
-
-            this.ColorWarningBgHover = @colorWarningBgHover;
-
-            this.ColorWarningBorder = @colorWarningBorder;
-
-            this.ColorWarningBorderHover = @colorWarningBorderHover;
-
-            this.ColorWarningHover = @colorWarningHover;
-
-            this.ColorWarning = @colorWarning;
-
-            this.ColorWarningActive = @colorWarningActive;
-
-            this.ColorWarningTextHover = @colorWarningTextHover;
-
-            this.ColorWarningText = @colorWarningText;
-
-            this.ColorWarningTextActive = @colorWarningTextActive;
-
-            this.ColorErrorBg = @colorErrorBg;
-
-            this.ColorErrorBgHover = @colorErrorBgHover;
-
-            this.ColorErrorBorder = @colorErrorBorder;
-
-            this.ColorErrorBorderHover = @colorErrorBorderHover;
-
-            this.ColorErrorHover = @colorErrorHover;
-
-            this.ColorError = @colorError;
-
-            this.ColorErrorActive = @colorErrorActive;
-
-            this.ColorErrorTextHover = @colorErrorTextHover;
-
-            this.ColorErrorText = @colorErrorText;
-
-            this.ColorErrorTextActive = @colorErrorTextActive;
 
             this.ColorInfoBg = @colorInfoBg;
 
@@ -195,9 +71,117 @@ namespace BlazorCssIsolation.Tokens
 
             this.ColorInfoTextActive = @colorInfoTextActive;
 
-            this.ColorBgMask = @colorBgMask;
+            this.ColorErrorBg = @colorErrorBg;
+
+            this.ColorErrorBgHover = @colorErrorBgHover;
+
+            this.ColorErrorBorder = @colorErrorBorder;
+
+            this.ColorErrorBorderHover = @colorErrorBorderHover;
+
+            this.ColorErrorHover = @colorErrorHover;
+
+            this.ColorError = @colorError;
+
+            this.ColorErrorActive = @colorErrorActive;
+
+            this.ColorErrorTextHover = @colorErrorTextHover;
+
+            this.ColorErrorText = @colorErrorText;
+
+            this.ColorErrorTextActive = @colorErrorTextActive;
+
+            this.ColorWarningBg = @colorWarningBg;
+
+            this.ColorWarningBgHover = @colorWarningBgHover;
+
+            this.ColorWarningBorder = @colorWarningBorder;
+
+            this.ColorWarningBorderHover = @colorWarningBorderHover;
+
+            this.ColorWarningHover = @colorWarningHover;
+
+            this.ColorWarning = @colorWarning;
+
+            this.ColorWarningActive = @colorWarningActive;
+
+            this.ColorWarningTextHover = @colorWarningTextHover;
+
+            this.ColorWarningText = @colorWarningText;
+
+            this.ColorWarningTextActive = @colorWarningTextActive;
+
+            this.ColorSuccessBg = @colorSuccessBg;
+
+            this.ColorSuccessBgHover = @colorSuccessBgHover;
+
+            this.ColorSuccessBorder = @colorSuccessBorder;
+
+            this.ColorSuccessBorderHover = @colorSuccessBorderHover;
+
+            this.ColorSuccessHover = @colorSuccessHover;
+
+            this.ColorSuccess = @colorSuccess;
+
+            this.ColorSuccessActive = @colorSuccessActive;
+
+            this.ColorSuccessTextHover = @colorSuccessTextHover;
+
+            this.ColorSuccessText = @colorSuccessText;
+
+            this.ColorSuccessTextActive = @colorSuccessTextActive;
+
+            this.ColorPrimary = @colorPrimary;
+
+            this.ColorPrimaryBg = @colorPrimaryBg;
+
+            this.ColorPrimaryBgHover = @colorPrimaryBgHover;
+
+            this.ColorPrimaryBorder = @colorPrimaryBorder;
+
+            this.ColorPrimaryBorderHover = @colorPrimaryBorderHover;
+
+            this.ColorPrimaryHover = @colorPrimaryHover;
+
+            this.ColorPrimaryActive = @colorPrimaryActive;
+
+            this.ColorPrimaryTextHover = @colorPrimaryTextHover;
+
+            this.ColorPrimaryText = @colorPrimaryText;
+
+            this.ColorPrimaryTextActive = @colorPrimaryTextActive;
+
+            this.ColorText = @colorText;
+
+            this.ColorTextSecondary = @colorTextSecondary;
+
+            this.ColorTextTertiary = @colorTextTertiary;
+
+            this.ColorTextQuaternary = @colorTextQuaternary;
+
+            this.ColorBorder = @colorBorder;
+
+            this.ColorBorderSecondary = @colorBorderSecondary;
+
+            this.ColorFill = @colorFill;
+
+            this.ColorFillSecondary = @colorFillSecondary;
+
+            this.ColorFillTertiary = @colorFillTertiary;
+
+            this.ColorFillQuaternary = @colorFillQuaternary;
+
+            this.ColorBgLayout = @colorBgLayout;
+
+            this.ColorBgContainer = @colorBgContainer;
+
+            this.ColorBgElevated = @colorBgElevated;
+
+            this.ColorBgSpotlight = @colorBgSpotlight;
 
             this.ColorWhite = @colorWhite;
+
+            this.ColorBgMask = @colorBgMask;
 
             this.Blue1 = @blue1;
 
@@ -485,6 +469,10 @@ namespace BlazorCssIsolation.Tokens
 
             this.Gold = @gold;
 
+            this.ColorTextBase = @colorTextBase;
+
+            this.ColorBgBase = @colorBgBase;
+
             this.FontFamily = @fontFamily;
 
             this.FontSize = @fontSize;
@@ -493,33 +481,11 @@ namespace BlazorCssIsolation.Tokens
 
             this.LineType = @lineType;
 
-            this.MotionUnit = @motionUnit;
-
-            this.MotionBase = @motionBase;
-
-            this.MotionEaseOutCirc = @motionEaseOutCirc;
-
-            this.MotionEaseInOutCirc = @motionEaseInOutCirc;
-
-            this.MotionEaseInOut = @motionEaseInOut;
-
-            this.MotionEaseOutBack = @motionEaseOutBack;
-
-            this.MotionEaseInBack = @motionEaseInBack;
-
-            this.MotionEaseInQuint = @motionEaseInQuint;
-
-            this.MotionEaseOutQuint = @motionEaseOutQuint;
-
-            this.MotionEaseOut = @motionEaseOut;
-
             this.BorderRadius = @borderRadius;
 
             this.SizeUnit = @sizeUnit;
 
             this.SizeStep = @sizeStep;
-
-            this.SizePopupArrow = @sizePopupArrow;
 
             this.ControlHeight = @controlHeight;
 
@@ -527,7 +493,7 @@ namespace BlazorCssIsolation.Tokens
 
             this.ZIndexPopupBase = @zIndexPopupBase;
 
-            this.OpacityImage = @opacityImage;
+            this.MotionUnit = @motionUnit;
 
             this.Wireframe = @wireframe;
 
@@ -535,9 +501,13 @@ namespace BlazorCssIsolation.Tokens
 
             this.ColorFillAlter = @colorFillAlter;
 
+            this.ColorFillContent = @colorFillContent;
+
             this.ColorBgContainerDisabled = @colorBgContainerDisabled;
 
-            this.ColorFillContent = @colorFillContent;
+            this.ColorBgTextHover = @colorBgTextHover;
+
+            this.ColorBgTextActive = @colorBgTextActive;
 
             this.ColorBorderBg = @colorBorderBg;
 
@@ -554,10 +524,6 @@ namespace BlazorCssIsolation.Tokens
             this.ColorTextDescription = @colorTextDescription;
 
             this.ColorTextLightSolid = @colorTextLightSolid;
-
-            this.ColorBgTextHover = @colorBgTextHover;
-
-            this.ColorBgTextActive = @colorBgTextActive;
 
             this.ColorIcon = @colorIcon;
 
@@ -721,61 +687,11 @@ namespace BlazorCssIsolation.Tokens
 
             this.ControlTmpOutline = @controlTmpOutline;
 
-            this.BoxShadowPopoverArrow = @boxShadowPopoverArrow;
-
-            this.BoxShadowCard = @boxShadowCard;
-
-            this.BoxShadowDrawerRight = @boxShadowDrawerRight;
-
-            this.BoxShadowDrawerLeft = @boxShadowDrawerLeft;
-
-            this.BoxShadowDrawerUp = @boxShadowDrawerUp;
-
-            this.BoxShadowDrawerDown = @boxShadowDrawerDown;
-
-            this.BoxShadowTabsOverflowLeft = @boxShadowTabsOverflowLeft;
-
-            this.BoxShadowTabsOverflowRight = @boxShadowTabsOverflowRight;
-
-            this.BoxShadowTabsOverflowTop = @boxShadowTabsOverflowTop;
-
-            this.BoxShadowTabsOverflowBottom = @boxShadowTabsOverflowBottom;
-
         }
-        [System.Text.Json.Serialization.JsonPropertyName("fontSizes")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public System.Collections.Generic.ICollection<double> FontSizes { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("lineHeights")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public System.Collections.Generic.ICollection<double> LineHeights { get; init; }
-
-
         [System.Text.Json.Serialization.JsonPropertyName("lineWidthBold")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
         public double LineWidthBold { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("motionDurationFast")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string MotionDurationFast { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("motionDurationMid")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string MotionDurationMid { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("motionDurationSlow")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string MotionDurationSlow { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("borderRadiusXS")]
@@ -796,28 +712,22 @@ namespace BlazorCssIsolation.Tokens
         public double BorderRadiusLG { get; init; }
 
 
-        [System.Text.Json.Serialization.JsonPropertyName("borderRadiusOuter")]
+        [System.Text.Json.Serialization.JsonPropertyName("motionDurationFast")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double BorderRadiusOuter { get; init; }
+        public string MotionDurationFast { get; init; }
 
 
-        [System.Text.Json.Serialization.JsonPropertyName("controlHeightXS")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double ControlHeightXS { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("controlHeightSM")]
+        [System.Text.Json.Serialization.JsonPropertyName("motionDurationMid")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double ControlHeightSM { get; init; }
+        public string MotionDurationMid { get; init; }
 
 
-        [System.Text.Json.Serialization.JsonPropertyName("controlHeightLG")]
+        [System.Text.Json.Serialization.JsonPropertyName("motionDurationSlow")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double ControlHeightLG { get; init; }
+        public string MotionDurationSlow { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("sizeXXL")]
@@ -875,345 +785,6 @@ namespace BlazorCssIsolation.Tokens
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
         public double SizeXXS { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorTextBase")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorTextBase { get; init; }
-
-        /// <summary>
-        /// Base component background color. Will derivative container background color with this
-        /// </summary>
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorBgBase")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorBgBase { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorText")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorText { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorTextSecondary")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorTextSecondary { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorTextTertiary")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorTextTertiary { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorTextQuaternary")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorTextQuaternary { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorFill")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorFill { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorFillSecondary")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorFillSecondary { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorFillTertiary")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorFillTertiary { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorFillQuaternary")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorFillQuaternary { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorBgContainer")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorBgContainer { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorBgElevated")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorBgElevated { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorBgLayout")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorBgLayout { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorBgSpotlight")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorBgSpotlight { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorBorder")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorBorder { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorBorderSecondary")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorBorderSecondary { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorPrimaryBg")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorPrimaryBg { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorPrimaryBgHover")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorPrimaryBgHover { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorPrimaryBorder")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorPrimaryBorder { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorPrimaryBorderHover")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorPrimaryBorderHover { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorPrimaryHover")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorPrimaryHover { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorPrimary")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorPrimary { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorPrimaryActive")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorPrimaryActive { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorPrimaryTextHover")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorPrimaryTextHover { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorPrimaryText")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorPrimaryText { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorPrimaryTextActive")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorPrimaryTextActive { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorSuccessBg")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorSuccessBg { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorSuccessBgHover")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorSuccessBgHover { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorSuccessBorder")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorSuccessBorder { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorSuccessBorderHover")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorSuccessBorderHover { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorSuccessHover")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorSuccessHover { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorSuccess")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorSuccess { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorSuccessActive")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorSuccessActive { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorSuccessTextHover")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorSuccessTextHover { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorSuccessText")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorSuccessText { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorSuccessTextActive")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorSuccessTextActive { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorWarningBg")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorWarningBg { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorWarningBgHover")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorWarningBgHover { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorWarningBorder")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorWarningBorder { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorWarningBorderHover")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorWarningBorderHover { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorWarningHover")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorWarningHover { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorWarning")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorWarning { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorWarningActive")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorWarningActive { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorWarningTextHover")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorWarningTextHover { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorWarningText")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorWarningText { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorWarningTextActive")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorWarningTextActive { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorErrorBg")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorErrorBg { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorErrorBgHover")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorErrorBgHover { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorErrorBorder")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorErrorBorder { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorErrorBorderHover")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorErrorBorderHover { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorErrorHover")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorErrorHover { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorError")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorError { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorErrorActive")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorErrorActive { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorErrorTextHover")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorErrorTextHover { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorErrorText")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorErrorText { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorErrorTextActive")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorErrorTextActive { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorInfoBg")]
@@ -1276,16 +847,340 @@ namespace BlazorCssIsolation.Tokens
         public string ColorInfoTextActive { get; init; }
 
 
-        [System.Text.Json.Serialization.JsonPropertyName("colorBgMask")]
+        [System.Text.Json.Serialization.JsonPropertyName("colorErrorBg")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorBgMask { get; init; }
+        public string ColorErrorBg { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorErrorBgHover")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorErrorBgHover { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorErrorBorder")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorErrorBorder { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorErrorBorderHover")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorErrorBorderHover { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorErrorHover")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorErrorHover { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorError")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorError { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorErrorActive")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorErrorActive { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorErrorTextHover")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorErrorTextHover { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorErrorText")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorErrorText { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorErrorTextActive")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorErrorTextActive { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorWarningBg")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorWarningBg { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorWarningBgHover")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorWarningBgHover { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorWarningBorder")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorWarningBorder { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorWarningBorderHover")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorWarningBorderHover { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorWarningHover")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorWarningHover { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorWarning")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorWarning { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorWarningActive")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorWarningActive { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorWarningTextHover")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorWarningTextHover { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorWarningText")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorWarningText { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorWarningTextActive")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorWarningTextActive { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorSuccessBg")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorSuccessBg { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorSuccessBgHover")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorSuccessBgHover { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorSuccessBorder")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorSuccessBorder { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorSuccessBorderHover")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorSuccessBorderHover { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorSuccessHover")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorSuccessHover { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorSuccess")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorSuccess { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorSuccessActive")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorSuccessActive { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorSuccessTextHover")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorSuccessTextHover { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorSuccessText")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorSuccessText { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorSuccessTextActive")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorSuccessTextActive { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorPrimary")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorPrimary { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorPrimaryBg")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorPrimaryBg { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorPrimaryBgHover")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorPrimaryBgHover { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorPrimaryBorder")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorPrimaryBorder { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorPrimaryBorderHover")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorPrimaryBorderHover { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorPrimaryHover")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorPrimaryHover { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorPrimaryActive")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorPrimaryActive { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorPrimaryTextHover")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorPrimaryTextHover { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorPrimaryText")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorPrimaryText { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorPrimaryTextActive")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorPrimaryTextActive { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorText")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorText { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorTextSecondary")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorTextSecondary { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorTextTertiary")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorTextTertiary { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorTextQuaternary")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorTextQuaternary { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorBorder")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorBorder { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorBorderSecondary")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorBorderSecondary { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorFill")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorFill { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorFillSecondary")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorFillSecondary { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorFillTertiary")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorFillTertiary { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorFillQuaternary")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorFillQuaternary { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorBgLayout")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorBgLayout { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorBgContainer")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorBgContainer { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorBgElevated")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorBgElevated { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorBgSpotlight")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorBgSpotlight { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorWhite")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
         public string ColorWhite { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorBgMask")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorBgMask { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("blue-1")]
@@ -2146,6 +2041,18 @@ namespace BlazorCssIsolation.Tokens
         public string Gold { get; init; }
 
 
+        [System.Text.Json.Serialization.JsonPropertyName("colorTextBase")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorTextBase { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorBgBase")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorBgBase { get; init; }
+
+
         [System.Text.Json.Serialization.JsonPropertyName("fontFamily")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
@@ -2157,9 +2064,6 @@ namespace BlazorCssIsolation.Tokens
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
         public double FontSize { get; init; }
 
-        /// <summary>
-        /// Border width of base components
-        /// </summary>
 
         [System.Text.Json.Serialization.JsonPropertyName("lineWidth")]
 
@@ -2171,66 +2075,6 @@ namespace BlazorCssIsolation.Tokens
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
         public string LineType { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("motionUnit")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double MotionUnit { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("motionBase")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double MotionBase { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("motionEaseOutCirc")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string MotionEaseOutCirc { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("motionEaseInOutCirc")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string MotionEaseInOutCirc { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("motionEaseInOut")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string MotionEaseInOut { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("motionEaseOutBack")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string MotionEaseOutBack { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("motionEaseInBack")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string MotionEaseInBack { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("motionEaseInQuint")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string MotionEaseInQuint { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("motionEaseOutQuint")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string MotionEaseOutQuint { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("motionEaseOut")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string MotionEaseOut { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("borderRadius")]
@@ -2251,43 +2095,28 @@ namespace BlazorCssIsolation.Tokens
         public double SizeStep { get; init; }
 
 
-        [System.Text.Json.Serialization.JsonPropertyName("sizePopupArrow")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double SizePopupArrow { get; init; }
-
-
         [System.Text.Json.Serialization.JsonPropertyName("controlHeight")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
         public double ControlHeight { get; init; }
 
-        /// <summary>
-        /// Base zIndex of component like BackTop, Affix which can be cover by large popup
-        /// </summary>
 
         [System.Text.Json.Serialization.JsonPropertyName("zIndexBase")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
         public double ZIndexBase { get; init; }
 
-        /// <summary>
-        /// Base popup component zIndex
-        /// </summary>
 
         [System.Text.Json.Serialization.JsonPropertyName("zIndexPopupBase")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
         public double ZIndexPopupBase { get; init; }
 
-        /// <summary>
-        /// Define default Image opacity. Useful when in dark-like theme
-        /// </summary>
 
-        [System.Text.Json.Serialization.JsonPropertyName("opacityImage")]
+        [System.Text.Json.Serialization.JsonPropertyName("motionUnit")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public double OpacityImage { get; init; }
+        public double MotionUnit { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("wireframe")]
@@ -2308,16 +2137,28 @@ namespace BlazorCssIsolation.Tokens
         public string ColorFillAlter { get; init; }
 
 
+        [System.Text.Json.Serialization.JsonPropertyName("colorFillContent")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorFillContent { get; init; }
+
+
         [System.Text.Json.Serialization.JsonPropertyName("colorBgContainerDisabled")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
         public string ColorBgContainerDisabled { get; init; }
 
 
-        [System.Text.Json.Serialization.JsonPropertyName("colorFillContent")]
+        [System.Text.Json.Serialization.JsonPropertyName("colorBgTextHover")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorFillContent { get; init; }
+        public string ColorBgTextHover { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("colorBgTextActive")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string ColorBgTextActive { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("colorBorderBg")]
@@ -2366,18 +2207,6 @@ namespace BlazorCssIsolation.Tokens
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
         public string ColorTextLightSolid { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorBgTextHover")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorBgTextHover { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("colorBgTextActive")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string ColorBgTextActive { get; init; }
 
         /// <summary>
         /// Weak action. Such as `allowClear` or Alert close button
@@ -2900,66 +2729,6 @@ namespace BlazorCssIsolation.Tokens
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
         public string ControlTmpOutline { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("boxShadowPopoverArrow")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string BoxShadowPopoverArrow { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("boxShadowCard")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string BoxShadowCard { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("boxShadowDrawerRight")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string BoxShadowDrawerRight { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("boxShadowDrawerLeft")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string BoxShadowDrawerLeft { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("boxShadowDrawerUp")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string BoxShadowDrawerUp { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("boxShadowDrawerDown")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string BoxShadowDrawerDown { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("boxShadowTabsOverflowLeft")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string BoxShadowTabsOverflowLeft { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("boxShadowTabsOverflowRight")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string BoxShadowTabsOverflowRight { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("boxShadowTabsOverflowTop")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string BoxShadowTabsOverflowTop { get; init; }
-
-
-        [System.Text.Json.Serialization.JsonPropertyName("boxShadowTabsOverflowBottom")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public string BoxShadowTabsOverflowBottom { get; init; }
 
 
     }

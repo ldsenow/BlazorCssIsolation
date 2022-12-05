@@ -1,22 +1,39 @@
-const generateJsonSchema = require("./generateJsonSchema");
-const sanitizeTokens = require("./sanitizeTokens");
+import { unlinkSync, readdirSync } from "fs";
+import { join } from "path";
+
+import generateJsonSchema from "./generateJsonSchema.js";
+import sanitizeTokens from "./sanitizeTokens.js";
+
+const directory = "./schemas";
 
 const types = [
-  'PresetColorType',
-  "SeedToken",
+  "PresetColorType",
   "ColorPalettes",
+  "SeedToken",
+  "MapToken",
   "ColorMapToken",
-  "SizeMapToken",
-  "HeightMapToken",
+  "ColorNeutralMapToken",
   "CommonMapToken",
-  'NeutralColorMapToken',
-  'MapToken',
-  'AliasToken'
+  "HeightMapToken",
+  "SizeMapToken",
+  "FontSizeMapToken",
+  "StyleMapToken",
+  "AliasToken",
 ];
 
+emptyFolder();
+
 types.forEach((t) => {
-  const file = `./schemas/${t}.json`;
+  const file = join(directory, `${t}.json`);
 
   generateJsonSchema(file, t);
   sanitizeTokens(file);
 });
+
+function emptyFolder() {
+  const files = readdirSync(directory);
+
+  for (const file of files) {
+    unlinkSync(join(directory, file));
+  }
+}

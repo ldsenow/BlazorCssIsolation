@@ -21,10 +21,9 @@ internal static class ColorMapTokensGenerator
         var errorColors = options.PatternColorPallettesGenerator(colorErrorBase);
         var infoColors = options.PatternColorPallettesGenerator(colorInfoBase);
 
-        var neutralColors = options.NeutralColorPallettesGenerator((colorBgBase, colorTextBase));
+        var neutralColors = options.ColorNeutralPallettesGenerator((colorBgBase, colorTextBase));
 
         return new ColorMapToken(
-            colorBgBase: neutralColors.ColorBgBase,
             colorBgContainer: neutralColors.ColorBgContainer,
             colorBgElevated: neutralColors.ColorBgElevated,
             colorBgLayout: neutralColors.ColorBgLayout,
@@ -77,7 +76,6 @@ internal static class ColorMapTokensGenerator
             colorSuccessTextActive: successColors.TextActive,
             colorSuccessTextHover: successColors.TextHover,
             colorText: neutralColors.ColorText,
-            colorTextBase: neutralColors.ColorTextBase,
             colorTextQuaternary: neutralColors.ColorTextQuaternary,
             colorTextSecondary: neutralColors.ColorTextSecondary,
             colorTextTertiary: neutralColors.ColorTextTertiary,
@@ -97,7 +95,7 @@ internal static class ColorMapTokensGenerator
 
 public record ColorPalettesGenerationOptions(
     Func<string, PatternColorPallettes> PatternColorPallettesGenerator,
-    Func<(string bgBaseColor, string textBaseColor), NeutralColorMapToken> NeutralColorPallettesGenerator);
+    Func<(string bgBaseColor, string textBaseColor), ColorNeutralMapToken> ColorNeutralPallettesGenerator);
 
 public record PatternColorPallettes(
     string? Bg,
