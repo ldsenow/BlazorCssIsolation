@@ -2,6 +2,10 @@
 
 public partial record SeedToken : TokenBase
 {
+    public SeedToken()
+    {
+    }
+
     //TODO: find a way to extract these default seed from TS if possible
     //e.g. export from seed.ts as json with the values
     public static readonly SeedToken Default = new(

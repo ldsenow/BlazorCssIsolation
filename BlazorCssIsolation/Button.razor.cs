@@ -1,9 +1,10 @@
 using BlazorCssIsolation.Themes;
+using BlazorCssIsolation.Tokens;
 using Microsoft.AspNetCore.Components;
 
 namespace BlazorCssIsolation;
 
-public record ButtonDesignTokens : DesignTokens
+public record ButtonDesignTokens : TokenBase
 {
     public string? ButtonPrimaryBorderColor { get; set; }
 }

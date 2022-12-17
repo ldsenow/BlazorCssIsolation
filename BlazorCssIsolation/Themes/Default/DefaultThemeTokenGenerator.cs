@@ -8,6 +8,8 @@ public class DefaultThemeTokenGenerator : IThemeTokenGenerator
 {
     private readonly IColorDerivative colorDerivative;
 
+    public string Name => "default";
+
     public DefaultThemeTokenGenerator(IColorDerivative colorDerivative)
     {
         this.colorDerivative = colorDerivative;
@@ -60,6 +62,7 @@ public class DefaultThemeTokenGenerator : IThemeTokenGenerator
 
     private void PopulateColorMapTokens(SeedToken seedToken, DesignTokenCollection tokenCollection)
     {
+        //TODO: Dont need to follow how antd react does
         var tokens = ColorMapTokensGenerator.Genereate(seedToken, new ColorPalettesGenerationOptions(
             (baseColor) =>
             {

@@ -1,4 +1,4 @@
-﻿<BlazorCssIsolation.ConfigProvider Theme=@CustomTheme>
+﻿<BlazorCssIsolation.ConfigProvider>
     <Router AppAssembly="@typeof(App).Assembly">
         <Found Context="routeData">
             <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
@@ -14,8 +14,5 @@
 </BlazorCssIsolation.ConfigProvider>
 
 @code {
-    BlazorCssIsolation.Theme CustomTheme = new()
-    {
-        Base = new() { Primary = "green" }
-    };
+
 }

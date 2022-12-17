@@ -20,7 +20,6 @@
 	<ItemGroup>
 	  <Compile Include="Themes\Default\DefaultThemeTokenGenerator.cs" />
 	  <Compile Include="Themes\DesignTokenCollection.cs" />
-	  <Compile Include="Themes\DesignTokens.cs" />
 	  <Compile Include="Themes\IColorDerivative.cs" />
 	  <Compile Include="Themes\IPresetColors.cs" />
 	  <Compile Include="Themes\IThemeTokenGenerator.cs" />
