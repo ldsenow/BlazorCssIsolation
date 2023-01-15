@@ -6,7 +6,7 @@ namespace BlazorCssIsolation;
 
 public partial class ConfigProvider
 {
-    public Theme Theme { get; set; } = new();
+    public Theme Theme { get; set; }//=> Algorithms.Where(x => x.Name == "default");
 
     [Parameter]
     public Action<Theme>? ConfigTheme { get; set; }
@@ -20,7 +20,7 @@ public partial class ConfigProvider
 
 public class Theme
 {
-    public string[] Algorithms { get; set; } = new[] { "default" };
+    public string[] Algorithms { get; set; } = new[] { "default", "dark", "compact" };
     public BaseDesignTokens Base { get; set; } = new();
     public ButtonDesignTokens Button { get; set; } = new();
 }

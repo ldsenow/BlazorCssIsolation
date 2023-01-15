@@ -14,7 +14,7 @@ namespace BlazorCssIsolation.Tokens
     {
         [System.Text.Json.Serialization.JsonConstructor]
 
-        public StyleMapToken(double @borderRadiusLG, double @borderRadiusSM, double @borderRadiusXS, double @lineWidthBold)
+        public StyleMapToken(double @borderRadiusLG, double @borderRadiusOuter, double @borderRadiusSM, double @borderRadiusXS, double @lineWidthBold)
 
 
         {
@@ -26,6 +26,8 @@ namespace BlazorCssIsolation.Tokens
             this.BorderRadiusSM = @borderRadiusSM;
 
             this.BorderRadiusLG = @borderRadiusLG;
+
+            this.BorderRadiusOuter = @borderRadiusOuter;
 
         }
         [System.Text.Json.Serialization.JsonPropertyName("lineWidthBold")]
@@ -50,6 +52,12 @@ namespace BlazorCssIsolation.Tokens
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
         public double BorderRadiusLG { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("borderRadiusOuter")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public double BorderRadiusOuter { get; init; }
 
 
     }

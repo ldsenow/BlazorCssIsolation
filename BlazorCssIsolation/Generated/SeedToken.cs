@@ -14,7 +14,7 @@ namespace BlazorCssIsolation.Tokens
     {
         [System.Text.Json.Serialization.JsonConstructor]
 
-        public SeedToken(string @blue, double @borderRadius, string @colorBgBase, string @colorError, string @colorInfo, string @colorPrimary, string @colorSuccess, string @colorTextBase, string @colorWarning, double @controlHeight, string @cyan, string @fontFamily, double @fontSize, string @geekblue, string @gold, string @green, string @lime, string @lineType, double @lineWidth, string @magenta, double @motionUnit, string @orange, string @pink, string @purple, string @red, double @sizeStep, double @sizeUnit, string @volcano, bool @wireframe, string @yellow, double @zIndexBase, double @zIndexPopupBase)
+        public SeedToken(string @blue, double @borderRadius, string @colorBgBase, string @colorError, string @colorInfo, string @colorPrimary, string @colorSuccess, string @colorTextBase, string @colorWarning, double @controlHeight, string @cyan, string @fontFamily, double @fontSize, string @geekblue, string @gold, string @green, string @lime, string @lineType, double @lineWidth, string @magenta, double @motionBase, string @motionEaseInBack, string @motionEaseInOut, string @motionEaseInOutCirc, string @motionEaseInQuint, string @motionEaseOut, string @motionEaseOutBack, string @motionEaseOutCirc, string @motionEaseOutQuint, double @motionUnit, double @opacityImage, string @orange, string @pink, string @purple, string @red, double @sizePopupArrow, double @sizeStep, double @sizeUnit, string @volcano, bool @wireframe, string @yellow, double @zIndexBase, double @zIndexPopupBase)
 
 
         {
@@ -73,13 +73,35 @@ namespace BlazorCssIsolation.Tokens
 
             this.SizeStep = @sizeStep;
 
+            this.SizePopupArrow = @sizePopupArrow;
+
             this.ControlHeight = @controlHeight;
 
             this.ZIndexBase = @zIndexBase;
 
             this.ZIndexPopupBase = @zIndexPopupBase;
 
+            this.OpacityImage = @opacityImage;
+
             this.MotionUnit = @motionUnit;
+
+            this.MotionBase = @motionBase;
+
+            this.MotionEaseOutCirc = @motionEaseOutCirc;
+
+            this.MotionEaseInOutCirc = @motionEaseInOutCirc;
+
+            this.MotionEaseInOut = @motionEaseInOut;
+
+            this.MotionEaseOutBack = @motionEaseOutBack;
+
+            this.MotionEaseInBack = @motionEaseInBack;
+
+            this.MotionEaseInQuint = @motionEaseInQuint;
+
+            this.MotionEaseOutQuint = @motionEaseOutQuint;
+
+            this.MotionEaseOut = @motionEaseOut;
 
             this.Wireframe = @wireframe;
 
@@ -246,6 +268,12 @@ namespace BlazorCssIsolation.Tokens
         public double SizeStep { get; init; }
 
 
+        [System.Text.Json.Serialization.JsonPropertyName("sizePopupArrow")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public double SizePopupArrow { get; init; }
+
+
         [System.Text.Json.Serialization.JsonPropertyName("controlHeight")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
@@ -264,10 +292,70 @@ namespace BlazorCssIsolation.Tokens
         public double ZIndexPopupBase { get; init; }
 
 
+        [System.Text.Json.Serialization.JsonPropertyName("opacityImage")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public double OpacityImage { get; init; }
+
+
         [System.Text.Json.Serialization.JsonPropertyName("motionUnit")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
         public double MotionUnit { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("motionBase")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public double MotionBase { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("motionEaseOutCirc")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string MotionEaseOutCirc { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("motionEaseInOutCirc")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string MotionEaseInOutCirc { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("motionEaseInOut")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string MotionEaseInOut { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("motionEaseOutBack")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string MotionEaseOutBack { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("motionEaseInBack")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string MotionEaseInBack { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("motionEaseInQuint")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string MotionEaseInQuint { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("motionEaseOutQuint")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string MotionEaseOutQuint { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("motionEaseOut")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string MotionEaseOut { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("wireframe")]

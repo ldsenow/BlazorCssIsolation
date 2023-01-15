@@ -2,6 +2,7 @@ import tsj from "ts-json-schema-generator";
 import { writeFileSync } from "fs";
 
 export default function (outputPath, type) {
+  console.log(`********Generating ${type} to ${outputPath}********`);
   /** @type {import('ts-json-schema-generator/dist/src/Config').Config} */
   const config = {
     path: "./node_modules/antd/es/theme/interface/index.d.ts",
@@ -12,4 +13,5 @@ export default function (outputPath, type) {
   const schema = tsj.createGenerator(config).createSchema(config.type);
   const schemaString = JSON.stringify(schema, null, 2);
   writeFileSync(outputPath, schemaString);
+  console.log(`********Generated ${type} to ${outputPath}********`);
 }

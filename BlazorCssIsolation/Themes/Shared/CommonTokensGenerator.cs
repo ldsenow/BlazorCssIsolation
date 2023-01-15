@@ -20,6 +20,7 @@ internal static class CommonTokensGenerator
            borderRadiusLG: radii.BorderRadiusLG,
            borderRadiusSM: radii.BorderRadiusSM,
            borderRadiusXS: radii.BorderRadiusXS,
+           borderRadiusOuter: radii.BorderRadiusOuter,
            lineWidthBold: lineWidth + 1,
            motionDurationFast: $"{(motionBase + motionUnit * 1):N1}s",
            motionDurationMid: $"{(motionBase + motionUnit * 2):N1}s",

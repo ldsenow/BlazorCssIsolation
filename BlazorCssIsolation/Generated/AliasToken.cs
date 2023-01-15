@@ -14,7 +14,7 @@ namespace BlazorCssIsolation.Tokens
     {
         [System.Text.Json.Serialization.JsonConstructor]
 
-        public AliasToken(string @blue, string @blue1, string @blue10, string @blue2, string @blue3, string @blue4, string @blue5, string @blue6, string @blue7, string @blue8, string @blue9, double @borderRadius, double @borderRadiusLG, double @borderRadiusSM, double @borderRadiusXS, string @boxShadow, string @boxShadowSecondary, string @colorBgBase, string @colorBgContainer, string @colorBgContainerDisabled, string @colorBgElevated, string @colorBgLayout, string @colorBgMask, string @colorBgSpotlight, string @colorBgTextActive, string @colorBgTextHover, string @colorBorder, string @colorBorderBg, string @colorBorderSecondary, string @colorError, string @colorErrorActive, string @colorErrorBg, string @colorErrorBgHover, string @colorErrorBorder, string @colorErrorBorderHover, string @colorErrorHover, string @colorErrorOutline, string @colorErrorText, string @colorErrorTextActive, string @colorErrorTextHover, string @colorFill, string @colorFillAlter, string @colorFillContent, string @colorFillContentHover, string @colorFillQuaternary, string @colorFillSecondary, string @colorFillTertiary, string @colorHighlight, string @colorIcon, string @colorIconHover, string @colorInfo, string @colorInfoActive, string @colorInfoBg, string @colorInfoBgHover, string @colorInfoBorder, string @colorInfoBorderHover, string @colorInfoHover, string @colorInfoText, string @colorInfoTextActive, string @colorInfoTextHover, string @colorLink, string @colorLinkActive, string @colorLinkHover, string @colorPrimary, string @colorPrimaryActive, string @colorPrimaryBg, string @colorPrimaryBgHover, string @colorPrimaryBorder, string @colorPrimaryBorderHover, string @colorPrimaryHover, string @colorPrimaryText, string @colorPrimaryTextActive, string @colorPrimaryTextHover, string @colorSplit, string @colorSuccess, string @colorSuccessActive, string @colorSuccessBg, string @colorSuccessBgHover, string @colorSuccessBorder, string @colorSuccessBorderHover, string @colorSuccessHover, string @colorSuccessText, string @colorSuccessTextActive, string @colorSuccessTextHover, string @colorText, string @colorTextBase, string @colorTextDescription, string @colorTextDisabled, string @colorTextHeading, string @colorTextLabel, string @colorTextLightSolid, string @colorTextPlaceholder, string @colorTextQuaternary, string @colorTextSecondary, string @colorTextTertiary, string @colorWarning, string @colorWarningActive, string @colorWarningBg, string @colorWarningBgHover, string @colorWarningBorder, string @colorWarningBorderHover, string @colorWarningHover, string @colorWarningOutline, string @colorWarningText, string @colorWarningTextActive, string @colorWarningTextHover, string @colorWhite, double @controlHeight, double @controlInteractiveSize, string @controlItemBgActive, string @controlItemBgActiveDisabled, string @controlItemBgActiveHover, string @controlItemBgHover, string @controlOutline, double @controlOutlineWidth, double @controlPaddingHorizontal, double @controlPaddingHorizontalSM, string @controlTmpOutline, string @cyan, string @cyan1, string @cyan10, string @cyan2, string @cyan3, string @cyan4, string @cyan5, string @cyan6, string @cyan7, string @cyan8, string @cyan9, string @fontFamily, double @fontSize, double @fontSizeHeading1, double @fontSizeHeading2, double @fontSizeHeading3, double @fontSizeHeading4, double @fontSizeHeading5, double @fontSizeIcon, double @fontSizeLG, double @fontSizeSM, double @fontSizeXL, double @fontWeightStrong, string @geekblue, string @geekblue1, string @geekblue10, string @geekblue2, string @geekblue3, string @geekblue4, string @geekblue5, string @geekblue6, string @geekblue7, string @geekblue8, string @geekblue9, string @gold, string @gold1, string @gold10, string @gold2, string @gold3, string @gold4, string @gold5, string @gold6, string @gold7, string @gold8, string @gold9, string @green, string @green1, string @green10, string @green2, string @green3, string @green4, string @green5, string @green6, string @green7, string @green8, string @green9, string @lime, string @lime1, string @lime10, string @lime2, string @lime3, string @lime4, string @lime5, string @lime6, string @lime7, string @lime8, string @lime9, double @lineHeight, double @lineHeightHeading1, double @lineHeightHeading2, double @lineHeightHeading3, double @lineHeightHeading4, double @lineHeightHeading5, double @lineHeightLG, double @lineHeightSM, string @lineType, double @lineWidth, double @lineWidthBold, string @linkDecoration, string @linkFocusDecoration, string @linkHoverDecoration, string @magenta, string @magenta1, string @magenta10, string @magenta2, string @magenta3, string @magenta4, string @magenta5, string @magenta6, string @magenta7, string @magenta8, string @magenta9, double @margin, double @marginLG, double @marginMD, double @marginSM, double @marginXL, double @marginXS, double @marginXXL, double @marginXXS, string @motionDurationFast, string @motionDurationMid, string @motionDurationSlow, double @motionUnit, double @opacityLoading, string @orange, string @orange1, string @orange10, string @orange2, string @orange3, string @orange4, string @orange5, string @orange6, string @orange7, string @orange8, string @orange9, double @padding, double @paddingContentHorizontal, double @paddingContentHorizontalLG, double @paddingContentHorizontalSM, double @paddingContentVertical, double @paddingContentVerticalLG, double @paddingContentVerticalSM, double @paddingLG, double @paddingMD, double @paddingSM, double @paddingXL, double @paddingXS, double @paddingXXS, string @pink, string @pink1, string @pink10, string @pink2, string @pink3, string @pink4, string @pink5, string @pink6, string @pink7, string @pink8, string @pink9, string @purple, string @purple1, string @purple10, string @purple2, string @purple3, string @purple4, string @purple5, string @purple6, string @purple7, string @purple8, string @purple9, string @red, string @red1, string @red10, string @red2, string @red3, string @red4, string @red5, string @red6, string @red7, string @red8, string @red9, double @screenLG, double @screenLGMax, double @screenLGMin, double @screenMD, double @screenMDMax, double @screenMDMin, double @screenSM, double @screenSMMax, double @screenSMMin, double @screenXL, double @screenXLMax, double @screenXLMin, double @screenXS, double @screenXSMax, double @screenXSMin, double @screenXXL, double @screenXXLMin, double @size, double @sizeLG, double @sizeMD, double @sizeMS, double @sizeSM, double @sizeStep, double @sizeUnit, double @sizeXL, double @sizeXS, double @sizeXXL, double @sizeXXS, string @volcano, string @volcano1, string @volcano10, string @volcano2, string @volcano3, string @volcano4, string @volcano5, string @volcano6, string @volcano7, string @volcano8, string @volcano9, bool @wireframe, string @yellow, string @yellow1, string @yellow10, string @yellow2, string @yellow3, string @yellow4, string @yellow5, string @yellow6, string @yellow7, string @yellow8, string @yellow9, double @zIndexBase, double @zIndexPopupBase)
+        public AliasToken(string @blue, string @blue1, string @blue10, string @blue2, string @blue3, string @blue4, string @blue5, string @blue6, string @blue7, string @blue8, string @blue9, double @borderRadius, double @borderRadiusLG, double @borderRadiusOuter, double @borderRadiusSM, double @borderRadiusXS, string @boxShadow, string @boxShadowSecondary, string @colorBgBase, string @colorBgContainer, string @colorBgContainerDisabled, string @colorBgElevated, string @colorBgLayout, string @colorBgMask, string @colorBgSpotlight, string @colorBgTextActive, string @colorBgTextHover, string @colorBorder, string @colorBorderBg, string @colorBorderSecondary, string @colorError, string @colorErrorActive, string @colorErrorBg, string @colorErrorBgHover, string @colorErrorBorder, string @colorErrorBorderHover, string @colorErrorHover, string @colorErrorOutline, string @colorErrorText, string @colorErrorTextActive, string @colorErrorTextHover, string @colorFill, string @colorFillAlter, string @colorFillContent, string @colorFillContentHover, string @colorFillQuaternary, string @colorFillSecondary, string @colorFillTertiary, string @colorHighlight, string @colorIcon, string @colorIconHover, string @colorInfo, string @colorInfoActive, string @colorInfoBg, string @colorInfoBgHover, string @colorInfoBorder, string @colorInfoBorderHover, string @colorInfoHover, string @colorInfoText, string @colorInfoTextActive, string @colorInfoTextHover, string @colorLink, string @colorLinkActive, string @colorLinkHover, string @colorPrimary, string @colorPrimaryActive, string @colorPrimaryBg, string @colorPrimaryBgHover, string @colorPrimaryBorder, string @colorPrimaryBorderHover, string @colorPrimaryHover, string @colorPrimaryText, string @colorPrimaryTextActive, string @colorPrimaryTextHover, string @colorSplit, string @colorSuccess, string @colorSuccessActive, string @colorSuccessBg, string @colorSuccessBgHover, string @colorSuccessBorder, string @colorSuccessBorderHover, string @colorSuccessHover, string @colorSuccessText, string @colorSuccessTextActive, string @colorSuccessTextHover, string @colorText, string @colorTextBase, string @colorTextDescription, string @colorTextDisabled, string @colorTextHeading, string @colorTextLabel, string @colorTextLightSolid, string @colorTextPlaceholder, string @colorTextQuaternary, string @colorTextSecondary, string @colorTextTertiary, string @colorWarning, string @colorWarningActive, string @colorWarningBg, string @colorWarningBgHover, string @colorWarningBorder, string @colorWarningBorderHover, string @colorWarningHover, string @colorWarningOutline, string @colorWarningText, string @colorWarningTextActive, string @colorWarningTextHover, string @colorWhite, double @controlHeight, double @controlHeightLG, double @controlHeightSM, double @controlHeightXS, double @controlInteractiveSize, string @controlItemBgActive, string @controlItemBgActiveDisabled, string @controlItemBgActiveHover, string @controlItemBgHover, string @controlOutline, double @controlOutlineWidth, double @controlPaddingHorizontal, double @controlPaddingHorizontalSM, string @controlTmpOutline, string @cyan, string @cyan1, string @cyan10, string @cyan2, string @cyan3, string @cyan4, string @cyan5, string @cyan6, string @cyan7, string @cyan8, string @cyan9, string @fontFamily, double @fontSize, double @fontSizeHeading1, double @fontSizeHeading2, double @fontSizeHeading3, double @fontSizeHeading4, double @fontSizeHeading5, double @fontSizeIcon, double @fontSizeLG, double @fontSizeSM, double @fontSizeXL, double @fontWeightStrong, string @geekblue, string @geekblue1, string @geekblue10, string @geekblue2, string @geekblue3, string @geekblue4, string @geekblue5, string @geekblue6, string @geekblue7, string @geekblue8, string @geekblue9, string @gold, string @gold1, string @gold10, string @gold2, string @gold3, string @gold4, string @gold5, string @gold6, string @gold7, string @gold8, string @gold9, string @green, string @green1, string @green10, string @green2, string @green3, string @green4, string @green5, string @green6, string @green7, string @green8, string @green9, string @lime, string @lime1, string @lime10, string @lime2, string @lime3, string @lime4, string @lime5, string @lime6, string @lime7, string @lime8, string @lime9, double @lineHeight, double @lineHeightHeading1, double @lineHeightHeading2, double @lineHeightHeading3, double @lineHeightHeading4, double @lineHeightHeading5, double @lineHeightLG, double @lineHeightSM, string @lineType, double @lineWidth, double @lineWidthBold, string @linkDecoration, string @linkFocusDecoration, string @linkHoverDecoration, string @magenta, string @magenta1, string @magenta10, string @magenta2, string @magenta3, string @magenta4, string @magenta5, string @magenta6, string @magenta7, string @magenta8, string @magenta9, double @margin, double @marginLG, double @marginMD, double @marginSM, double @marginXL, double @marginXS, double @marginXXL, double @marginXXS, double @motionBase, string @motionDurationFast, string @motionDurationMid, string @motionDurationSlow, string @motionEaseInBack, string @motionEaseInOut, string @motionEaseInOutCirc, string @motionEaseInQuint, string @motionEaseOut, string @motionEaseOutBack, string @motionEaseOutCirc, string @motionEaseOutQuint, double @motionUnit, double @opacityImage, double @opacityLoading, string @orange, string @orange1, string @orange10, string @orange2, string @orange3, string @orange4, string @orange5, string @orange6, string @orange7, string @orange8, string @orange9, double @padding, double @paddingContentHorizontal, double @paddingContentHorizontalLG, double @paddingContentHorizontalSM, double @paddingContentVertical, double @paddingContentVerticalLG, double @paddingContentVerticalSM, double @paddingLG, double @paddingMD, double @paddingSM, double @paddingXL, double @paddingXS, double @paddingXXS, string @pink, string @pink1, string @pink10, string @pink2, string @pink3, string @pink4, string @pink5, string @pink6, string @pink7, string @pink8, string @pink9, string @purple, string @purple1, string @purple10, string @purple2, string @purple3, string @purple4, string @purple5, string @purple6, string @purple7, string @purple8, string @purple9, string @red, string @red1, string @red10, string @red2, string @red3, string @red4, string @red5, string @red6, string @red7, string @red8, string @red9, double @screenLG, double @screenLGMax, double @screenLGMin, double @screenMD, double @screenMDMax, double @screenMDMin, double @screenSM, double @screenSMMax, double @screenSMMin, double @screenXL, double @screenXLMax, double @screenXLMin, double @screenXS, double @screenXSMax, double @screenXSMin, double @screenXXL, double @screenXXLMin, double @size, double @sizeLG, double @sizeMD, double @sizeMS, double @sizePopupArrow, double @sizeSM, double @sizeStep, double @sizeUnit, double @sizeXL, double @sizeXS, double @sizeXXL, double @sizeXXS, string @volcano, string @volcano1, string @volcano10, string @volcano2, string @volcano3, string @volcano4, string @volcano5, string @volcano6, string @volcano7, string @volcano8, string @volcano9, bool @wireframe, string @yellow, string @yellow1, string @yellow10, string @yellow2, string @yellow3, string @yellow4, string @yellow5, string @yellow6, string @yellow7, string @yellow8, string @yellow9, double @zIndexBase, double @zIndexPopupBase)
 
 
         {
@@ -26,6 +26,8 @@ namespace BlazorCssIsolation.Tokens
             this.BorderRadiusSM = @borderRadiusSM;
 
             this.BorderRadiusLG = @borderRadiusLG;
+
+            this.BorderRadiusOuter = @borderRadiusOuter;
 
             this.MotionDurationFast = @motionDurationFast;
 
@@ -66,6 +68,12 @@ namespace BlazorCssIsolation.Tokens
             this.LineHeightHeading4 = @lineHeightHeading4;
 
             this.LineHeightHeading5 = @lineHeightHeading5;
+
+            this.ControlHeightXS = @controlHeightXS;
+
+            this.ControlHeightSM = @controlHeightSM;
+
+            this.ControlHeightLG = @controlHeightLG;
 
             this.SizeXXL = @sizeXXL;
 
@@ -519,13 +527,35 @@ namespace BlazorCssIsolation.Tokens
 
             this.SizeStep = @sizeStep;
 
+            this.SizePopupArrow = @sizePopupArrow;
+
             this.ControlHeight = @controlHeight;
 
             this.ZIndexBase = @zIndexBase;
 
             this.ZIndexPopupBase = @zIndexPopupBase;
 
+            this.OpacityImage = @opacityImage;
+
             this.MotionUnit = @motionUnit;
+
+            this.MotionBase = @motionBase;
+
+            this.MotionEaseOutCirc = @motionEaseOutCirc;
+
+            this.MotionEaseInOutCirc = @motionEaseInOutCirc;
+
+            this.MotionEaseInOut = @motionEaseInOut;
+
+            this.MotionEaseOutBack = @motionEaseOutBack;
+
+            this.MotionEaseInBack = @motionEaseInBack;
+
+            this.MotionEaseInQuint = @motionEaseInQuint;
+
+            this.MotionEaseOutQuint = @motionEaseOutQuint;
+
+            this.MotionEaseOut = @motionEaseOut;
 
             this.Wireframe = @wireframe;
 
@@ -710,6 +740,12 @@ namespace BlazorCssIsolation.Tokens
         public double BorderRadiusLG { get; init; }
 
 
+        [System.Text.Json.Serialization.JsonPropertyName("borderRadiusOuter")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public double BorderRadiusOuter { get; init; }
+
+
         [System.Text.Json.Serialization.JsonPropertyName("motionDurationFast")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
@@ -828,6 +864,24 @@ namespace BlazorCssIsolation.Tokens
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
         public double LineHeightHeading5 { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("controlHeightXS")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public double ControlHeightXS { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("controlHeightSM")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public double ControlHeightSM { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("controlHeightLG")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public double ControlHeightLG { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("sizeXXL")]
@@ -2189,6 +2243,12 @@ namespace BlazorCssIsolation.Tokens
         public double SizeStep { get; init; }
 
 
+        [System.Text.Json.Serialization.JsonPropertyName("sizePopupArrow")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public double SizePopupArrow { get; init; }
+
+
         [System.Text.Json.Serialization.JsonPropertyName("controlHeight")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
@@ -2207,10 +2267,70 @@ namespace BlazorCssIsolation.Tokens
         public double ZIndexPopupBase { get; init; }
 
 
+        [System.Text.Json.Serialization.JsonPropertyName("opacityImage")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public double OpacityImage { get; init; }
+
+
         [System.Text.Json.Serialization.JsonPropertyName("motionUnit")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
         public double MotionUnit { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("motionBase")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public double MotionBase { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("motionEaseOutCirc")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string MotionEaseOutCirc { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("motionEaseInOutCirc")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string MotionEaseInOutCirc { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("motionEaseInOut")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string MotionEaseInOut { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("motionEaseOutBack")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string MotionEaseOutBack { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("motionEaseInBack")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string MotionEaseInBack { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("motionEaseInQuint")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string MotionEaseInQuint { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("motionEaseOutQuint")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string MotionEaseOutQuint { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("motionEaseOut")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string MotionEaseOut { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("wireframe")]
