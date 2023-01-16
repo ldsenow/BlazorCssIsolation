@@ -1,4 +1,6 @@
-﻿using System.Text.RegularExpressions;
+﻿using System.Drawing;
+using System.Text.RegularExpressions;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace BlazorCssIsolation;
 
@@ -56,7 +58,7 @@ public interface IConvertToHsl
 /// </summary>
 public partial record HEX : IColor
 {
-    [GeneratedRegex("^([a-fA-F0-9]{3,4,6,8})$", RegexOptions.Compiled)]
+    [GeneratedRegex("^(?:[0-9a-fA-F]{3,4}){1,2}$", RegexOptions.Compiled)]
     private static partial Regex HexPatternRegex();
     private static readonly Regex HexRegex = HexPatternRegex();
 
@@ -94,12 +96,13 @@ public partial record HEX : IColor
 
     private static string Parse(string value)
     {
-        if (string.IsNullOrWhiteSpace(value)) throw new ArgumentNullException(nameof(value));
+        if (string.IsNullOrWhiteSpace(value))
+            throw new ArgumentNullException(nameof(value));
 
         var v = value.StartsWith("#") ? value[1..] : value;
 
         if (!HexRegex.IsMatch(v))
-            throw new ArgumentException("Only the three-value and six-value syntax are supported");
+            throw new ArgumentException($"Invalid HEX value: {value}");
 
         v = v.Length switch
         {
@@ -113,17 +116,50 @@ public partial record HEX : IColor
 
     public IColor ApplyAlpha(double alpha)
     {
-        throw new NotImplementedException();
+        if (alpha < 0 || alpha > 1) throw new ArgumentOutOfRangeException(nameof(alpha));
+
+        var alphaValue = (int)Math.Ceiling(alpha * 255);
+        var alphaHex = $"{alphaValue:x2}";
+        if (Value.Length == 6)
+        {
+            return new HEX($"{Value}{alphaHex}");
+        }
+        else
+        {
+            return new HEX($"{Value[0..6]}{alphaHex}");
+        }
     }
 
     public IColor Lighten(int brightness)
     {
-        throw new NotImplementedException();
+        if (brightness < 0 || brightness > 100)
+            throw new ArgumentOutOfRangeException(nameof(brightness));
+
+        var hsl = ToHSL();
+
+        var amount = brightness == 0 ? 0 : brightness;
+
+        var l = hsl.L + (amount / 100);
+
+        l = Math.Clamp(l, 0, 1);
+
+        return new HSL(hsl.H, hsl.S, l).ToHEX();
     }
 
     public IColor Darken(int brightness)
     {
-        throw new NotImplementedException();
+        if (brightness < 0 || brightness > 100)
+            throw new ArgumentOutOfRangeException(nameof(brightness));
+
+        var rgb = ToRGB();
+
+        var amount = brightness == 0 ? 0 : brightness;
+
+        var r = (int)Math.Max(0, Math.Min(255, rgb.R - Math.Round(255d * -(amount / 100))));
+        var g = (int)Math.Max(0, Math.Min(255, rgb.G - Math.Round(255d * -(amount / 100))));
+        var b = (int)Math.Max(0, Math.Min(255, rgb.B - Math.Round(255d * -(amount / 100))));
+
+        return new RGB(r, g, b).ToHEX();
     }
 
     public string AsString()

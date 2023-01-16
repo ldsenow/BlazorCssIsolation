@@ -11,8 +11,8 @@ public record ButtonDesignTokens : TokenBase
 
 public partial class Button
 {
-    [CascadingParameter]
-    public Theme Theme { get; set; } = default!;
+    //[CascadingParameter]
+    //public Theme Theme { get; set; } = default!;
 
     [Parameter]
     public string Type { get; set; } = "primary";

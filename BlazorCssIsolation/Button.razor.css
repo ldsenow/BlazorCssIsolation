@@ -1,5 +1,5 @@
 ﻿.ant-btn {
-    --ant-button-primary-border-color: var(--ant-primary);
+    --ant-button-primary-border-color: var(--ant-color-primary);
 }
 
     .ant-btn.--primary {

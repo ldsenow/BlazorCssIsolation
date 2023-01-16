@@ -35,7 +35,7 @@ public class DefaultThemeTokenGenerator : IThemeTokenGenerator
         var tokenNames = GetSortedPropertyNames<CommonMapToken>();
         foreach (var n in tokenNames)
         {
-            tokenCollection.Add(n, tokens[n]);
+            tokenCollection.Set(n, tokens[n]);
         }
     }
 
@@ -45,7 +45,7 @@ public class DefaultThemeTokenGenerator : IThemeTokenGenerator
         var tokenNames = GetSortedPropertyNames<HeightMapToken>();
         foreach (var n in tokenNames)
         {
-            tokenCollection.Add(n, tokens[n]);
+            tokenCollection.Set(n, tokens[n]);
         }
     }
 
@@ -56,7 +56,7 @@ public class DefaultThemeTokenGenerator : IThemeTokenGenerator
         var tokenNames = GetSortedPropertyNames<SizeMapToken>();
         foreach (var n in tokenNames)
         {
-            tokenCollection.Add(n, tokens[n]);
+            tokenCollection.Set(n, tokens[n]);
         }
     }
 
@@ -81,8 +81,8 @@ public class DefaultThemeTokenGenerator : IThemeTokenGenerator
             },
             (x) =>
             {
-                var colorBgBase = new HEX(x.bgBaseColor ?? "#fff");
-                var colorTextBase = new HEX(x.textBaseColor ?? "#000");
+                var colorBgBase = new HEX(string.IsNullOrEmpty(x.bgBaseColor) ? "#fff" : x.bgBaseColor);
+                var colorTextBase = new HEX(string.IsNullOrEmpty(x.textBaseColor) ? "#000" : x.textBaseColor);
 
                 return new ColorNeutralMapToken(
                     colorText: colorTextBase.ApplyAlpha(0.88).AsString(),
@@ -107,7 +107,7 @@ public class DefaultThemeTokenGenerator : IThemeTokenGenerator
         var tokenNames = GetSortedPropertyNames<ColorMapToken>();
         foreach (var n in tokenNames)
         {
-            tokenCollection.Add(n, tokens[n]);
+            tokenCollection.Set(n, tokens[n]);
         }
     }
 
@@ -116,7 +116,8 @@ public class DefaultThemeTokenGenerator : IThemeTokenGenerator
         var tokenNames = GetSortedPropertyNames<SeedToken>();
         foreach (var n in tokenNames)
         {
-            tokenCollection.Add(n, seedToken[n]);
+            Console.WriteLine($"{n}: '{seedToken[n]}'");
+            tokenCollection.Set(n, seedToken[n]);
         }
     }
 
@@ -133,7 +134,7 @@ public class DefaultThemeTokenGenerator : IThemeTokenGenerator
 
             //TODO: Color.Parse(string). Just assume it will be hex value for now
             var derivedColors = colorDerivative.Derive(new HEX(value))
-                .Select(x => x.ToHEX().ToString())
+                .Select(x => x.ToHEX().AsString())
                 .ToArray();
 
             if (derivedColors.Length != 10)
@@ -141,14 +142,14 @@ public class DefaultThemeTokenGenerator : IThemeTokenGenerator
 
             for (int i = 0; i < derivedColors.Length; i++)
             {
-                tokenCollection.Add($"{name}{i + 1}", derivedColors[i]);
+                tokenCollection.Set($"{name}{i + 1}", derivedColors[i]);
             }
         }
     }
 
     private static string[] GetSortedPropertyNames<T>()
     {
-        return typeof(T).GetProperties(BindingFlags.Public | BindingFlags.Instance)
+        return typeof(T).GetProperties(BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly)
             .Select(x => x.Name)
             .OrderBy(x => x)
             .ToArray();

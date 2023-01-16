@@ -24,6 +24,7 @@ public partial record SeedToken : TokenBase
         geekblue: "#2F54EB",
         gold: "#FAAD14",
         lime: "#A0D911",
+
         // Color
         colorPrimary: "#1677ff",
         colorSuccess: "#52c41a",

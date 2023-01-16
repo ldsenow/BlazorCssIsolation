@@ -1,6 +1,12 @@
 ﻿
-<CascadingValue Value=@Theme>
+@*<CascadingValue Value=@Theme>
     <container class="ant" style=@Theme.Base.ToCssStyle()>
+        @ChildContent
+    </container>
+</CascadingValue>*@
+
+<CascadingValue Value=@ThemeDesignTokens>
+    <container style=@ThemeDesignTokens.ToCssVars("ant")>
         @ChildContent
     </container>
 </CascadingValue>

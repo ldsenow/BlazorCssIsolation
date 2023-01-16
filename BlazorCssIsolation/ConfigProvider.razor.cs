@@ -1,4 +1,5 @@
 ﻿using BlazorCssIsolation.Themes;
+using BlazorCssIsolation.Themes.Default;
 using BlazorCssIsolation.Tokens;
 using Microsoft.AspNetCore.Components;
 
@@ -6,7 +7,9 @@ namespace BlazorCssIsolation;
 
 public partial class ConfigProvider
 {
-    public Theme Theme { get; set; }//=> Algorithms.Where(x => x.Name == "default");
+    public Theme? Theme { get; set; }//=> Algorithms.Where(x => x.Name == "default");
+
+    public DesignTokenCollection ThemeDesignTokens { get; set; }
 
     [Parameter]
     public Action<Theme>? ConfigTheme { get; set; }
@@ -16,6 +19,12 @@ public partial class ConfigProvider
 
     [Parameter]
     public RenderFragment? ChildContent { get; set; }
+
+    public ConfigProvider()
+    {
+        ThemeDesignTokens = new DefaultThemeTokenGenerator(new ColorDerivative())
+                .Generate(SeedToken.Default);
+    }
 }
 
 public class Theme
