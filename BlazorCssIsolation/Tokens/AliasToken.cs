@@ -2,7 +2,7 @@
 
 public partial record AliasToken : TokenBase
 {
-    public AliasToken()
-    {
-    }
+	public AliasToken()
+	{
+	}
 }

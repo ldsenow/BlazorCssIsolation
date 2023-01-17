@@ -8,16 +8,16 @@
 #nullable enable
 
 
-namespace BlazorCssIsolation.Tokens
+namespace BlazorCssIsolation.Theming.Tokens
 {
     #pragma warning disable // Disable all warnings
 
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.8.0.0 (Newtonsoft.Json v9.0.0.0)")]
-    public partial record StyleMapToken
+    public partial record CommonMapToken
     {
         [System.Text.Json.Serialization.JsonConstructor]
 
-        public StyleMapToken(double @borderRadiusLG, double @borderRadiusOuter, double @borderRadiusSM, double @borderRadiusXS, double @lineWidthBold)
+        public CommonMapToken(double @borderRadiusLG, double @borderRadiusOuter, double @borderRadiusSM, double @borderRadiusXS, double @lineWidthBold, string @motionDurationFast, string @motionDurationMid, string @motionDurationSlow)
 
 
         {
@@ -31,6 +31,12 @@ namespace BlazorCssIsolation.Tokens
             this.BorderRadiusLG = @borderRadiusLG;
 
             this.BorderRadiusOuter = @borderRadiusOuter;
+
+            this.MotionDurationFast = @motionDurationFast;
+
+            this.MotionDurationMid = @motionDurationMid;
+
+            this.MotionDurationSlow = @motionDurationSlow;
 
         }
         [System.Text.Json.Serialization.JsonPropertyName("lineWidthBold")]
@@ -61,6 +67,24 @@ namespace BlazorCssIsolation.Tokens
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
         public double BorderRadiusOuter { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("motionDurationFast")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string MotionDurationFast { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("motionDurationMid")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string MotionDurationMid { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("motionDurationSlow")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string MotionDurationSlow { get; init; }
 
 
     }

@@ -1,5 +1,7 @@
 ﻿using BlazorCssIsolation.Themes.Shared;
-using BlazorCssIsolation.Tokens;
+using BlazorCssIsolation.Theming;
+using BlazorCssIsolation.Theming.Themes;
+using BlazorCssIsolation.Theming.Tokens;
 using System.Reflection;
 
 namespace BlazorCssIsolation.Themes.Default;

@@ -5,6 +5,9 @@
 //----------------------
 
 
+#nullable enable
+
+
 namespace BlazorCssIsolation.Tokens
 {
     #pragma warning disable // Disable all warnings

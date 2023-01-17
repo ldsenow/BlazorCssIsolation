@@ -1,4 +1,4 @@
-﻿using BlazorCssIsolation.Tokens;
+﻿using BlazorCssIsolation.Theming.Tokens;
 
 namespace BlazorCssIsolation.Themes.Shared;
 

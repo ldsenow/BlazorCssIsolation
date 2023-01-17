@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace BlazorCssIsolation.Tokens;
+﻿namespace BlazorCssIsolation.Theming.Tokens;
 
 public partial record SeedToken : TokenBase
 {

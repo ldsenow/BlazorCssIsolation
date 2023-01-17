@@ -7,7 +7,7 @@ class Program
     {
         var baseInputFolder = "../../../schemas";
         //var baseInputFolder = "../../../generated";
-        var baseOutputFolder = "../../../../BlazorCssIsolation/Generated";
+        var baseOutputFolder = "../../../../BlazorCssIsolation.Theming/Generated";
 
         //Delete existing files first
         Directory.GetFiles(baseOutputFolder, "*.cs").ToList().ForEach(File.Delete);
@@ -17,16 +17,16 @@ class Program
         {
             var fileName = Path.GetFileNameWithoutExtension(f);
             await GenerateTokens(
-                inputPath: f, 
+                inputPath: f,
                 outputPath: Path.Combine(baseOutputFolder, $"{fileName}.cs"),
-                outputTypeNamespace: $"BlazorCssIsolation.Tokens",
+                outputTypeNamespace: $"BlazorCssIsolation.Theming.Tokens",
                 fileName);
         }
     }
 
     private static async Task GenerateTokens(
-        string inputPath, 
-        string outputPath, 
+        string inputPath,
+        string outputPath,
         string outputTypeNamespace,
         string outputTypeName)
     {
@@ -41,8 +41,9 @@ class Program
             GenerateDataAnnotations = false,
             GenerateNativeRecords = true,
             GenerateOptionalPropertiesAsNullable = true,
+            GenerateNullableReferenceTypes = true,
             TypeNameGenerator = new StaticTypeNameGenerator(outputTypeName),
-            ClassStyle = CSharpClassStyle.Record
+            ClassStyle = CSharpClassStyle.Record,
         });
         var file = generator.GenerateFile();
 

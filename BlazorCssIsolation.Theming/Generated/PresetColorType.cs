@@ -8,7 +8,7 @@
 #nullable enable
 
 
-namespace BlazorCssIsolation.Tokens
+namespace BlazorCssIsolation.Theming.Tokens
 {
     #pragma warning disable // Disable all warnings
 
