@@ -15,7 +15,7 @@ public class DerivativeThemeGenerator : IThemeGenerator
         if (algorithms == null || !algorithms.Any())
             throw new ArgumentNullException(nameof(algorithms));
 
-        ThemeTokens? themeTokens = null;
+        ThemeToken? themeTokens = null;
         Dictionary<string, DesignTokenCollection> designTokens = new();
 
         foreach (var algorithm in algorithms)
