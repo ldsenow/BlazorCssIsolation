@@ -281,7 +281,7 @@ public record RGB : IColor
 
     public string AsString()
     {
-        return $"rgb({R}, {G}, {B})";
+        return A.HasValue && A < 0 ? $"rgba({R}, {G}, {B}, {A})" : $"rgb({R}, {G}, {B})";
     }
 }
 
