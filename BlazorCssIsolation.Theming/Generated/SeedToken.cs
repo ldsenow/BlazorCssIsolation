@@ -17,7 +17,7 @@ namespace BlazorCssIsolation.Theming.Tokens
     {
         [System.Text.Json.Serialization.JsonConstructor]
 
-        public SeedToken(string @blue, double @borderRadius, string @colorBgBase, string @colorError, string @colorInfo, string @colorPrimary, string @colorSuccess, string @colorTextBase, string @colorWarning, double @controlHeight, string @cyan, string @fontFamily, double @fontSize, string @geekblue, string @gold, string @green, string @lime, string @lineType, double @lineWidth, string @magenta, double @motionBase, string @motionEaseInBack, string @motionEaseInOut, string @motionEaseInOutCirc, string @motionEaseInQuint, string @motionEaseOut, string @motionEaseOutBack, string @motionEaseOutCirc, string @motionEaseOutQuint, double @motionUnit, double @opacityImage, string @orange, string @pink, string @purple, string @red, double @sizePopupArrow, double @sizeStep, double @sizeUnit, string @volcano, bool @wireframe, string @yellow, double @zIndexBase, double @zIndexPopupBase)
+        public SeedToken(string @blue, double @borderRadius, string @colorBgBase, string @colorError, string @colorInfo, string @colorPrimary, string @colorSuccess, string @colorTextBase, string @colorWarning, double @controlHeight, string @cyan, string @fontFamily, string @fontFamilyCode, double @fontSize, string @geekblue, string @gold, string @green, string @lime, string @lineType, double @lineWidth, string @magenta, double @motionBase, string @motionEaseInBack, string @motionEaseInOut, string @motionEaseInOutCirc, string @motionEaseInQuint, string @motionEaseOut, string @motionEaseOutBack, string @motionEaseOutCirc, string @motionEaseOutQuint, double @motionUnit, double @opacityImage, string @orange, string @pink, string @purple, string @red, double @sizePopupArrow, double @sizeStep, double @sizeUnit, string @volcano, bool @wireframe, string @yellow, double @zIndexBase, double @zIndexPopupBase)
 
 
         {
@@ -63,6 +63,8 @@ namespace BlazorCssIsolation.Theming.Tokens
             this.ColorBgBase = @colorBgBase;
 
             this.FontFamily = @fontFamily;
+
+            this.FontFamilyCode = @fontFamilyCode;
 
             this.FontSize = @fontSize;
 
@@ -233,6 +235,12 @@ namespace BlazorCssIsolation.Theming.Tokens
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
         public string FontFamily { get; init; }
+
+
+        [System.Text.Json.Serialization.JsonPropertyName("fontFamilyCode")]
+
+        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
+        public string FontFamilyCode { get; init; }
 
 
         [System.Text.Json.Serialization.JsonPropertyName("fontSize")]

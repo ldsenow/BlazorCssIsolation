@@ -12,20 +12,21 @@ public class DerivativeThemeGenerator : IThemeGenerator
 {
     public Theme Generate(SeedToken seedToken, params IThemeAlgorithm[] algorithms)
     {
-        if (algorithms == null || !algorithms.Any())
-            throw new ArgumentNullException(nameof(algorithms));
+        throw new NotImplementedException();
+        //if (algorithms == null || !algorithms.Any())
+        //    throw new ArgumentNullException(nameof(algorithms));
 
-        ThemeToken? themeTokens = null;
-        Dictionary<string, DesignTokenCollection> designTokens = new();
+        //ThemeToken? themeTokens = null;
+        //Dictionary<string, DesignTokenCollection> designTokens = new();
 
-        foreach (var algorithm in algorithms)
-        {
-            var pair = algorithm.Derive(seedToken, themeTokens);
+        //foreach (var algorithm in algorithms)
+        //{
+        //    var pair = algorithm.Derive(seedToken, themeTokens);
 
-            themeTokens = pair.ThemeTokens;
-            designTokens.Add(algorithm.Name, pair.DesignTokens);
-        }
+        //    themeTokens = pair.ThemeTokens;
+        //    designTokens.Add(algorithm.Name, pair.DesignTokens);
+        //}
 
-        return new Theme(themeTokens!, designTokens);
+        //return new Theme(themeTokens!, designTokens);
     }
 }

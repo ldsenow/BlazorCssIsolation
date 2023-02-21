@@ -8,13 +8,6 @@ namespace BlazorCssIsolation.Theming;
 public interface IColor : IConvertToHex, IConvertToHsv, IConvertToRgb, IConvertToHsl
 {
     /// <summary>
-    /// Sets the alpha value on the current color.
-    /// </summary>
-    /// <param name="alpha">Valid between 0 and 1.</param>
-    /// <returns>A new color</returns>
-    IColor ApplyAlpha(double alpha);
-
-    /// <summary>
     /// Lighten the color a given amount, from 0 to 100. Providing 100 will always return white.
     /// </summary>
     /// <param name="brightness">Valid between 1 and 100</param>
@@ -27,6 +20,15 @@ public interface IColor : IConvertToHex, IConvertToHsv, IConvertToRgb, IConvertT
     /// <param name="brightness">Valid between 1 and 100</param>
     /// <returns>A new color</returns>
     IColor Darken(int brightness);
+
+    /// <summary>
+    /// Sets the alpha value on the current color.
+    /// </summary>
+    /// <param name="alpha">Valid between 0 and 1.</param>
+    /// <returns>A new color</returns>
+    IColor ApplyAlpha(double alpha);
+
+    IColor ClampAlpha(IColor otherColor);
 
     string AsString();
 }
@@ -51,9 +53,6 @@ public interface IConvertToHsl
     HSL ToHSL();
 }
 
-/// <summary>
-/// Alpha is not supported at this stage
-/// </summary>
 public partial record HEX : IColor
 {
     [GeneratedRegex("^(?:[0-9a-fA-F]{3,4}){1,2}$", RegexOptions.Compiled)]
@@ -160,6 +159,11 @@ public partial record HEX : IColor
         return new RGB(r, g, b).ToHEX();
     }
 
+    public IColor ClampAlpha(IColor otherColor)
+    {
+        throw new NotImplementedException();
+    }
+
     public string AsString()
     {
         return $"#{Value}";
@@ -206,6 +210,33 @@ public record RGB : IColor
     public IColor ApplyAlpha(double alpha)
     {
         throw new NotImplementedException();
+    }
+
+    public IColor ClampAlpha(IColor backgroundColor)
+    {
+        var fRgb = ToRGB();
+        if (fRgb.A < 1) return this;
+
+        var bRgb = backgroundColor.ToRGB();
+
+        for (var fA = 0.01; fA <= 1; fA += 0.01)
+        {
+            var r = (int)Math.Round((fRgb.R - bRgb.R * (1 - fA)) / fA, 0);
+            var g = (int)Math.Round((fRgb.G - bRgb.G * (1 - fA)) / fA, 0);
+            var b = (int)Math.Round((fRgb.B - bRgb.B * (1 - fA)) / fA, 0);
+
+            if (IsStableColor(r) && IsStableColor(g) && IsStableColor(b))
+            {
+                return new RGB(r, g, b, fA);
+            }
+        }
+
+        return new RGB(fRgb.R, fRgb.G, fRgb.B, 1);
+    }
+
+    private static bool IsStableColor(double colorValue)
+    {
+        return colorValue >= 0 && colorValue <= 255;
     }
 
     public HEX ToHEX()
@@ -323,6 +354,11 @@ public record HSV : IColor
         throw new NotImplementedException();
     }
 
+    public IColor ClampAlpha(IColor otherColor)
+    {
+        throw new NotImplementedException();
+    }
+
     public HEX ToHEX()
     {
         return ToRGB().ToHEX();
@@ -423,6 +459,11 @@ public record HSL : IColor
     }
 
     public IColor ApplyAlpha(double alpha)
+    {
+        throw new NotImplementedException();
+    }
+    
+    public IColor ClampAlpha(IColor otherColor)
     {
         throw new NotImplementedException();
     }

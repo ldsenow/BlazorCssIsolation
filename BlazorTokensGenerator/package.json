@@ -5,16 +5,17 @@
   "main": "main.js",
   "type": "module",
   "scripts": {
-    "generate": "node ./main.js"
+    "generate": "node ./main.js",
+    "generate-themes": "node ./themes.js"
   },
   "dependencies": {
-    "antd": "^5.1.6",
-    "ts-json-schema-generator": "^2.0.0-next.0"
+    "antd": "^5.2.2",
+    "ts-json-schema-generator": "^1.2.0"
   },
   "devDependencies": {
-    "@babel/runtime": "^7.20.13",
-    "@types/node": "^18.11.18",
-    "@types/react": "^18.0.27",
-    "typescript": "^4.9.4"
+    "@babel/runtime": "^7.21.0",
+    "@types/node": "^18.14.0",
+    "@types/react": "^18.0.28",
+    "typescript": "^4.9.5"
   }
 }
