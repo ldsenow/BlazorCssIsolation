@@ -21,7 +21,7 @@ public abstract record TokenBase
         {
             var v = p.GetValue(this);
             if (v != null)
-                sb.Append($"{VarPrefix}-{ToKebabCase(p.Name)}: {v};");
+                sb.Append($"{VarPrefix}-{ToKebabCase(p.Name)}:{v};");
         }
 
         return sb.ToString();

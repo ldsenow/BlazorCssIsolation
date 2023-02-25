@@ -4,9 +4,16 @@ namespace BlazorCssIsolation.Theming.Themes;
 
 public class DesignTokenCollection : Dictionary<string, DesignToken>
 {
-
     public DesignTokenCollection()
     {
+    }
+
+    public DesignTokenCollection(Dictionary<string, object?> pairs)
+    {
+        foreach (var p in pairs)
+        {
+            Set(p.Key, p.Value);
+        }
     }
 
     public DesignTokenCollection(DesignToken[] tokens)
@@ -45,7 +52,7 @@ public class DesignTokenCollection : Dictionary<string, DesignToken>
 
         foreach (var p in this)
         {
-            var name = ToKebabCase(p.Value.Name);
+            var name = ToKebabCase(p.Value.Name, separator: "-");
             sb.Append($"{varPrefix}{name}:{p.Value.Value};");
         }
 
@@ -53,8 +60,7 @@ public class DesignTokenCollection : Dictionary<string, DesignToken>
     }
 
     //https://github.com/J0rgeSerran0/JsonNamingPolicy/blob/master/JsonKebabCaseNamingPolicy.cs
-    private const string separator = "-";
-    private static string ToKebabCase(string name)
+    private static string ToKebabCase(string name, string separator)
     {
         if (string.IsNullOrEmpty(name) || string.IsNullOrWhiteSpace(name)) return string.Empty;
 
@@ -62,10 +68,6 @@ public class DesignTokenCollection : Dictionary<string, DesignToken>
 
         var stringBuilder = new StringBuilder();
         var addCharacter = true;
-
-        var isPreviousSpace = false;
-        var isPreviousSeparator = false;
-        var isCurrentSpace = false;
         var isNextLower = false;
         var isNextUpper = false;
         var isNextSpace = false;
@@ -74,9 +76,9 @@ public class DesignTokenCollection : Dictionary<string, DesignToken>
         {
             if (position != 0)
             {
-                isCurrentSpace = spanName[position] == 32;
-                isPreviousSpace = spanName[position - 1] == 32;
-                isPreviousSeparator = spanName[position - 1] == 95;
+                bool isCurrentSpace = spanName[position] == 32;
+                bool isPreviousSpace = spanName[position - 1] == 32;
+                bool isPreviousSeparator = spanName[position - 1] == 95;
 
                 if (position + 1 != spanName.Length)
                 {
@@ -90,7 +92,9 @@ public class DesignTokenCollection : Dictionary<string, DesignToken>
                     isPreviousSeparator ||
                     isNextUpper ||
                     isNextSpace))
+                {
                     addCharacter = false;
+                }
                 else
                 {
                     var isCurrentUpper = spanName[position] > 64 && spanName[position] < 91;
@@ -103,14 +107,16 @@ public class DesignTokenCollection : Dictionary<string, DesignToken>
                     isNextLower ||
                     isNextSpace ||
                     isNextLower && !isPreviousSpace))
-                        stringBuilder.Append(separator);
+                    {
+                        _ = stringBuilder.Append(separator);
+                    }
                     else
                     {
                         if (isCurrentSpace &&
                             !isPreviousSpace &&
                             !isNextSpace)
                         {
-                            stringBuilder.Append(separator);
+                            _ = stringBuilder.Append(separator);
                             addCharacter = false;
                         }
                     }
@@ -118,9 +124,13 @@ public class DesignTokenCollection : Dictionary<string, DesignToken>
             }
 
             if (addCharacter)
+            {
                 stringBuilder.Append(spanName[position]);
+            }
             else
+            {
                 addCharacter = true;
+            }
         }
 
         return stringBuilder.ToString().ToLower();

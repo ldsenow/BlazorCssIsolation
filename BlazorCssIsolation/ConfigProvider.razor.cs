@@ -1,5 +1,5 @@
-﻿using BlazorCssIsolation.Themes.Default;
-using BlazorCssIsolation.Theming.Themes;
+﻿using BlazorCssIsolation.Theming.Themes;
+using BlazorCssIsolation.Theming.Themes.Algorithms;
 using BlazorCssIsolation.Theming.Tokens;
 using Microsoft.AspNetCore.Components;
 
@@ -7,29 +7,36 @@ namespace BlazorCssIsolation;
 
 public partial class ConfigProvider
 {
-    public Theme? Theme { get; set; }//=> Algorithms.Where(x => x.Name == "default");
-
-    public DesignTokenCollection ThemeDesignTokens { get; set; }
-
-    [Parameter]
-    public Action<Theme>? ConfigTheme { get; set; }
+    [Inject]
+    public IThemeGenerator ThemeGenerator { get; set; } = default!;
 
     [Inject]
-    public IEnumerable<IThemeTokenGenerator> Algorithms { get; set; } = Enumerable.Empty<IThemeTokenGenerator>();
+    public IThemeAlgorithm[] AvailableAlgorithms { get; set; } = Array.Empty<IThemeAlgorithm>();
+
+    [Parameter]
+    public IThemeAlgorithm[] AppliedAlgorithms { get; set; } = Array.Empty<IThemeAlgorithm>();
+
+    [Parameter]
+    public SeedToken SeedToken { get; set; } = SeedToken.Default;
 
     [Parameter]
     public RenderFragment? ChildContent { get; set; }
 
+    public ThemeTokenCollection ThemeToken { get; private set; }
+
     public ConfigProvider()
     {
-        ThemeDesignTokens = new DefaultThemeTokenGenerator(new ColorDerivative())
-                .Generate(SeedToken.Default);
+        AppliedAlgorithms = AvailableAlgorithms.Any()
+            ? new[] { AvailableAlgorithms.First() }
+            : Array.Empty<IThemeAlgorithm>();
+
+        ThemeToken = ThemeGenerator.Generate(seedToken: SeedToken, AppliedAlgorithms);
     }
 }
 
-public class Theme
-{
-    public string[] Algorithms { get; set; } = new[] { "default", "dark", "compact" };
-    public ThemeTokenCollection Base { get; set; } = default!;
-    public ButtonDesignTokens Button { get; set; } = new();
-}
+//public class ThemeOptions
+//{
+//    public Type[] Algorithms { get; set; } = new[] { typeof(DefaultThemeAlgorithm) };
+//    public ThemeTokenCollection Base { get; set; } = default!;
+//    public ButtonDesignTokens Button { get; set; } = new();
+//}

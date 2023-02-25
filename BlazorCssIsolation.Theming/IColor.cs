@@ -161,7 +161,7 @@ public partial record HEX : IColor
 
     public IColor ClampAlpha(IColor otherColor)
     {
-        throw new NotImplementedException();
+        return ToRGB().ClampAlpha(otherColor);
     }
 
     public string AsString()

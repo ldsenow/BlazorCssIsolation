@@ -15,67 +15,58 @@ public class DefaultThemeAlgorithm : IThemeAlgorithm
         this.colorDerivative = colorDerivative;
     }
 
-    public ThemeTokenCollection Derive(SeedToken seedToken)
+    public ThemeTokenCollection Derive(SeedToken seedToken, ThemeTokenCollection? derivedFrom = null)
     {
-        var tokenCollection = new DesignTokenCollection();
-
-        var seedTokens = PopulateSeedTokens(seedToken, tokenCollection);
-        var colorPalettesTokens = PopulateColorPalettes(seedToken, tokenCollection);
-        var colorMapTokens = PopulateColorMapTokens(seedToken, tokenCollection);
-        var sizeMapTokens = PopulateSizeMapTokens(seedToken, tokenCollection);
-        var heightMapTokens = PopulateHeightMapTokens(seedToken, tokenCollection);
-        var commonMapTokens = PopulateCommonMapTokens(seedToken, tokenCollection);
+        var colorPalettes = BuildColorPalettes(seedToken);
+        var colorMapToken = BuildColorMapTokens(seedToken);
+        var sizeMapToken = BuildSizeMapTokens(seedToken);
+        var heightMapToken = BuildHeightMapTokens(seedToken);
+        var fontMapToken = BuildFontMapTokens(seedToken);
+        var commonMapToken = BuildCommonMapTokens(seedToken);
 
         var aliasToken = new AliasToken(
-            seedToken: seedTokens,
-            colorPalettes: colorPalettesTokens,
-            colorMapToken: colorMapTokens,
-            commonMapToken: commonMapTokens,
-            sizeMapToken: sizeMapTokens,
-            fontMapToken: null,
-            heightMapToken: heightMapTokens);
+            seedToken: seedToken,
+            colorPalettes: colorPalettes,
+            colorMapToken: colorMapToken,
+            commonMapToken: commonMapToken,
+            sizeMapToken: sizeMapToken,
+            fontMapToken: fontMapToken,
+            heightMapToken: heightMapToken);
 
-        return new ThemeTokenCollection(aliasToken);
+        var collection = new ThemeTokenCollection(aliasToken);
+
+        if (derivedFrom != null)
+        {
+            collection = derivedFrom.Merge(collection);
+        }
+
+        return collection;
     }
 
-    private static CommonMapToken PopulateCommonMapTokens(SeedToken seedToken, DesignTokenCollection tokenCollection)
+    private static FontMapToken BuildFontMapTokens(SeedToken seedToken)
+    {
+        return FontMapTokensGenerator.Genereate(seedToken.FontSize);
+    }
+
+    private static CommonMapToken BuildCommonMapTokens(SeedToken seedToken)
     {
         var tokens = CommonTokensGenerator.Genereate(seedToken);
-        var tokenNames = GetSortedPropertyNames<CommonMapToken>();
-        foreach (var n in tokenNames)
-        {
-            tokenCollection.Set(n, tokens[n]);
-        }
-
         return tokens;
     }
 
-    private static HeightMapToken PopulateHeightMapTokens(SeedToken seedToken, DesignTokenCollection tokenCollection)
+    private static HeightMapToken BuildHeightMapTokens(SeedToken seedToken)
     {
         var tokens = ControlHeightsGenerator.Genereate(seedToken.ControlHeight);
-        var tokenNames = GetSortedPropertyNames<HeightMapToken>();
-        foreach (var n in tokenNames)
-        {
-            tokenCollection.Set(n, tokens[n]);
-        }
-
         return tokens;
     }
 
-    private static SizeMapToken PopulateSizeMapTokens(SeedToken seedToken, DesignTokenCollection tokenCollection)
+    private static SizeMapToken BuildSizeMapTokens(SeedToken seedToken)
     {
         var tokens = SizesGenerator.Genereate(seedToken.SizeUnit, seedToken.SizeStep);
-
-        var tokenNames = GetSortedPropertyNames<SizeMapToken>();
-        foreach (var n in tokenNames)
-        {
-            tokenCollection.Set(n, tokens[n]);
-        }
-
         return tokens;
     }
 
-    private ColorMapToken PopulateColorMapTokens(SeedToken seedToken, DesignTokenCollection tokenCollection)
+    private ColorMapToken BuildColorMapTokens(SeedToken seedToken)
     {
         //TODO: Dont need to follow how antd react does
         var tokens = ColorMapTokensGenerator.Genereate(seedToken, new ColorPalettesGenerationOptions(
@@ -120,28 +111,10 @@ public class DefaultThemeAlgorithm : IThemeAlgorithm
                     colorBorderSecondary: colorBgBase.Darken(6).AsString());
             }));
 
-        var tokenNames = GetSortedPropertyNames<ColorMapToken>();
-        foreach (var n in tokenNames)
-        {
-            tokenCollection.Set(n, tokens[n]);
-        }
-
         return tokens;
     }
 
-    private static SeedToken PopulateSeedTokens(SeedToken seedToken, DesignTokenCollection tokenCollection)
-    {
-        var tokenNames = GetSortedPropertyNames<SeedToken>();
-        foreach (var n in tokenNames)
-        {
-            Console.WriteLine($"{n}: '{seedToken[n]}'");
-            tokenCollection.Set(n, seedToken[n]);
-        }
-
-        return seedToken;
-    }
-
-    private ColorPalettes PopulateColorPalettes(SeedToken seedToken, DesignTokenCollection tokenCollection)
+    private ColorPalettes BuildColorPalettes(SeedToken seedToken)
     {
         var map = new Dictionary<string, string>();
         var presetColorNames = GetSortedPropertyNames<PresetColorType>();
@@ -163,7 +136,6 @@ public class DefaultThemeAlgorithm : IThemeAlgorithm
 
             for (int i = 0; i < derivedColors.Length; i++)
             {
-                tokenCollection.Set($"{name}{i + 1}", derivedColors[i]);
                 map.Add($"{name}{i + 1}", derivedColors[i]);
             }
         }

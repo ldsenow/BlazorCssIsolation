@@ -9,6 +9,7 @@ const darkTheme = theme.darkAlgorithm(seed, defaultTheme);
 const compactTheme = theme.compactAlgorithm(seed, defaultTheme);
 
 emptyFolder();
+writeFile("seed.json", seed);
 writeFile("defaultTheme.json", defaultTheme);
 writeFile("darkTheme.json", darkTheme);
 writeFile("compactTheme.json", compactTheme);
