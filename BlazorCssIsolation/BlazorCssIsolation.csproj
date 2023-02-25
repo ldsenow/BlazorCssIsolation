@@ -11,27 +11,6 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <Compile Remove="Themes\**" />
-	  <Content Remove="Themes\**" />
-	  <EmbeddedResource Remove="Themes\**" />
-	  <None Remove="Themes\**" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Compile Include="Themes\Default\DefaultThemeTokenGenerator.cs" />
-	  <Compile Include="Themes\DesignTokenCollection.cs" />
-	  <Compile Include="Themes\IColorDerivative.cs" />
-	  <Compile Include="Themes\IPresetColors.cs" />
-	  <Compile Include="Themes\IThemeTokenGenerator.cs" />
-	  <Compile Include="Themes\Shared\ColorMapTokensGenerator.cs" />
-	  <Compile Include="Themes\Shared\CommonTokensGenerator.cs" />
-	  <Compile Include="Themes\Shared\ControlHeightsGenerator.cs" />
-	  <Compile Include="Themes\Shared\FontSizesGenerator.cs" />
-	  <Compile Include="Themes\Shared\RadiiGenerator.cs" />
-	  <Compile Include="Themes\Shared\SizesGenerator.cs" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<SupportedPlatform Include="browser" />
 
 	</ItemGroup>
@@ -41,9 +20,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Generated\" />
-	  <Folder Include="Themes\Algorithms\" />
-	  <Folder Include="Themes\Decorators\" />
+	  <ProjectReference Include="..\BlazorCssIsolation.Theming\BlazorCssIsolation.Theming.csproj" />
 	</ItemGroup>
 
 </Project>

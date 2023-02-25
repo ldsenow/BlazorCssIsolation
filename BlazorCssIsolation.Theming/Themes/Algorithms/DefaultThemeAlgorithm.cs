@@ -1,35 +1,44 @@
 ﻿using BlazorCssIsolation.Themes.Shared;
-using BlazorCssIsolation.Tokens;
+using BlazorCssIsolation.Theming.Tokens;
 using System.Reflection;
 
-namespace BlazorCssIsolation.Themes.Default;
+namespace BlazorCssIsolation.Theming.Themes.Algorithms;
 
-public class DefaultThemeTokenGenerator : IThemeTokenGenerator
+public class DefaultThemeAlgorithm : IThemeAlgorithm
 {
     private readonly IColorDerivative colorDerivative;
 
     public string Name => "default";
 
-    public DefaultThemeTokenGenerator(IColorDerivative colorDerivative)
+    public DefaultThemeAlgorithm(IColorDerivative colorDerivative)
     {
         this.colorDerivative = colorDerivative;
     }
 
-    public DesignTokenCollection Generate(SeedToken seedToken)
+    public ThemeTokenCollection Derive(SeedToken seedToken)
     {
         var tokenCollection = new DesignTokenCollection();
 
-        PopulateSeedTokens(seedToken, tokenCollection);
-        PopulateColorPalettes(seedToken, tokenCollection);
-        PopulateColorMapTokens(seedToken, tokenCollection);
-        PopulateSizeMapTokens(seedToken, tokenCollection);
-        PopulateHeightMapTokens(seedToken, tokenCollection);
-        PopulateCommonMapTokens(seedToken, tokenCollection);
+        var seedTokens = PopulateSeedTokens(seedToken, tokenCollection);
+        var colorPalettesTokens = PopulateColorPalettes(seedToken, tokenCollection);
+        var colorMapTokens = PopulateColorMapTokens(seedToken, tokenCollection);
+        var sizeMapTokens = PopulateSizeMapTokens(seedToken, tokenCollection);
+        var heightMapTokens = PopulateHeightMapTokens(seedToken, tokenCollection);
+        var commonMapTokens = PopulateCommonMapTokens(seedToken, tokenCollection);
 
-        return tokenCollection;
+        var aliasToken = new AliasToken(
+            seedToken: seedTokens,
+            colorPalettes: colorPalettesTokens,
+            colorMapToken: colorMapTokens,
+            commonMapToken: commonMapTokens,
+            sizeMapToken: sizeMapTokens,
+            fontMapToken: null,
+            heightMapToken: heightMapTokens);
+
+        return new ThemeTokenCollection(aliasToken);
     }
 
-    private static void PopulateCommonMapTokens(SeedToken seedToken, DesignTokenCollection tokenCollection)
+    private static CommonMapToken PopulateCommonMapTokens(SeedToken seedToken, DesignTokenCollection tokenCollection)
     {
         var tokens = CommonTokensGenerator.Genereate(seedToken);
         var tokenNames = GetSortedPropertyNames<CommonMapToken>();
@@ -37,9 +46,11 @@ public class DefaultThemeTokenGenerator : IThemeTokenGenerator
         {
             tokenCollection.Set(n, tokens[n]);
         }
+
+        return tokens;
     }
 
-    private static void PopulateHeightMapTokens(SeedToken seedToken, DesignTokenCollection tokenCollection)
+    private static HeightMapToken PopulateHeightMapTokens(SeedToken seedToken, DesignTokenCollection tokenCollection)
     {
         var tokens = ControlHeightsGenerator.Genereate(seedToken.ControlHeight);
         var tokenNames = GetSortedPropertyNames<HeightMapToken>();
@@ -47,9 +58,11 @@ public class DefaultThemeTokenGenerator : IThemeTokenGenerator
         {
             tokenCollection.Set(n, tokens[n]);
         }
+
+        return tokens;
     }
 
-    private static void PopulateSizeMapTokens(SeedToken seedToken, DesignTokenCollection tokenCollection)
+    private static SizeMapToken PopulateSizeMapTokens(SeedToken seedToken, DesignTokenCollection tokenCollection)
     {
         var tokens = SizesGenerator.Genereate(seedToken.SizeUnit, seedToken.SizeStep);
 
@@ -58,9 +71,11 @@ public class DefaultThemeTokenGenerator : IThemeTokenGenerator
         {
             tokenCollection.Set(n, tokens[n]);
         }
+
+        return tokens;
     }
 
-    private void PopulateColorMapTokens(SeedToken seedToken, DesignTokenCollection tokenCollection)
+    private ColorMapToken PopulateColorMapTokens(SeedToken seedToken, DesignTokenCollection tokenCollection)
     {
         //TODO: Dont need to follow how antd react does
         var tokens = ColorMapTokensGenerator.Genereate(seedToken, new ColorPalettesGenerationOptions(
@@ -110,9 +125,11 @@ public class DefaultThemeTokenGenerator : IThemeTokenGenerator
         {
             tokenCollection.Set(n, tokens[n]);
         }
+
+        return tokens;
     }
 
-    private static void PopulateSeedTokens(SeedToken seedToken, DesignTokenCollection tokenCollection)
+    private static SeedToken PopulateSeedTokens(SeedToken seedToken, DesignTokenCollection tokenCollection)
     {
         var tokenNames = GetSortedPropertyNames<SeedToken>();
         foreach (var n in tokenNames)
@@ -120,10 +137,13 @@ public class DefaultThemeTokenGenerator : IThemeTokenGenerator
             Console.WriteLine($"{n}: '{seedToken[n]}'");
             tokenCollection.Set(n, seedToken[n]);
         }
+
+        return seedToken;
     }
 
-    private void PopulateColorPalettes(SeedToken seedToken, DesignTokenCollection tokenCollection)
+    private ColorPalettes PopulateColorPalettes(SeedToken seedToken, DesignTokenCollection tokenCollection)
     {
+        var map = new Dictionary<string, string>();
         var presetColorNames = GetSortedPropertyNames<PresetColorType>();
 
         foreach (var name in presetColorNames)
@@ -144,8 +164,11 @@ public class DefaultThemeTokenGenerator : IThemeTokenGenerator
             for (int i = 0; i < derivedColors.Length; i++)
             {
                 tokenCollection.Set($"{name}{i + 1}", derivedColors[i]);
+                map.Add($"{name}{i + 1}", derivedColors[i]);
             }
         }
+
+        return new ColorPalettes(map);
     }
 
     private static string[] GetSortedPropertyNames<T>()

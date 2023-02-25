@@ -1,6 +1,6 @@
-using BlazorCssIsolation.Themes;
 using BlazorCssIsolation.Themes.Default;
-using BlazorCssIsolation.Tokens;
+using BlazorCssIsolation.Theming.Themes;
+using BlazorCssIsolation.Theming.Tokens;
 
 namespace BlazorCssIsolation.Tests
 {

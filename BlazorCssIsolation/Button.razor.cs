@@ -1,5 +1,4 @@
-using BlazorCssIsolation.Themes;
-using BlazorCssIsolation.Tokens;
+using BlazorCssIsolation.Theming.Tokens;
 using Microsoft.AspNetCore.Components;
 
 namespace BlazorCssIsolation;

@@ -369,4 +369,16 @@ public partial record AliasToken : TokenBase
             zIndexPopupBase: seedToken.ZIndexPopupBase)
     {
     }
+
+    // FIXME: component box-shadow, should be removed
+    internal static string BoxShadowPopoverArrow => "2px 2px 5px rgba(0, 0, 0, 0.05)";
+    internal static string BoxShadowCard => "0 1px 2px -2px rgba(0, 0, 0, 0.16), 0 3px 6px 0 rgba(0, 0, 0, 0.12), 0 5px 12px 4px rgba(0, 0, 0, 0.09)";
+    internal static string BoxShadowDrawerRight => "-6px 0 16px 0 rgba(0, 0, 0, 0.08), -3px 0 6px -4px rgba(0, 0, 0, 0.12), -9px 0 28px 8px rgba(0, 0, 0, 0.05)";
+    internal static string BoxShadowDrawerLeft => "6px 0 16px 0 rgba(0, 0, 0, 0.08), 3px 0 6px -4px rgba(0, 0, 0, 0.12), 9px 0 28px 8px rgba(0, 0, 0, 0.05)";
+    internal static string BoxShadowDrawerUp => "0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05)";
+    internal static string BoxShadowDrawerDown => "0 -6px 16px 0 rgba(0, 0, 0, 0.08), 0 -3px 6px -4px rgba(0, 0, 0, 0.12), 0 -9px 28px 8px rgba(0, 0, 0, 0.05)";
+    internal static string BoxShadowTabsOverflowLeft => "inset 10px 0 8px -8px rgba(0, 0, 0, 0.08)";
+    internal static string BoxShadowTabsOverflowRight => "inset -10px 0 8px -8px rgba(0, 0, 0, 0.08)";
+    internal static string BoxShadowTabsOverflowTop => "inset 0 10px 8px -8px rgba(0, 0, 0, 0.08)";
+    internal static string BoxShadowTabsOverflowBottom => "inset 0 -10px 8px -8px rgba(0, 0, 0, 0.08)";
 }

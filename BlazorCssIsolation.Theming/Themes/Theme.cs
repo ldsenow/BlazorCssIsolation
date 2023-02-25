@@ -2,14 +2,19 @@
 
 namespace BlazorCssIsolation.Theming.Themes;
 
-public class Theme
+public record Theme
 {
-    public Theme(ThemeToken themeTokens, IDictionary<string, DesignTokenCollection> designTokens)
+    public Theme(string name, ThemeTokenCollection themeTokens)
     {
+        Name = name;
         ThemeTokens = themeTokens;
-        DesignTokens = designTokens.AsReadOnly();
     }
 
-    public ThemeToken ThemeTokens { get; }
-    public IReadOnlyDictionary<string, DesignTokenCollection> DesignTokens { get; }
+    public string Name { get; }
+    public ThemeTokenCollection ThemeTokens { get; }
+
+    public Theme Merge(Theme otherTheme)
+    {
+        throw new NotImplementedException();
+    }
 }

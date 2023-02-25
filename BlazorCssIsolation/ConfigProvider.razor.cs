@@ -1,6 +1,6 @@
-﻿using BlazorCssIsolation.Themes;
-using BlazorCssIsolation.Themes.Default;
-using BlazorCssIsolation.Tokens;
+﻿using BlazorCssIsolation.Themes.Default;
+using BlazorCssIsolation.Theming.Themes;
+using BlazorCssIsolation.Theming.Tokens;
 using Microsoft.AspNetCore.Components;
 
 namespace BlazorCssIsolation;
@@ -30,10 +30,6 @@ public partial class ConfigProvider
 public class Theme
 {
     public string[] Algorithms { get; set; } = new[] { "default", "dark", "compact" };
-    public BaseDesignTokens Base { get; set; } = new();
+    public ThemeTokenCollection Base { get; set; } = default!;
     public ButtonDesignTokens Button { get; set; } = new();
-}
-
-public record BaseDesignTokens : AliasToken
-{
 }
