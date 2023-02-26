@@ -1,3 +1,9 @@
 [submodule "BlazorTokensGenerator/ant-design"]
 	path = BlazorTokensGenerator/ant-design
 	url = https://github.com/ant-design/ant-design.git
+[submodule "BlazorTokensGenerator/ant-design-colors"]
+	path = BlazorTokensGenerator/ant-design-colors
+	url = https://github.com/ant-design/ant-design-colors.git
+[submodule "BlazorTokensGenerator/tinycolor"]
+	path = BlazorTokensGenerator/tinycolor
+	url = https://github.com/scttcper/tinycolor.git

@@ -12,18 +12,18 @@ internal static class FontSizesGenerator
 
             var i = idx - 1;
 
-            var b = baseUnit * Math.Pow(2.71828, (i / 5));
-            var intSize = idx > 1 ? Math.Floor(b) : Math.Ceiling(b);
+            var b = baseUnit * Math.Pow(2.71828, (i / 5.0));
+            var s = idx > 1 ? Math.Floor(b) : Math.Ceiling(b);
 
             // Convert to even
-            return Math.Floor(intSize / 2) * 2;
-        });
+            return Math.Floor(s / 2.0) * 2;
+        }).ToList();
 
         return sizes.Select(size =>
         {
             var height = size + 8;
-
-            return new FontSize(size, height / size);
+            var lineHeight = height / size;
+            return new FontSize(size, lineHeight);
         }).ToArray();
     }
 }

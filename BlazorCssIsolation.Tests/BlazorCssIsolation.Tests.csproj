@@ -9,11 +9,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="defaultTheme.json" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="defaultTheme.json">
+    <Content Include="..\BlazorTokensGenerator\generated\compactTheme.json" Link="themes\compactTheme.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\BlazorTokensGenerator\generated\darkTheme.json" Link="themes\darkTheme.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\BlazorTokensGenerator\generated\defaultTheme.json" Link="themes\defaultTheme.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\BlazorTokensGenerator\generated\seed.json" Link="themes\seed.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
@@ -30,6 +35,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BlazorCssIsolation\BlazorCssIsolation.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="themes\" />
   </ItemGroup>
 
 </Project>

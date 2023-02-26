@@ -5,14 +5,15 @@ public interface IColorDerivative
     IColor[] Derive(IColor primary, ColorDerivativeOptions? options = default);
 }
 
+//https://github.com/ant-design/ant-design-colors
 public class ColorDerivative : IColorDerivative
 {
     //TODO: Consider to move these settings into ThemeGenerationOptions
     private const int hueStep = 2; // 色相阶梯
-    private const int saturationStep = 16; // 饱和度阶梯，浅色部分
-    private const int saturationStep2 = 5; // 饱和度阶梯，深色部分
-    private const int brightnessStep1 = 5; // 亮度阶梯，浅色部分
-    private const int brightnessStep2 = 15; // 亮度阶梯，深色部分
+    private const double saturationStep = 0.16; // 饱和度阶梯，浅色部分
+    private const double saturationStep2 = 0.05; // 饱和度阶梯，深色部分
+    private const double brightnessStep1 = 0.05; // 亮度阶梯，浅色部分
+    private const double brightnessStep2 = 0.15; // 亮度阶梯，深色部分
     private const int lightColorCount = 5; // 浅色数量，主色上
     private const int darkColorCount = 4; // 深色数量，主色下
 
@@ -35,7 +36,6 @@ public class ColorDerivative : IColorDerivative
     {
         List<HEX> patterns = new();
 
-        var rgb = primary.ToRGB();
         var hsv = primary.ToHSV();
 
         for (var i = lightColorCount; i > 0; i -= 1)
@@ -74,18 +74,19 @@ public class ColorDerivative : IColorDerivative
         }
     }
 
-    private static int MixHue(HSV color, int amount, bool light)
+    private static double MixHue(HSV color, int amount, bool light)
     {
-        int hue;
+        double hue;
+        double h = Math.Round(color.H);
 
         // 根据色相不同，色相转向不同
-        if (color.H >= 60 && color.H <= 240)
+        if (h>= 60 && h<= 240)
         {
-            hue = light ? color.H - hueStep * amount : color.H + hueStep * amount;
+            hue = light ? h - hueStep * amount : h + hueStep * amount;
         }
         else
         {
-            hue = light ? color.H + hueStep * amount : color.H - hueStep * amount;
+            hue = light ? h + hueStep * amount : h - hueStep * amount;
         }
 
         if (hue < 0)
@@ -100,7 +101,7 @@ public class ColorDerivative : IColorDerivative
         return hue;
     }
 
-    private static int MixSaturation(HSV color, int amount, bool light)
+    private static double MixSaturation(HSV color, int amount, bool light)
     {
         // grey color don't change saturation
         if (color.H == 0 && color.S == 0)
@@ -108,7 +109,7 @@ public class ColorDerivative : IColorDerivative
             return color.S;
         }
 
-        int saturation;
+        double saturation;
         if (light)
         {
             saturation = color.S - saturationStep * amount;
@@ -122,24 +123,24 @@ public class ColorDerivative : IColorDerivative
             saturation = color.S + saturationStep2 * amount;
         }
 
-        // Restrict the first light saturation <= 10
-        if (light && amount == lightColorCount && saturation > 10)
+        // Restrict the first light saturation <= 0.1
+        if (light && amount == lightColorCount && saturation > 0.1)
         {
-            saturation = 10;
+            saturation = 0.1;
         }
 
-        saturation = Math.Clamp(saturation, 6, 100);
+        saturation = Math.Clamp(saturation, 0.06, 1);
 
-        return saturation;
+        return Math.Round(saturation, 2);
     }
 
-    private static int MixValue(HSV color, int amount, bool light)
+    private static double MixValue(HSV color, int amount, bool light)
     {
-        int value = light
+        double value = light
             ? color.V + brightnessStep1 * amount
             : color.V - brightnessStep2 * amount;
 
-        return Math.Min(value, 100);
+        return Math.Round(Math.Min(value, 1), 2);
     }
 
     // Wrapper function ported from TinyColor.prototype.mix, not treeshakable.
@@ -150,7 +151,7 @@ public class ColorDerivative : IColorDerivative
         if (amount > 1 || amount < 0)
             throw new ArgumentOutOfRangeException(nameof(amount));
 
-        var mix = (int v1, int v2) => (int)Math.Round((v2 - v1) * amount + v1);
+        var mix = (double v1, double v2) => (v2 - v1) * amount + v1;
 
         var r = mix(rgb1.R, rgb2.R);
         var g = mix(rgb1.G, rgb2.G);

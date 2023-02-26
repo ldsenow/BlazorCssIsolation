@@ -1,4 +1,5 @@
 ﻿using System.Text.RegularExpressions;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace BlazorCssIsolation.Theming;
 
@@ -12,14 +13,14 @@ public interface IColor : IConvertToHex, IConvertToHsv, IConvertToRgb, IConvertT
     /// </summary>
     /// <param name="brightness">Valid between 1 and 100</param>
     /// <returns>A new color</returns>
-    IColor Lighten(int brightness);
+    IColor Lighten(double brightness);
 
     /// <summary>
     /// Darken the color a given amount, from 0 to 100. Providing 100 will always return black.
     /// </summary>
     /// <param name="brightness">Valid between 1 and 100</param>
     /// <returns>A new color</returns>
-    IColor Darken(int brightness);
+    IColor Darken(double brightness);
 
     /// <summary>
     /// Sets the alpha value on the current color.
@@ -127,7 +128,7 @@ public partial record HEX : IColor
         }
     }
 
-    public IColor Lighten(int brightness)
+    public IColor Lighten(double brightness)
     {
         if (brightness < 0 || brightness > 100)
             throw new ArgumentOutOfRangeException(nameof(brightness));
@@ -143,20 +144,28 @@ public partial record HEX : IColor
         return new HSL(hsl.H, hsl.S, l).ToHEX();
     }
 
-    public IColor Darken(int brightness)
+    public IColor Darken(double brightness)
     {
         if (brightness < 0 || brightness > 100)
             throw new ArgumentOutOfRangeException(nameof(brightness));
 
-        var rgb = ToRGB();
+        var hsl = ToHSL();
 
-        var amount = brightness == 0 ? 0 : brightness;
+        var l = hsl.L;
+        l -= brightness / 100;
+        l = Math.Clamp(l, 0, 1);
 
-        var r = (int)Math.Max(0, Math.Min(255, rgb.R - Math.Round(255d * -(amount / 100))));
-        var g = (int)Math.Max(0, Math.Min(255, rgb.G - Math.Round(255d * -(amount / 100))));
-        var b = (int)Math.Max(0, Math.Min(255, rgb.B - Math.Round(255d * -(amount / 100))));
+        //var rgb = ToRGB();
 
-        return new RGB(r, g, b).ToHEX();
+        //var amount = brightness == 0 ? 0 : brightness;
+
+        //var r = (int)Math.Max(0, Math.Min(255, rgb.R - Math.Round(255d * -(amount / 100))));
+        //var g = (int)Math.Max(0, Math.Min(255, rgb.G - Math.Round(255d * -(amount / 100))));
+        //var b = (int)Math.Max(0, Math.Min(255, rgb.B - Math.Round(255d * -(amount / 100))));
+
+        hsl = (hsl with { L = l });
+        var hex = hsl.ToHEX();
+        return hex;
     }
 
     public IColor ClampAlpha(IColor otherColor)
@@ -179,7 +188,7 @@ public record RGB : IColor
     /// <param name="g">Green value from 0 to 255</param>
     /// <param name="b">Blue value from 0 to 255</param>
     /// <param name="a">Alpha value from 0 to 1</param>
-    public RGB(int r, int g, int b, double? a = default)
+    public RGB(double r, double g, double b, double? a = default)
     {
         if (r < 0 || r > 255) throw new ArgumentException(nameof(r));
         if (g < 0 || g > 255) throw new ArgumentException(nameof(g));
@@ -192,17 +201,17 @@ public record RGB : IColor
         A = a;
     }
 
-    public int R { get; }
-    public int G { get; }
-    public int B { get; }
+    public double R { get; }
+    public double G { get; }
+    public double B { get; }
     public double? A { get; }
 
-    public IColor Darken(int brightness)
+    public IColor Darken(double brightness)
     {
         throw new NotImplementedException();
     }
 
-    public IColor Lighten(int brightness)
+    public IColor Lighten(double brightness)
     {
         throw new NotImplementedException();
     }
@@ -221,9 +230,9 @@ public record RGB : IColor
 
         for (var fA = 0.01; fA <= 1; fA += 0.01)
         {
-            var r = (int)Math.Round((fRgb.R - bRgb.R * (1 - fA)) / fA, 0);
-            var g = (int)Math.Round((fRgb.G - bRgb.G * (1 - fA)) / fA, 0);
-            var b = (int)Math.Round((fRgb.B - bRgb.B * (1 - fA)) / fA, 0);
+            var r = Math.Round((fRgb.R - bRgb.R * (1 - fA)) / fA, 0);
+            var g = Math.Round((fRgb.G - bRgb.G * (1 - fA)) / fA, 0);
+            var b = Math.Round((fRgb.B - bRgb.B * (1 - fA)) / fA, 0);
 
             if (IsStableColor(r) && IsStableColor(g) && IsStableColor(b))
             {
@@ -241,21 +250,27 @@ public record RGB : IColor
 
     public HEX ToHEX()
     {
-        return new HEX($"{R:x2}{G:x2}{B:x2}");
+        var r = (int)Math.Round(R);
+        var g = (int)Math.Round(G);
+        var b = (int)Math.Round(B);
+        var a = A.HasValue ? (int)Math.Round(A.Value) : new int?();
+
+        return a.HasValue ? new($"{r:x2}{g:x2}{b:x2}{a:x2}") : new($"{r:x2}{g:x2}{b:x2}");
     }
 
     public HSL ToHSL()
     {
-        double modifiedR, modifiedG, modifiedB, min, max, delta, h, s, l;
+        double r = R / 255.0;
+        double g = G / 255.0;
+        double b = B / 255.0;
 
-        modifiedR = R / 255.0;
-        modifiedG = G / 255.0;
-        modifiedB = B / 255.0;
+        double min = new[] { r, g, b }.Min();
+        double max = new[] { r, g, b }.Max();
+        double delta = max - min;
 
-        min = new[] { modifiedR, modifiedG, modifiedB }.Min();
-        max = new[] { modifiedR, modifiedG, modifiedB }.Max();
-        delta = max - min;
-        l = (min + max) / 2;
+        double h;
+        double s;
+        double l = (min + max) / 2;
 
         if (delta == 0)
         {
@@ -264,45 +279,77 @@ public record RGB : IColor
         }
         else
         {
-            s = (l <= 0.5) ? (delta / (min + max)) : (delta / (2 - max - min));
+            s = l > 0.5 ? (delta / (2 - max - min)) : (delta / (max + min));
 
-            if (modifiedR == max)
+            if (r == max)
             {
-                h = (modifiedG - modifiedB) / 6 / delta;
+                h = (g - b) / delta + (g < b ? 6 : 0);
             }
-            else if (modifiedG == max)
+            else if (g == max)
             {
-                h = (1.0 / 3) + ((modifiedB - modifiedR) / 6 / delta);
+                h = (b - r) / delta + 2;
             }
             else
             {
-                h = (2.0 / 3) + ((modifiedR - modifiedG) / 6 / delta);
+                h = (r - g) / delta + 4;
             }
 
-            h = (h < 0) ? ++h : h;
-            h = (h > 1) ? --h : h;
+            h /= 6;
         }
 
-        return new HSL(
-            (int)Math.Round(h * 360),
-            (int)Math.Round(s * 100),
-            (int)Math.Round(l * 100));
+        return new HSL(h * 360, s, l);
     }
 
     public HSV ToHSV()
     {
-        var hsl = ToHSL();
+        double r = R / 255.0;
+        double g = G / 255.0;
+        double b = B / 255.0;
 
-        double modifiedS, modifiedL, hsvS, hsvV;
+        double max = new[] { r, g, b }.Max();
+        double min = new[] { r, g, b }.Min();
+        double delta = max - min;
 
-        modifiedS = hsl.S / 100.0;
-        modifiedL = hsl.L / 100.0;
+        double h;
+        double s = max == 0 ? 0 : delta / max;
+        double v = max;
 
-        hsvV = modifiedL + modifiedS * Math.Min(modifiedL, 1 - modifiedL);
+        if (max == min)
+        {
+            h = 0d; // achromatic
+        }
+        else
+        {
+            if (max == r)
+            {
+                h = (g - b) / delta + (g < b ? 6 : 0);
+            }
+            else if (max == g)
+            {
+                h = (b - r) / delta + 2;
+            }
+            else
+            {
+                h = (r - g) / delta + 4;
+            }
 
-        hsvS = (hsvV == 0) ? 0 : 2 * (1 - modifiedL / hsvV);
+            h /= 6;
+        }
 
-        return new HSV(hsl.H, (int)Math.Round(hsvS * 100), (int)Math.Round(hsvV * 100));
+        return new HSV(h * 360, s, v);
+
+        //var hsl = ToHSL();
+
+        //double modifiedS, modifiedL, hsvS, hsvV;
+
+        //modifiedS = hsl.S / 100.0;
+        //modifiedL = hsl.L / 100.0;
+
+        //hsvV = modifiedL + modifiedS * Math.Min(modifiedL, 1 - modifiedL);
+
+        //hsvS = (hsvV == 0) ? 0 : 2 * (1 - modifiedL / hsvV);
+
+        //return new HSV(hsl.H, (int)Math.Round(hsvS * 100), (int)Math.Round(hsvV * 100));
     }
 
     public RGB ToRGB()
@@ -322,29 +369,29 @@ public record HSV : IColor
     /// e.g. hsv(120, 100%, 50%) = new HSV(120, 100, 50)
     /// </summary>
     /// <param name="h">Hue value from 0 to 360</param>
-    /// <param name="s">Saturation percentage from 0 to 100</param>
-    /// <param name="v">Value (or Brightness) percentage from 0 to 100</param>
-    public HSV(int h, int s, int v)
+    /// <param name="s">Saturation percentage from 0 to 1 or 100%</param>
+    /// <param name="v">Value (or Brightness) percentage from 0 to 1 or 100%</param>
+    public HSV(double h, double s, double v)
     {
-        if (h < 0 || h > 360) throw new ArgumentException(nameof(h));
-        if (s < 0 || s > 100) throw new ArgumentException(nameof(s));
-        if (v < 0 || v > 100) throw new ArgumentException(nameof(v));
+        if (h < 0 || h > 360) throw new ArgumentOutOfRangeException(nameof(h));
+        if (s < 0 || s > 1) throw new ArgumentOutOfRangeException(nameof(s));
+        if (v < 0 || v > 1) throw new ArgumentOutOfRangeException(nameof(v));
 
         H = h;
         S = s;
         V = v;
     }
 
-    public int H { get; }
-    public int S { get; }
-    public int V { get; }
+    public double H { get; }
+    public double S { get; }
+    public double V { get; }
 
-    public IColor Darken(int brightness)
+    public IColor Darken(double brightness)
     {
         throw new NotImplementedException();
     }
 
-    public IColor Lighten(int brightness)
+    public IColor Lighten(double brightness)
     {
         throw new NotImplementedException();
     }
@@ -366,15 +413,7 @@ public record HSV : IColor
 
     public HSL ToHSL()
     {
-        double modifiedS, modifiedV, hslS, hslL;
-
-        modifiedS = S / 100.0;
-        modifiedV = V / 100.0;
-
-        hslL = modifiedV * (1 - modifiedS / 2);
-        hslS = (hslL == 0 || hslL == 1) ? 0 : (modifiedV - hslL) / Math.Min(hslL, 1 - hslL);
-
-        return new HSL(H, (int)Math.Round(hslS * 100), (int)Math.Round(hslL * 100));
+        return ToRGB().ToHSL();
     }
 
     public HSV ToHSV()
@@ -384,12 +423,29 @@ public record HSV : IColor
 
     public RGB ToRGB()
     {
-        return ToHSL().ToRGB();
+        double h = H / 360 * 6;
+        double s = S;
+        double v = V;
+
+        int i = (int)Math.Floor(h);
+
+        double f = h - i;
+        double p = v * (1 - s);
+        double q = v * (1 - f * s);
+        double t = v * (1 - (1 - f) * s);
+
+        int mod = i % 6;
+
+        double r = new[] { v, q, p, p, t, v }[mod];
+        double g = new[] { t, v, v, q, p, p }[mod];
+        double b = new[] { p, p, t, v, v, q }[mod];
+
+        return new RGB(r * 255, g * 255, b * 255);
     }
 
     public string AsString()
     {
-        return $"hsl({H} {S}% {V}%)";
+        return $"hsv({H} {S * 100}% {V * 100}%)";
     }
 }
 
@@ -399,22 +455,22 @@ public record HSL : IColor
     /// e.g. hsl(120, 100%, 50%) = new HSV(120, 100, 50)
     /// </summary>
     /// <param name="h">Hue degree from 0 to 360</param>
-    /// <param name="s">Saturation percentage from 0 to 100</param>
-    /// <param name="l">Lightness percentage from 0 to 100</param>
-    public HSL(int h, int s, int l)
+    /// <param name="s">Saturation percentage from 0 to 1 or 100%</param>
+    /// <param name="l">Lightness percentage from 0 to 1 or 100%</param>
+    public HSL(double h, double s, double l)
     {
-        if (h < 0 || h > 360) throw new ArgumentException(nameof(h));
-        if (s < 0 || s > 100) throw new ArgumentException(nameof(s));
-        if (l < 0 || l > 100) throw new ArgumentException(nameof(l));
+        if (h < 0 || h > 360) throw new ArgumentOutOfRangeException(nameof(h));
+        if (s < 0 || s > 1) throw new ArgumentOutOfRangeException(nameof(s));
+        if (l < 0 || l > 1) throw new ArgumentOutOfRangeException(nameof(l));
 
         H = h;
         S = s;
         L = l;
     }
 
-    public int H { get; }
-    public int S { get; }
-    public int L { get; }
+    public double H { get; init; }
+    public double S { get; init; }
+    public double L { get; init; }
 
     public HEX ToHEX()
     {
@@ -433,54 +489,82 @@ public record HSL : IColor
 
     public RGB ToRGB()
     {
-        double modifiedH, modifiedS, modifiedL, r = 1, g = 1, b = 1, q, p;
+        double r;
+        double g;
+        double b;
 
-        modifiedH = H / 360.0;
-        modifiedS = S / 100.0;
-        modifiedL = L / 100.0;
+        double h = H;
+        double s = S;
+        double l = L;
 
-        q = (modifiedL < 0.5) ? modifiedL * (1 + modifiedS) : modifiedL + modifiedS - modifiedL * modifiedS;
-        p = 2 * modifiedL - q;
-
-        if (modifiedL == 0)  // if the lightness value is 0 it will always be black
+        if (s == 0)
         {
-            r = 0;
-            g = 0;
-            b = 0;
+            // achromatic
+            g = l;
+            b = l;
+            r = l;
         }
-        else if (modifiedS != 0)
+        else
         {
-            r = GetHue(p, q, modifiedH + 1.0 / 3);
-            g = GetHue(p, q, modifiedH);
-            b = GetHue(p, q, modifiedH - 1.0 / 3);
+            double q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+            double p = 2 * l - q;
+
+            r = Hue2Rgb(p, q, h + 1 / 3);
+            g = Hue2Rgb(p, q, h);
+            b = Hue2Rgb(p, q, h - 1 / 3);
         }
 
-        return new RGB((int)Math.Round(r * 255), (int)Math.Round(g * 255), (int)Math.Round(b * 255));
+        return new RGB(r * 255d, g * 255d, b * 255d);
+
+
+        //double modifiedH, modifiedS, modifiedL, r = 1, g = 1, b = 1, q, p;
+
+        //modifiedH = H / 360d;
+        //modifiedS = S / 100d;
+        //modifiedL = L / 100d;
+
+        //q = (modifiedL < 0.5) ? modifiedL * (1 + modifiedS) : modifiedL + modifiedS - modifiedL * modifiedS;
+        //p = 2 * modifiedL - q;
+
+        //if (modifiedL == 0)  // if the lightness value is 0 it will always be black
+        //{
+        //    r = 0;
+        //    g = 0;
+        //    b = 0;
+        //}
+        //else if (modifiedS != 0)
+        //{
+        //    r = GetHue(p, q, modifiedH + 1.0 / 3);
+        //    g = GetHue(p, q, modifiedH);
+        //    b = GetHue(p, q, modifiedH - 1.0 / 3);
+        //}
+
+        //return new RGB(r * 255d, g * 255d, b * 255d);
     }
 
     public IColor ApplyAlpha(double alpha)
     {
         throw new NotImplementedException();
     }
-    
+
     public IColor ClampAlpha(IColor otherColor)
     {
         throw new NotImplementedException();
     }
 
-    public IColor Lighten(int brightness)
+    public IColor Lighten(double brightness)
     {
         throw new NotImplementedException();
     }
 
-    public IColor Darken(int brightness)
+    public IColor Darken(double brightness)
     {
         throw new NotImplementedException();
     }
 
     public string AsString()
     {
-        return $"hsv({H} {S}% {L}%)";
+        return $"hsl({H} {S * 100}% {L * 100}%)";
     }
 
     private static double GetHue(double p, double q, double t)
@@ -504,5 +588,35 @@ public record HSL : IColor
         }
 
         return value;
+    }
+
+    private static double Hue2Rgb(double p, double q, double t)
+    {
+        if (t < 0)
+        {
+            t += 1;
+        }
+
+        if (t > 1)
+        {
+            t -= 1;
+        }
+
+        if (t < 1 / 6)
+        {
+            return p + (q - p) * (6 * t);
+        }
+
+        if (t < 1 / 2)
+        {
+            return q;
+        }
+
+        if (t < 2 / 3)
+        {
+            return p + (q - p) * (2 / 3 - t) * 6;
+        }
+
+        return p;
     }
 }

@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
-  "type": "module",
   "scripts": {
     "generate": "node ./main.js",
     "generate-themes": "node ./themes.js"
   },
   "dependencies": {
+    "@ctrl/tinycolor": "^3.6.0",
     "antd": "^5.2.2",
     "ts-json-schema-generator": "^1.2.0"
   },

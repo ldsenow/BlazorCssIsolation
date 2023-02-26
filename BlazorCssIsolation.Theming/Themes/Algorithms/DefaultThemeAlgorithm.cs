@@ -74,17 +74,18 @@ public class DefaultThemeAlgorithm : IThemeAlgorithm
             {
                 var colors = colorDerivative.Derive(new HEX(baseColor));
 
+                //TODO: It is wrong here
                 return new PatternColorPallettes(
                     Bg: colors[0].AsString(),
                     BgHover: colors[1].AsString(),
                     Border: colors[2].AsString(),
                     BorderHover: colors[3].AsString(),
-                    Hover: colors[4].AsString(),
+                    Hover: colors[3].AsString(),
                     Default: colors[5].AsString(),
                     Active: colors[6].AsString(),
-                    TextHover: colors[4].AsString(),
-                    Text: colors[5].AsString(),
-                    TextActive: colors[6].AsString());
+                    TextHover: colors[7].AsString(),
+                    Text: colors[8].AsString(),
+                    TextActive: colors[9].AsString());
             },
             (x) =>
             {
