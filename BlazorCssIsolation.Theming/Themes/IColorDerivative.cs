@@ -65,7 +65,7 @@ public class ColorDerivative : IColorDerivative
             var bgRgb = (options.BackgroundColor ?? new HEX("#141414")).ToRGB();
 
             return darkColorMap
-                .Select(x => MixRGB(bgRgb, patterns[x.Index].ToRGB(), x.Opacity * 100).ToHEX())
+                .Select(x => MixRGB(bgRgb, patterns[x.Index].ToRGB(), x.Opacity * 100.0).ToHEX())
                 .ToArray();
         }
         else
@@ -77,7 +77,7 @@ public class ColorDerivative : IColorDerivative
     private static double MixHue(HSV color, int amount, bool light)
     {
         double hue;
-        double h = Math.Round(color.H);
+        double h = Math.Round(color.H, MidpointRounding.AwayFromZero);
 
         // 根据色相不同，色相转向不同
         if (h>= 60 && h<= 240)
@@ -131,7 +131,7 @@ public class ColorDerivative : IColorDerivative
 
         saturation = Math.Clamp(saturation, 0.06, 1);
 
-        return Math.Round(saturation, 2);
+        return Math.Round(saturation, 2, MidpointRounding.AwayFromZero);
     }
 
     private static double MixValue(HSV color, int amount, bool light)
@@ -140,7 +140,7 @@ public class ColorDerivative : IColorDerivative
             ? color.V + brightnessStep1 * amount
             : color.V - brightnessStep2 * amount;
 
-        return Math.Round(Math.Min(value, 1), 2);
+        return Math.Round(Math.Min(value, 1), 2, MidpointRounding.AwayFromZero);
     }
 
     // Wrapper function ported from TinyColor.prototype.mix, not treeshakable.
@@ -148,10 +148,12 @@ public class ColorDerivative : IColorDerivative
     // Assume color1 & color2 has no alpha, since the following src code did so.
     private static RGB MixRGB(RGB rgb1, RGB rgb2, double amount)
     {
-        if (amount > 1 || amount < 0)
+        if (amount > 100 || amount < 0)
             throw new ArgumentOutOfRangeException(nameof(amount));
 
-        var mix = (double v1, double v2) => (v2 - v1) * amount + v1;
+        var p = amount / 100.0;
+
+        var mix = (double v1, double v2) => (v2 - v1) * p + v1;
 
         var r = mix(rgb1.R, rgb2.R);
         var g = mix(rgb1.G, rgb2.G);

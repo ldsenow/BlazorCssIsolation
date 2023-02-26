@@ -152,16 +152,8 @@ public partial record HEX : IColor
         var hsl = ToHSL();
 
         var l = hsl.L;
-        l -= brightness / 100;
+        l -= brightness / 100d;
         l = Math.Clamp(l, 0, 1);
-
-        //var rgb = ToRGB();
-
-        //var amount = brightness == 0 ? 0 : brightness;
-
-        //var r = (int)Math.Max(0, Math.Min(255, rgb.R - Math.Round(255d * -(amount / 100))));
-        //var g = (int)Math.Max(0, Math.Min(255, rgb.G - Math.Round(255d * -(amount / 100))));
-        //var b = (int)Math.Max(0, Math.Min(255, rgb.B - Math.Round(255d * -(amount / 100))));
 
         hsl = (hsl with { L = l });
         var hex = hsl.ToHEX();
@@ -230,9 +222,9 @@ public record RGB : IColor
 
         for (var fA = 0.01; fA <= 1; fA += 0.01)
         {
-            var r = Math.Round((fRgb.R - bRgb.R * (1 - fA)) / fA, 0);
-            var g = Math.Round((fRgb.G - bRgb.G * (1 - fA)) / fA, 0);
-            var b = Math.Round((fRgb.B - bRgb.B * (1 - fA)) / fA, 0);
+            var r = Math.Round((fRgb.R - bRgb.R * (1 - fA)) / fA, MidpointRounding.AwayFromZero);
+            var g = Math.Round((fRgb.G - bRgb.G * (1 - fA)) / fA, MidpointRounding.AwayFromZero);
+            var b = Math.Round((fRgb.B - bRgb.B * (1 - fA)) / fA, MidpointRounding.AwayFromZero);
 
             if (IsStableColor(r) && IsStableColor(g) && IsStableColor(b))
             {
@@ -250,10 +242,10 @@ public record RGB : IColor
 
     public HEX ToHEX()
     {
-        var r = (int)Math.Round(R);
-        var g = (int)Math.Round(G);
-        var b = (int)Math.Round(B);
-        var a = A.HasValue ? (int)Math.Round(A.Value) : new int?();
+        var r = (int)Math.Round(R, MidpointRounding.AwayFromZero);
+        var g = (int)Math.Round(G, MidpointRounding.AwayFromZero);
+        var b = (int)Math.Round(B, MidpointRounding.AwayFromZero);
+        var a = A.HasValue ? (int)Math.Round(A.Value, MidpointRounding.AwayFromZero) : new int?();
 
         return a.HasValue ? new($"{r:x2}{g:x2}{b:x2}{a:x2}") : new($"{r:x2}{g:x2}{b:x2}");
     }
@@ -302,9 +294,9 @@ public record RGB : IColor
 
     public HSV ToHSV()
     {
-        double r = R / 255.0;
-        double g = G / 255.0;
-        double b = B / 255.0;
+        double r = R / 255d;
+        double g = G / 255d;
+        double b = B / 255d;
 
         double max = new[] { r, g, b }.Max();
         double min = new[] { r, g, b }.Min();
@@ -333,23 +325,10 @@ public record RGB : IColor
                 h = (r - g) / delta + 4;
             }
 
-            h /= 6;
+            h /= 6d;
         }
 
         return new HSV(h * 360, s, v);
-
-        //var hsl = ToHSL();
-
-        //double modifiedS, modifiedL, hsvS, hsvV;
-
-        //modifiedS = hsl.S / 100.0;
-        //modifiedL = hsl.L / 100.0;
-
-        //hsvV = modifiedL + modifiedS * Math.Min(modifiedL, 1 - modifiedL);
-
-        //hsvS = (hsvV == 0) ? 0 : 2 * (1 - modifiedL / hsvV);
-
-        //return new HSV(hsl.H, (int)Math.Round(hsvS * 100), (int)Math.Round(hsvV * 100));
     }
 
     public RGB ToRGB()

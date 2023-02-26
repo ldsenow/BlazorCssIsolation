@@ -89,7 +89,7 @@ internal static class ColorMapTokensGenerator
             colorWarningText: warningColors.Text,
             colorWarningTextActive: warningColors.TextActive,
             colorWarningTextHover: warningColors.TextHover,
-            colorWhite: "#ffffff");
+            colorWhite: "#fff");
     }
 }
 

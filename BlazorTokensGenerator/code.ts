@@ -163,13 +163,21 @@ export default function generate(color: string, opts: Opts = {}): string[] {
   patterns.push(toHex(pColor));
   for (let i = 1; i <= darkColorCount; i += 1) {
     const hsv = toHsv(pColor);
-    const colorString: string = toHex(
-      inputToRGB({
-        h: getHue(hsv, i),
-        s: getSaturation(hsv, i),
-        v: getValue(hsv, i),
-      })
-    );
+    const mixedHsv = {
+      h: getHue(hsv, i),
+      s: getSaturation(hsv, i),
+      v: getValue(hsv, i),
+    };
+    const rgb = inputToRGB(mixedHsv);
+    const colorString: string = toHex(rgb);
+
+    console.log(`***dark ${i + 5}***`);
+    console.log(pColor);
+    console.log(hsv);
+    console.log(mixedHsv);
+    console.log(rgb);
+    console.log(colorString);
+
     patterns.push(colorString);
   }
 
@@ -189,7 +197,7 @@ export default function generate(color: string, opts: Opts = {}): string[] {
   return patterns;
 }
 
-// generate("#FADB14");
+generate("#1677ff");
 
 // function darken(amount = 10): TinyColor {
 //   const hsl = this.toHsl();
@@ -198,8 +206,8 @@ export default function generate(color: string, opts: Opts = {}): string[] {
 //   return new TinyColor(hsl);
 // }
 
-const fontSizes = genFontSizes(14);
-console.log(fontSizes);
+// const fontSizes = genFontSizes(14);
+// console.log(fontSizes);
 //.toHexString());
 
 export {};

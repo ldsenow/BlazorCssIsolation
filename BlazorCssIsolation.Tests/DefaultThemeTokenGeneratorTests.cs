@@ -16,6 +16,20 @@ namespace BlazorCssIsolation.Tests
 { ok: true, format: 'hsv', r: 229.5, g: 244.375, b: 255, a: 1 }
 #e6f4ff
 
+***8*** Blue
+{ ok: true, format: 'hex', r: 22, g: 119, b: 255, a: 1 }
+{ h: 215.02145922746783, s: 0.9137254901960784, v: 1 }
+{ h: 219, s: 1, v: 0.7 }
+{
+  ok: true,
+  format: 'hsv',
+  r: 0,
+  g: 62.475000000000094,
+  b: 178.5,
+  a: 1
+}
+#003eb3
+
 ***5*** Yellow
 { ok: true, format: 'hex', r: 250, g: 219, b: 20, a: 1 }
 { h: 51.91304347826087, s: 0.9199999999999999, v: 0.9803921568627451 }
