@@ -84,12 +84,22 @@ public partial record HEX : IColor
 
     public RGB ToRGB()
     {
-        var value = Convert.ToInt32(Value, 16);
+        var hasAlpha = Value.Length == 8;
+        var rgbValue = Convert.ToInt32(Value[0..6], 16);
+        var aValue = hasAlpha
+            ? Convert.ToInt32(Value[6..8], 16)
+            : new int?();
 
-        return new RGB(
-            value >> 16 & 255,
-            value >> 8 & 255,
-            value & 255);
+        return hasAlpha
+            ? new RGB(
+                rgbValue >> 16 & 255,
+                rgbValue >> 8 & 255,
+                rgbValue & 255,
+                aValue / 255d)
+            : new RGB(
+                rgbValue >> 16 & 255,
+                rgbValue >> 8 & 255,
+                rgbValue & 255);
     }
 
     private static string Parse(string value)
@@ -106,7 +116,8 @@ public partial record HEX : IColor
         {
             3 => $"{v[0]}{v[0]}{v[1]}{v[1]}{v[2]}{v[2]}",
             4 => $"{v[0]}{v[0]}{v[1]}{v[1]}{v[2]}{v[2]}{v[3]}{v[3]}",
-            _ => v,
+            6 or 8 => v,
+            _ => throw new NotSupportedException(),
         };
 
         return v.ToLowerInvariant();
@@ -137,11 +148,12 @@ public partial record HEX : IColor
 
         var amount = brightness == 0 ? 0 : brightness;
 
-        var l = hsl.L + (amount / 100);
-
+        var l = hsl.L + (amount / 100d);
         l = Math.Clamp(l, 0, 1);
 
-        return new HSL(hsl.H, hsl.S, l).ToHEX();
+        hsl = (hsl with { L = l });
+        var hex = hsl.ToHEX();
+        return hex;
     }
 
     public IColor Darken(double brightness)
@@ -190,7 +202,11 @@ public record RGB : IColor
         R = r;
         G = g;
         B = b;
-        A = a;
+
+        if (a.HasValue)
+        {
+            A = Math.Round(a.Value, 2, MidpointRounding.AwayFromZero);
+        }
     }
 
     public double R { get; }
@@ -245,7 +261,9 @@ public record RGB : IColor
         var r = (int)Math.Round(R, MidpointRounding.AwayFromZero);
         var g = (int)Math.Round(G, MidpointRounding.AwayFromZero);
         var b = (int)Math.Round(B, MidpointRounding.AwayFromZero);
-        var a = A.HasValue ? (int)Math.Round(A.Value, MidpointRounding.AwayFromZero) : new int?();
+        var a = A.HasValue
+            ? (int)Math.Round(A.Value, 2, MidpointRounding.AwayFromZero)
+            : new int?();
 
         return a.HasValue ? new($"{r:x2}{g:x2}{b:x2}{a:x2}") : new($"{r:x2}{g:x2}{b:x2}");
     }
@@ -338,7 +356,7 @@ public record RGB : IColor
 
     public string AsString()
     {
-        return A.HasValue && A < 0 ? $"rgba({R}, {G}, {B}, {A})" : $"rgb({R}, {G}, {B})";
+        return A.HasValue ? $"rgba({R}, {G}, {B}, {A})" : $"rgb({R}, {G}, {B})";
     }
 }
 

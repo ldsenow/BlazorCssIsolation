@@ -73,40 +73,43 @@ public class DefaultThemeAlgorithm : IThemeAlgorithm
             (baseColor) =>
             {
                 var colors = colorDerivative.Derive(new HEX(baseColor));
+                var hexColors = colors.Select(x => x.AsString()).ToArray();
 
-                //TODO: It is wrong here
-                return new PatternColorPallettes(
-                    Bg: colors[0].AsString(),
-                    BgHover: colors[1].AsString(),
-                    Border: colors[2].AsString(),
-                    BorderHover: colors[3].AsString(),
-                    Hover: colors[3].AsString(),
-                    Default: colors[5].AsString(),
-                    Active: colors[6].AsString(),
-                    TextHover: colors[7].AsString(),
-                    Text: colors[8].AsString(),
-                    TextActive: colors[9].AsString());
+                return new[]
+                {
+                    hexColors[0],
+                    hexColors[1],
+                    hexColors[2],
+                    hexColors[3],
+                    hexColors[4],
+                    hexColors[5],
+                    hexColors[6],
+                    hexColors[4],
+                    hexColors[5],
+                    hexColors[6]
+                };
             },
             (x) =>
             {
+                //TODO: Color.Parse
                 var colorBgBase = new HEX(string.IsNullOrEmpty(x.bgBaseColor) ? "#fff" : x.bgBaseColor);
                 var colorTextBase = new HEX(string.IsNullOrEmpty(x.textBaseColor) ? "#000" : x.textBaseColor);
 
                 return new ColorNeutralMapToken(
-                    colorText: colorTextBase.ApplyAlpha(0.88).AsString(),
-                    colorTextSecondary: colorTextBase.ApplyAlpha(0.65).AsString(),
-                    colorTextTertiary: colorTextBase.ApplyAlpha(0.45).AsString(),
-                    colorTextQuaternary: colorTextBase.ApplyAlpha(0.25).AsString(),
+                    colorText: colorTextBase.ApplyAlpha(0.88).ToRGB().AsString(),
+                    colorTextSecondary: colorTextBase.ApplyAlpha(0.65).ToRGB().AsString(),
+                    colorTextTertiary: colorTextBase.ApplyAlpha(0.45).ToRGB().AsString(),
+                    colorTextQuaternary: colorTextBase.ApplyAlpha(0.25).ToRGB().AsString(),
 
-                    colorFill: colorTextBase.ApplyAlpha(0.15).AsString(),
-                    colorFillSecondary: colorTextBase.ApplyAlpha(0.06).AsString(),
-                    colorFillTertiary: colorTextBase.ApplyAlpha(0.04).AsString(),
-                    colorFillQuaternary: colorTextBase.ApplyAlpha(0.02).AsString(),
+                    colorFill: colorTextBase.ApplyAlpha(0.15).ToRGB().ToRGB().AsString(),
+                    colorFillSecondary: colorTextBase.ApplyAlpha(0.06).ToRGB().AsString(),
+                    colorFillTertiary: colorTextBase.ApplyAlpha(0.04).ToRGB().AsString(),
+                    colorFillQuaternary: colorTextBase.ApplyAlpha(0.02).ToRGB().AsString(),
 
                     colorBgLayout: colorBgBase.Darken(4).AsString(),
                     colorBgContainer: colorBgBase.Darken(0).AsString(),
                     colorBgElevated: colorBgBase.Darken(0).AsString(),
-                    colorBgSpotlight: colorTextBase.ApplyAlpha(0.85).AsString(),
+                    colorBgSpotlight: colorTextBase.ApplyAlpha(0.85).ToRGB().AsString(),
 
                     colorBorder: colorBgBase.Darken(15).AsString(),
                     colorBorderSecondary: colorBgBase.Darken(6).AsString());
