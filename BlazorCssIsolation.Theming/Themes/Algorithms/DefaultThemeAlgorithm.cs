@@ -8,14 +8,12 @@ public class DefaultThemeAlgorithm : IThemeAlgorithm
 {
     private readonly IColorDerivative colorDerivative;
 
-    public string Name => "default";
-
     public DefaultThemeAlgorithm(IColorDerivative colorDerivative)
     {
         this.colorDerivative = colorDerivative;
     }
 
-    public ThemeToken Derive(SeedToken seedToken, ThemeToken? derivedFrom = null)
+    public ThemeToken Derive(SeedToken seedToken, IThemeAlgorithm? derivedFrom = null)
     {
         var colorPalettes = BuildColorPalettes(seedToken);
         var colorMapToken = BuildColorMapTokens(seedToken);
@@ -34,7 +32,7 @@ public class DefaultThemeAlgorithm : IThemeAlgorithm
             heightMapToken: heightMapToken);
 
         var collection = new ThemeToken(aliasToken);
-
+        
         return collection;
     }
 

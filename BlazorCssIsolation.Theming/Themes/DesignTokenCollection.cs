@@ -4,30 +4,6 @@ namespace BlazorCssIsolation.Theming.Themes;
 
 public class DesignTokenCollection : Dictionary<string, DesignToken>
 {
-    public DesignTokenCollection()
-    {
-    }
-
-    public DesignTokenCollection(IEnumerable<KeyValuePair<string, DesignToken>> pairs) : base(pairs)
-    {
-    }
-
-    public DesignTokenCollection(Dictionary<string, object?> pairs)
-    {
-        foreach (var p in pairs)
-        {
-            Set(p.Key, p.Value);
-        }
-    }
-
-    public DesignTokenCollection(DesignToken[] tokens)
-    {
-        foreach (var t in tokens)
-        {
-            Set(t);
-        }
-    }
-
     public void Set(string name, object? value)
     {
         var token = new DesignToken(name, value);
@@ -35,7 +11,7 @@ public class DesignTokenCollection : Dictionary<string, DesignToken>
         Set(token);
     }
 
-    public void Set(DesignToken token)
+    public void Set(DesignToken? token)
     {
         if (token == null) return;
 

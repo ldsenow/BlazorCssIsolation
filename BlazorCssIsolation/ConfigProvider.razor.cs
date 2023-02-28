@@ -22,7 +22,7 @@ public partial class ConfigProvider
     [Parameter]
     public RenderFragment? ChildContent { get; set; }
 
-    public ThemeToken ThemeToken { get; private set; }
+    public ThemeToken ThemeToken { get; }
 
     [Parameter]
     public Action<ThemeToken>? Config { get; set; }
