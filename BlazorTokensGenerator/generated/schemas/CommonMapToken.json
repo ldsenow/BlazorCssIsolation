@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$ref": "#/definitions/CommonMapToken",
+  "definitions": {
+    "CommonMapToken": {
+      "type": "object",
+      "properties": {
+        "lineWidthBold": {
+          "type": "number",
+          "default": 1
+        },
+        "borderRadiusXS": {
+          "type": "number",
+          "default": 2
+        },
+        "borderRadiusSM": {
+          "type": "number",
+          "default": 4
+        },
+        "borderRadiusLG": {
+          "type": "number",
+          "default": 8
+        },
+        "borderRadiusOuter": {
+          "type": "number",
+          "default": 4
+        },
+        "motionDurationFast": {
+          "type": "string"
+        },
+        "motionDurationMid": {
+          "type": "string"
+        },
+        "motionDurationSlow": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "borderRadiusLG",
+        "borderRadiusOuter",
+        "borderRadiusSM",
+        "borderRadiusXS",
+        "lineWidthBold",
+        "motionDurationFast",
+        "motionDurationMid",
+        "motionDurationSlow"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

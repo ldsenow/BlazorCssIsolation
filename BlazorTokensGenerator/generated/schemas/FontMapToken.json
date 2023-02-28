@@ -1,0 +1,87 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$ref": "#/definitions/FontMapToken",
+  "definitions": {
+    "FontMapToken": {
+      "type": "object",
+      "properties": {
+        "fontSizeSM": {
+          "type": "number"
+        },
+        "fontSize": {
+          "type": "number"
+        },
+        "fontSizeLG": {
+          "type": "number"
+        },
+        "fontSizeXL": {
+          "type": "number"
+        },
+        "fontSizeHeading1": {
+          "type": "number",
+          "default": 38
+        },
+        "fontSizeHeading2": {
+          "type": "number",
+          "default": 30
+        },
+        "fontSizeHeading3": {
+          "type": "number",
+          "default": 24
+        },
+        "fontSizeHeading4": {
+          "type": "number",
+          "default": 20
+        },
+        "fontSizeHeading5": {
+          "type": "number",
+          "default": 16
+        },
+        "lineHeight": {
+          "type": "number"
+        },
+        "lineHeightLG": {
+          "type": "number"
+        },
+        "lineHeightSM": {
+          "type": "number"
+        },
+        "lineHeightHeading1": {
+          "type": "number"
+        },
+        "lineHeightHeading2": {
+          "type": "number"
+        },
+        "lineHeightHeading3": {
+          "type": "number"
+        },
+        "lineHeightHeading4": {
+          "type": "number"
+        },
+        "lineHeightHeading5": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "fontSizeSM",
+        "fontSize",
+        "fontSizeLG",
+        "fontSizeXL",
+        "fontSizeHeading1",
+        "fontSizeHeading2",
+        "fontSizeHeading3",
+        "fontSizeHeading4",
+        "fontSizeHeading5",
+        "lineHeight",
+        "lineHeightLG",
+        "lineHeightSM",
+        "lineHeightHeading1",
+        "lineHeightHeading2",
+        "lineHeightHeading3",
+        "lineHeightHeading4",
+        "lineHeightHeading5"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

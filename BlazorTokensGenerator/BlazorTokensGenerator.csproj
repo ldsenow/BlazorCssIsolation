@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<OutputType>Exe</OutputType>
@@ -12,7 +12,15 @@
 		<PackageReference Include="NJsonSchema.CodeGeneration.CSharp" Version="10.8.0" />
 	</ItemGroup>
 
-	<!--<Target Name="GenerateJsonSchema" BeforeTargets="Build">
+	<ItemGroup>
+		<None Include="$(MSBuildProjectDirectory)/generated/**" CopyToOutputDirectory="PreserveNewest" />
+	</ItemGroup>
+
+	<Target Name="RemoveSchemasFolder" BeforeTargets="Build">
+		<RemoveDir Directories="$(BuildFolder)/generated" Condition="Exists('$(BuildFolder)/generated')"/>
+	</Target>
+
+	<!--<Target Name="GenerateJsonSchemas" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' ">
 		<Exec WorkingDirectory="$(MSBuildProjectDirectory)" Command="npm install" Condition="!Exists('$(MSBuildProjectDirectory)/node_modules')" />
 		<Exec WorkingDirectory="$(MSBuildProjectDirectory)" Command="npm run generate" />
 	</Target>-->

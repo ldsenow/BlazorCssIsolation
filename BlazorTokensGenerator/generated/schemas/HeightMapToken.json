@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$ref": "#/definitions/HeightMapToken",
+  "definitions": {
+    "HeightMapToken": {
+      "type": "object",
+      "properties": {
+        "controlHeightXS": {
+          "type": "number"
+        },
+        "controlHeightSM": {
+          "type": "number"
+        },
+        "controlHeightLG": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "controlHeightXS",
+        "controlHeightSM",
+        "controlHeightLG"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$ref": "#/definitions/SizeMapToken",
+  "definitions": {
+    "SizeMapToken": {
+      "type": "object",
+      "properties": {
+        "sizeXXL": {
+          "type": "number",
+          "default": 48
+        },
+        "sizeXL": {
+          "type": "number",
+          "default": 32
+        },
+        "sizeLG": {
+          "type": "number",
+          "default": 24
+        },
+        "sizeMD": {
+          "type": "number",
+          "default": 20
+        },
+        "sizeMS": {
+          "type": "number",
+          "description": "Same as size by default, but could be larger in compact mode"
+        },
+        "size": {
+          "type": "number",
+          "default": 16
+        },
+        "sizeSM": {
+          "type": "number",
+          "default": 12
+        },
+        "sizeXS": {
+          "type": "number",
+          "default": 8
+        },
+        "sizeXXS": {
+          "type": "number",
+          "default": 4
+        }
+      },
+      "required": [
+        "sizeXXL",
+        "sizeXL",
+        "sizeLG",
+        "sizeMD",
+        "sizeMS",
+        "size",
+        "sizeSM",
+        "sizeXS",
+        "sizeXXS"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

@@ -3,19 +3,21 @@
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
+  "type": "module",
   "scripts": {
     "generate": "node ./main.js",
-    "generate-themes": "node ./themes.js"
+    "generate-schemas": "node ./generateJsonSchemas.js",
+    "generate-themes": "node ./generateThemes.js"
   },
   "dependencies": {
-    "@ctrl/tinycolor": "^3.6.0",
-    "antd": "^5.2.2",
-    "ts-json-schema-generator": "^1.2.0"
   },
   "devDependencies": {
     "@babel/runtime": "^7.21.0",
-    "@types/node": "^18.14.0",
+    "@types/node": "^18.14.2",
     "@types/react": "^18.0.28",
-    "typescript": "^4.9.5"
+    "typescript": "^4.9.5",
+    "@ctrl/tinycolor": "^3.6.0",
+    "antd": "^5.2.3",
+    "ts-json-schema-generator": "^1.2.0"
   }
 }

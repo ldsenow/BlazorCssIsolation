@@ -1,0 +1,198 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$ref": "#/definitions/SeedToken",
+  "definitions": {
+    "SeedToken": {
+      "type": "object",
+      "properties": {
+        "blue": {
+          "type": "string"
+        },
+        "purple": {
+          "type": "string"
+        },
+        "cyan": {
+          "type": "string"
+        },
+        "green": {
+          "type": "string"
+        },
+        "magenta": {
+          "type": "string"
+        },
+        "pink": {
+          "type": "string"
+        },
+        "red": {
+          "type": "string"
+        },
+        "orange": {
+          "type": "string"
+        },
+        "yellow": {
+          "type": "string"
+        },
+        "volcano": {
+          "type": "string"
+        },
+        "geekblue": {
+          "type": "string"
+        },
+        "lime": {
+          "type": "string"
+        },
+        "gold": {
+          "type": "string"
+        },
+        "colorPrimary": {
+          "type": "string"
+        },
+        "colorSuccess": {
+          "type": "string"
+        },
+        "colorWarning": {
+          "type": "string"
+        },
+        "colorError": {
+          "type": "string"
+        },
+        "colorInfo": {
+          "type": "string"
+        },
+        "colorTextBase": {
+          "type": "string"
+        },
+        "colorBgBase": {
+          "type": "string"
+        },
+        "fontFamily": {
+          "type": "string"
+        },
+        "fontFamilyCode": {
+          "type": "string"
+        },
+        "fontSize": {
+          "type": "number",
+          "default": 14
+        },
+        "lineWidth": {
+          "type": "number"
+        },
+        "lineType": {
+          "type": "string"
+        },
+        "borderRadius": {
+          "type": "number"
+        },
+        "sizeUnit": {
+          "type": "number",
+          "default": 4
+        },
+        "sizeStep": {
+          "type": "number",
+          "default": 4
+        },
+        "sizePopupArrow": {
+          "type": "number"
+        },
+        "controlHeight": {
+          "type": "number",
+          "default": 32
+        },
+        "zIndexBase": {
+          "type": "number",
+          "default": 0
+        },
+        "zIndexPopupBase": {
+          "type": "number",
+          "default": 1000
+        },
+        "opacityImage": {
+          "type": "number"
+        },
+        "motionUnit": {
+          "type": "number",
+          "default": "100ms"
+        },
+        "motionBase": {
+          "type": "number"
+        },
+        "motionEaseOutCirc": {
+          "type": "string"
+        },
+        "motionEaseInOutCirc": {
+          "type": "string"
+        },
+        "motionEaseInOut": {
+          "type": "string"
+        },
+        "motionEaseOutBack": {
+          "type": "string"
+        },
+        "motionEaseInBack": {
+          "type": "string"
+        },
+        "motionEaseInQuint": {
+          "type": "string"
+        },
+        "motionEaseOutQuint": {
+          "type": "string"
+        },
+        "motionEaseOut": {
+          "type": "string"
+        },
+        "wireframe": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "required": [
+        "blue",
+        "borderRadius",
+        "colorBgBase",
+        "colorError",
+        "colorInfo",
+        "colorPrimary",
+        "colorSuccess",
+        "colorTextBase",
+        "colorWarning",
+        "controlHeight",
+        "cyan",
+        "fontFamily",
+        "fontFamilyCode",
+        "fontSize",
+        "geekblue",
+        "gold",
+        "green",
+        "lime",
+        "lineType",
+        "lineWidth",
+        "magenta",
+        "motionBase",
+        "motionEaseInBack",
+        "motionEaseInOut",
+        "motionEaseInOutCirc",
+        "motionEaseInQuint",
+        "motionEaseOut",
+        "motionEaseOutBack",
+        "motionEaseOutCirc",
+        "motionEaseOutQuint",
+        "motionUnit",
+        "opacityImage",
+        "orange",
+        "pink",
+        "purple",
+        "red",
+        "sizePopupArrow",
+        "sizeStep",
+        "sizeUnit",
+        "volcano",
+        "wireframe",
+        "yellow",
+        "zIndexBase",
+        "zIndexPopupBase"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

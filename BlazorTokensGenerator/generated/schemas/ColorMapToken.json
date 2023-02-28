@@ -1,0 +1,279 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$ref": "#/definitions/ColorMapToken",
+  "definitions": {
+    "ColorMapToken": {
+      "type": "object",
+      "properties": {
+        "colorInfoBg": {
+          "type": "string"
+        },
+        "colorInfoBgHover": {
+          "type": "string"
+        },
+        "colorInfoBorder": {
+          "type": "string"
+        },
+        "colorInfoBorderHover": {
+          "type": "string"
+        },
+        "colorInfoHover": {
+          "type": "string"
+        },
+        "colorInfo": {
+          "type": "string"
+        },
+        "colorInfoActive": {
+          "type": "string"
+        },
+        "colorInfoTextHover": {
+          "type": "string"
+        },
+        "colorInfoText": {
+          "type": "string"
+        },
+        "colorInfoTextActive": {
+          "type": "string"
+        },
+        "colorErrorBg": {
+          "type": "string"
+        },
+        "colorErrorBgHover": {
+          "type": "string"
+        },
+        "colorErrorBorder": {
+          "type": "string"
+        },
+        "colorErrorBorderHover": {
+          "type": "string"
+        },
+        "colorErrorHover": {
+          "type": "string"
+        },
+        "colorError": {
+          "type": "string"
+        },
+        "colorErrorActive": {
+          "type": "string"
+        },
+        "colorErrorTextHover": {
+          "type": "string"
+        },
+        "colorErrorText": {
+          "type": "string"
+        },
+        "colorErrorTextActive": {
+          "type": "string"
+        },
+        "colorWarningBg": {
+          "type": "string"
+        },
+        "colorWarningBgHover": {
+          "type": "string"
+        },
+        "colorWarningBorder": {
+          "type": "string"
+        },
+        "colorWarningBorderHover": {
+          "type": "string"
+        },
+        "colorWarningHover": {
+          "type": "string"
+        },
+        "colorWarning": {
+          "type": "string"
+        },
+        "colorWarningActive": {
+          "type": "string"
+        },
+        "colorWarningTextHover": {
+          "type": "string"
+        },
+        "colorWarningText": {
+          "type": "string"
+        },
+        "colorWarningTextActive": {
+          "type": "string"
+        },
+        "colorSuccessBg": {
+          "type": "string"
+        },
+        "colorSuccessBgHover": {
+          "type": "string"
+        },
+        "colorSuccessBorder": {
+          "type": "string"
+        },
+        "colorSuccessBorderHover": {
+          "type": "string"
+        },
+        "colorSuccessHover": {
+          "type": "string"
+        },
+        "colorSuccess": {
+          "type": "string"
+        },
+        "colorSuccessActive": {
+          "type": "string"
+        },
+        "colorSuccessTextHover": {
+          "type": "string"
+        },
+        "colorSuccessText": {
+          "type": "string"
+        },
+        "colorSuccessTextActive": {
+          "type": "string"
+        },
+        "colorPrimary": {
+          "type": "string"
+        },
+        "colorPrimaryBg": {
+          "type": "string"
+        },
+        "colorPrimaryBgHover": {
+          "type": "string"
+        },
+        "colorPrimaryBorder": {
+          "type": "string"
+        },
+        "colorPrimaryBorderHover": {
+          "type": "string"
+        },
+        "colorPrimaryHover": {
+          "type": "string"
+        },
+        "colorPrimaryActive": {
+          "type": "string"
+        },
+        "colorPrimaryTextHover": {
+          "type": "string"
+        },
+        "colorPrimaryText": {
+          "type": "string"
+        },
+        "colorPrimaryTextActive": {
+          "type": "string"
+        },
+        "colorText": {
+          "type": "string"
+        },
+        "colorTextSecondary": {
+          "type": "string"
+        },
+        "colorTextTertiary": {
+          "type": "string"
+        },
+        "colorTextQuaternary": {
+          "type": "string"
+        },
+        "colorBorder": {
+          "type": "string"
+        },
+        "colorBorderSecondary": {
+          "type": "string"
+        },
+        "colorFill": {
+          "type": "string"
+        },
+        "colorFillSecondary": {
+          "type": "string"
+        },
+        "colorFillTertiary": {
+          "type": "string"
+        },
+        "colorFillQuaternary": {
+          "type": "string"
+        },
+        "colorBgLayout": {
+          "type": "string"
+        },
+        "colorBgContainer": {
+          "type": "string"
+        },
+        "colorBgElevated": {
+          "type": "string"
+        },
+        "colorBgSpotlight": {
+          "type": "string"
+        },
+        "colorWhite": {
+          "type": "string",
+          "default": "#FFFFFF"
+        },
+        "colorBgMask": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "colorBgContainer",
+        "colorBgElevated",
+        "colorBgLayout",
+        "colorBgMask",
+        "colorBgSpotlight",
+        "colorBorder",
+        "colorBorderSecondary",
+        "colorError",
+        "colorErrorActive",
+        "colorErrorBg",
+        "colorErrorBgHover",
+        "colorErrorBorder",
+        "colorErrorBorderHover",
+        "colorErrorHover",
+        "colorErrorText",
+        "colorErrorTextActive",
+        "colorErrorTextHover",
+        "colorFill",
+        "colorFillQuaternary",
+        "colorFillSecondary",
+        "colorFillTertiary",
+        "colorInfo",
+        "colorInfoActive",
+        "colorInfoBg",
+        "colorInfoBgHover",
+        "colorInfoBorder",
+        "colorInfoBorderHover",
+        "colorInfoHover",
+        "colorInfoText",
+        "colorInfoTextActive",
+        "colorInfoTextHover",
+        "colorPrimary",
+        "colorPrimaryActive",
+        "colorPrimaryBg",
+        "colorPrimaryBgHover",
+        "colorPrimaryBorder",
+        "colorPrimaryBorderHover",
+        "colorPrimaryHover",
+        "colorPrimaryText",
+        "colorPrimaryTextActive",
+        "colorPrimaryTextHover",
+        "colorSuccess",
+        "colorSuccessActive",
+        "colorSuccessBg",
+        "colorSuccessBgHover",
+        "colorSuccessBorder",
+        "colorSuccessBorderHover",
+        "colorSuccessHover",
+        "colorSuccessText",
+        "colorSuccessTextActive",
+        "colorSuccessTextHover",
+        "colorText",
+        "colorTextQuaternary",
+        "colorTextSecondary",
+        "colorTextTertiary",
+        "colorWarning",
+        "colorWarningActive",
+        "colorWarningBg",
+        "colorWarningBgHover",
+        "colorWarningBorder",
+        "colorWarningBorderHover",
+        "colorWarningHover",
+        "colorWarningText",
+        "colorWarningTextActive",
+        "colorWarningTextHover",
+        "colorWhite"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

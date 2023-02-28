@@ -5,26 +5,31 @@ class Program
 {
     public static async Task Main(string[] args)
     {
-        var baseInputFolder = "../../../schemas";
-        //var baseInputFolder = "../../../generated";
+        var baseInputFolder = "./generated/schemas";
         var baseOutputFolder = "../../../../BlazorCssIsolation.Theming/Generated";
+        var classNamespace = "BlazorCssIsolation.Theming.Tokens";
 
+        await GenerateTokenClasses(classNamespace, baseInputFolder, baseOutputFolder);
+    }
+
+    private static async Task GenerateTokenClasses(string classNamespace, string inputFolder, string outputFolder)
+    {
         //Delete existing files first
-        Directory.GetFiles(baseOutputFolder, "*.cs").ToList().ForEach(File.Delete);
+        Directory.GetFiles(outputFolder, "*.cs").ToList().ForEach(File.Delete);
 
-        var jsonFiles = Directory.GetFiles(baseInputFolder, "*.json");
+        var jsonFiles = Directory.GetFiles(inputFolder, "*.json");
         foreach (var f in jsonFiles)
         {
             var fileName = Path.GetFileNameWithoutExtension(f);
-            await GenerateTokens(
+            await WriteTokenClass(
                 inputPath: f,
-                outputPath: Path.Combine(baseOutputFolder, $"{fileName}.cs"),
-                outputTypeNamespace: $"BlazorCssIsolation.Theming.Tokens",
+                outputPath: Path.Combine(outputFolder, $"{fileName}.cs"),
+                outputTypeNamespace: classNamespace,
                 fileName);
         }
     }
 
-    private static async Task GenerateTokens(
+    private static async Task WriteTokenClass(
         string inputPath,
         string outputPath,
         string outputTypeNamespace,

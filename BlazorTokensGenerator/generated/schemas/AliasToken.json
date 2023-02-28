@@ -1,0 +1,1734 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$ref": "#/definitions/AliasToken",
+  "definitions": {
+    "AliasToken": {
+      "type": "object",
+      "properties": {
+        "lineWidthBold": {
+          "type": "number",
+          "default": 1
+        },
+        "borderRadiusXS": {
+          "type": "number",
+          "default": 2
+        },
+        "borderRadiusSM": {
+          "type": "number",
+          "default": 4
+        },
+        "borderRadiusLG": {
+          "type": "number",
+          "default": 8
+        },
+        "borderRadiusOuter": {
+          "type": "number",
+          "default": 4
+        },
+        "motionDurationFast": {
+          "type": "string"
+        },
+        "motionDurationMid": {
+          "type": "string"
+        },
+        "motionDurationSlow": {
+          "type": "string"
+        },
+        "fontSizeSM": {
+          "type": "number"
+        },
+        "fontSize": {
+          "type": "number",
+          "default": 14
+        },
+        "fontSizeLG": {
+          "type": "number"
+        },
+        "fontSizeXL": {
+          "type": "number"
+        },
+        "fontSizeHeading1": {
+          "type": "number",
+          "default": 38
+        },
+        "fontSizeHeading2": {
+          "type": "number",
+          "default": 30
+        },
+        "fontSizeHeading3": {
+          "type": "number",
+          "default": 24
+        },
+        "fontSizeHeading4": {
+          "type": "number",
+          "default": 20
+        },
+        "fontSizeHeading5": {
+          "type": "number",
+          "default": 16
+        },
+        "lineHeight": {
+          "type": "number"
+        },
+        "lineHeightLG": {
+          "type": "number"
+        },
+        "lineHeightSM": {
+          "type": "number"
+        },
+        "lineHeightHeading1": {
+          "type": "number"
+        },
+        "lineHeightHeading2": {
+          "type": "number"
+        },
+        "lineHeightHeading3": {
+          "type": "number"
+        },
+        "lineHeightHeading4": {
+          "type": "number"
+        },
+        "lineHeightHeading5": {
+          "type": "number"
+        },
+        "controlHeightXS": {
+          "type": "number"
+        },
+        "controlHeightSM": {
+          "type": "number"
+        },
+        "controlHeightLG": {
+          "type": "number"
+        },
+        "sizeXXL": {
+          "type": "number",
+          "default": 48
+        },
+        "sizeXL": {
+          "type": "number",
+          "default": 32
+        },
+        "sizeLG": {
+          "type": "number",
+          "default": 24
+        },
+        "sizeMD": {
+          "type": "number",
+          "default": 20
+        },
+        "sizeMS": {
+          "type": "number",
+          "description": "Same as size by default, but could be larger in compact mode"
+        },
+        "size": {
+          "type": "number",
+          "default": 16
+        },
+        "sizeSM": {
+          "type": "number",
+          "default": 12
+        },
+        "sizeXS": {
+          "type": "number",
+          "default": 8
+        },
+        "sizeXXS": {
+          "type": "number",
+          "default": 4
+        },
+        "colorInfoBg": {
+          "type": "string"
+        },
+        "colorInfoBgHover": {
+          "type": "string"
+        },
+        "colorInfoBorder": {
+          "type": "string"
+        },
+        "colorInfoBorderHover": {
+          "type": "string"
+        },
+        "colorInfoHover": {
+          "type": "string"
+        },
+        "colorInfo": {
+          "type": "string"
+        },
+        "colorInfoActive": {
+          "type": "string"
+        },
+        "colorInfoTextHover": {
+          "type": "string"
+        },
+        "colorInfoText": {
+          "type": "string"
+        },
+        "colorInfoTextActive": {
+          "type": "string"
+        },
+        "colorErrorBg": {
+          "type": "string"
+        },
+        "colorErrorBgHover": {
+          "type": "string"
+        },
+        "colorErrorBorder": {
+          "type": "string"
+        },
+        "colorErrorBorderHover": {
+          "type": "string"
+        },
+        "colorErrorHover": {
+          "type": "string"
+        },
+        "colorError": {
+          "type": "string"
+        },
+        "colorErrorActive": {
+          "type": "string"
+        },
+        "colorErrorTextHover": {
+          "type": "string"
+        },
+        "colorErrorText": {
+          "type": "string"
+        },
+        "colorErrorTextActive": {
+          "type": "string"
+        },
+        "colorWarningBg": {
+          "type": "string"
+        },
+        "colorWarningBgHover": {
+          "type": "string"
+        },
+        "colorWarningBorder": {
+          "type": "string"
+        },
+        "colorWarningBorderHover": {
+          "type": "string"
+        },
+        "colorWarningHover": {
+          "type": "string"
+        },
+        "colorWarning": {
+          "type": "string"
+        },
+        "colorWarningActive": {
+          "type": "string"
+        },
+        "colorWarningTextHover": {
+          "type": "string"
+        },
+        "colorWarningText": {
+          "type": "string"
+        },
+        "colorWarningTextActive": {
+          "type": "string"
+        },
+        "colorSuccessBg": {
+          "type": "string"
+        },
+        "colorSuccessBgHover": {
+          "type": "string"
+        },
+        "colorSuccessBorder": {
+          "type": "string"
+        },
+        "colorSuccessBorderHover": {
+          "type": "string"
+        },
+        "colorSuccessHover": {
+          "type": "string"
+        },
+        "colorSuccess": {
+          "type": "string"
+        },
+        "colorSuccessActive": {
+          "type": "string"
+        },
+        "colorSuccessTextHover": {
+          "type": "string"
+        },
+        "colorSuccessText": {
+          "type": "string"
+        },
+        "colorSuccessTextActive": {
+          "type": "string"
+        },
+        "colorPrimary": {
+          "type": "string"
+        },
+        "colorPrimaryBg": {
+          "type": "string"
+        },
+        "colorPrimaryBgHover": {
+          "type": "string"
+        },
+        "colorPrimaryBorder": {
+          "type": "string"
+        },
+        "colorPrimaryBorderHover": {
+          "type": "string"
+        },
+        "colorPrimaryHover": {
+          "type": "string"
+        },
+        "colorPrimaryActive": {
+          "type": "string"
+        },
+        "colorPrimaryTextHover": {
+          "type": "string"
+        },
+        "colorPrimaryText": {
+          "type": "string"
+        },
+        "colorPrimaryTextActive": {
+          "type": "string"
+        },
+        "colorText": {
+          "type": "string"
+        },
+        "colorTextSecondary": {
+          "type": "string"
+        },
+        "colorTextTertiary": {
+          "type": "string"
+        },
+        "colorTextQuaternary": {
+          "type": "string"
+        },
+        "colorBorder": {
+          "type": "string"
+        },
+        "colorBorderSecondary": {
+          "type": "string"
+        },
+        "colorFill": {
+          "type": "string"
+        },
+        "colorFillSecondary": {
+          "type": "string"
+        },
+        "colorFillTertiary": {
+          "type": "string"
+        },
+        "colorFillQuaternary": {
+          "type": "string"
+        },
+        "colorBgLayout": {
+          "type": "string"
+        },
+        "colorBgContainer": {
+          "type": "string"
+        },
+        "colorBgElevated": {
+          "type": "string"
+        },
+        "colorBgSpotlight": {
+          "type": "string"
+        },
+        "colorWhite": {
+          "type": "string",
+          "default": "#FFFFFF"
+        },
+        "colorBgMask": {
+          "type": "string"
+        },
+        "blue-1": {
+          "type": "string"
+        },
+        "blue-2": {
+          "type": "string"
+        },
+        "blue-3": {
+          "type": "string"
+        },
+        "blue-4": {
+          "type": "string"
+        },
+        "blue-5": {
+          "type": "string"
+        },
+        "blue-6": {
+          "type": "string"
+        },
+        "blue-7": {
+          "type": "string"
+        },
+        "blue-8": {
+          "type": "string"
+        },
+        "blue-9": {
+          "type": "string"
+        },
+        "blue-10": {
+          "type": "string"
+        },
+        "purple-1": {
+          "type": "string"
+        },
+        "purple-2": {
+          "type": "string"
+        },
+        "purple-3": {
+          "type": "string"
+        },
+        "purple-4": {
+          "type": "string"
+        },
+        "purple-5": {
+          "type": "string"
+        },
+        "purple-6": {
+          "type": "string"
+        },
+        "purple-7": {
+          "type": "string"
+        },
+        "purple-8": {
+          "type": "string"
+        },
+        "purple-9": {
+          "type": "string"
+        },
+        "purple-10": {
+          "type": "string"
+        },
+        "cyan-1": {
+          "type": "string"
+        },
+        "cyan-2": {
+          "type": "string"
+        },
+        "cyan-3": {
+          "type": "string"
+        },
+        "cyan-4": {
+          "type": "string"
+        },
+        "cyan-5": {
+          "type": "string"
+        },
+        "cyan-6": {
+          "type": "string"
+        },
+        "cyan-7": {
+          "type": "string"
+        },
+        "cyan-8": {
+          "type": "string"
+        },
+        "cyan-9": {
+          "type": "string"
+        },
+        "cyan-10": {
+          "type": "string"
+        },
+        "green-1": {
+          "type": "string"
+        },
+        "green-2": {
+          "type": "string"
+        },
+        "green-3": {
+          "type": "string"
+        },
+        "green-4": {
+          "type": "string"
+        },
+        "green-5": {
+          "type": "string"
+        },
+        "green-6": {
+          "type": "string"
+        },
+        "green-7": {
+          "type": "string"
+        },
+        "green-8": {
+          "type": "string"
+        },
+        "green-9": {
+          "type": "string"
+        },
+        "green-10": {
+          "type": "string"
+        },
+        "magenta-1": {
+          "type": "string"
+        },
+        "magenta-2": {
+          "type": "string"
+        },
+        "magenta-3": {
+          "type": "string"
+        },
+        "magenta-4": {
+          "type": "string"
+        },
+        "magenta-5": {
+          "type": "string"
+        },
+        "magenta-6": {
+          "type": "string"
+        },
+        "magenta-7": {
+          "type": "string"
+        },
+        "magenta-8": {
+          "type": "string"
+        },
+        "magenta-9": {
+          "type": "string"
+        },
+        "magenta-10": {
+          "type": "string"
+        },
+        "pink-1": {
+          "type": "string"
+        },
+        "pink-2": {
+          "type": "string"
+        },
+        "pink-3": {
+          "type": "string"
+        },
+        "pink-4": {
+          "type": "string"
+        },
+        "pink-5": {
+          "type": "string"
+        },
+        "pink-6": {
+          "type": "string"
+        },
+        "pink-7": {
+          "type": "string"
+        },
+        "pink-8": {
+          "type": "string"
+        },
+        "pink-9": {
+          "type": "string"
+        },
+        "pink-10": {
+          "type": "string"
+        },
+        "red-1": {
+          "type": "string"
+        },
+        "red-2": {
+          "type": "string"
+        },
+        "red-3": {
+          "type": "string"
+        },
+        "red-4": {
+          "type": "string"
+        },
+        "red-5": {
+          "type": "string"
+        },
+        "red-6": {
+          "type": "string"
+        },
+        "red-7": {
+          "type": "string"
+        },
+        "red-8": {
+          "type": "string"
+        },
+        "red-9": {
+          "type": "string"
+        },
+        "red-10": {
+          "type": "string"
+        },
+        "orange-1": {
+          "type": "string"
+        },
+        "orange-2": {
+          "type": "string"
+        },
+        "orange-3": {
+          "type": "string"
+        },
+        "orange-4": {
+          "type": "string"
+        },
+        "orange-5": {
+          "type": "string"
+        },
+        "orange-6": {
+          "type": "string"
+        },
+        "orange-7": {
+          "type": "string"
+        },
+        "orange-8": {
+          "type": "string"
+        },
+        "orange-9": {
+          "type": "string"
+        },
+        "orange-10": {
+          "type": "string"
+        },
+        "yellow-1": {
+          "type": "string"
+        },
+        "yellow-2": {
+          "type": "string"
+        },
+        "yellow-3": {
+          "type": "string"
+        },
+        "yellow-4": {
+          "type": "string"
+        },
+        "yellow-5": {
+          "type": "string"
+        },
+        "yellow-6": {
+          "type": "string"
+        },
+        "yellow-7": {
+          "type": "string"
+        },
+        "yellow-8": {
+          "type": "string"
+        },
+        "yellow-9": {
+          "type": "string"
+        },
+        "yellow-10": {
+          "type": "string"
+        },
+        "volcano-1": {
+          "type": "string"
+        },
+        "volcano-2": {
+          "type": "string"
+        },
+        "volcano-3": {
+          "type": "string"
+        },
+        "volcano-4": {
+          "type": "string"
+        },
+        "volcano-5": {
+          "type": "string"
+        },
+        "volcano-6": {
+          "type": "string"
+        },
+        "volcano-7": {
+          "type": "string"
+        },
+        "volcano-8": {
+          "type": "string"
+        },
+        "volcano-9": {
+          "type": "string"
+        },
+        "volcano-10": {
+          "type": "string"
+        },
+        "geekblue-1": {
+          "type": "string"
+        },
+        "geekblue-2": {
+          "type": "string"
+        },
+        "geekblue-3": {
+          "type": "string"
+        },
+        "geekblue-4": {
+          "type": "string"
+        },
+        "geekblue-5": {
+          "type": "string"
+        },
+        "geekblue-6": {
+          "type": "string"
+        },
+        "geekblue-7": {
+          "type": "string"
+        },
+        "geekblue-8": {
+          "type": "string"
+        },
+        "geekblue-9": {
+          "type": "string"
+        },
+        "geekblue-10": {
+          "type": "string"
+        },
+        "lime-1": {
+          "type": "string"
+        },
+        "lime-2": {
+          "type": "string"
+        },
+        "lime-3": {
+          "type": "string"
+        },
+        "lime-4": {
+          "type": "string"
+        },
+        "lime-5": {
+          "type": "string"
+        },
+        "lime-6": {
+          "type": "string"
+        },
+        "lime-7": {
+          "type": "string"
+        },
+        "lime-8": {
+          "type": "string"
+        },
+        "lime-9": {
+          "type": "string"
+        },
+        "lime-10": {
+          "type": "string"
+        },
+        "gold-1": {
+          "type": "string"
+        },
+        "gold-2": {
+          "type": "string"
+        },
+        "gold-3": {
+          "type": "string"
+        },
+        "gold-4": {
+          "type": "string"
+        },
+        "gold-5": {
+          "type": "string"
+        },
+        "gold-6": {
+          "type": "string"
+        },
+        "gold-7": {
+          "type": "string"
+        },
+        "gold-8": {
+          "type": "string"
+        },
+        "gold-9": {
+          "type": "string"
+        },
+        "gold-10": {
+          "type": "string"
+        },
+        "blue": {
+          "type": "string"
+        },
+        "purple": {
+          "type": "string"
+        },
+        "cyan": {
+          "type": "string"
+        },
+        "green": {
+          "type": "string"
+        },
+        "magenta": {
+          "type": "string"
+        },
+        "pink": {
+          "type": "string"
+        },
+        "red": {
+          "type": "string"
+        },
+        "orange": {
+          "type": "string"
+        },
+        "yellow": {
+          "type": "string"
+        },
+        "volcano": {
+          "type": "string"
+        },
+        "geekblue": {
+          "type": "string"
+        },
+        "lime": {
+          "type": "string"
+        },
+        "gold": {
+          "type": "string"
+        },
+        "colorTextBase": {
+          "type": "string"
+        },
+        "colorBgBase": {
+          "type": "string"
+        },
+        "fontFamily": {
+          "type": "string"
+        },
+        "fontFamilyCode": {
+          "type": "string"
+        },
+        "lineWidth": {
+          "type": "number"
+        },
+        "lineType": {
+          "type": "string"
+        },
+        "borderRadius": {
+          "type": "number"
+        },
+        "sizeUnit": {
+          "type": "number",
+          "default": 4
+        },
+        "sizeStep": {
+          "type": "number",
+          "default": 4
+        },
+        "sizePopupArrow": {
+          "type": "number"
+        },
+        "controlHeight": {
+          "type": "number",
+          "default": 32
+        },
+        "zIndexBase": {
+          "type": "number",
+          "default": 0
+        },
+        "zIndexPopupBase": {
+          "type": "number",
+          "default": 1000
+        },
+        "opacityImage": {
+          "type": "number"
+        },
+        "motionUnit": {
+          "type": "number",
+          "default": "100ms"
+        },
+        "motionBase": {
+          "type": "number"
+        },
+        "motionEaseOutCirc": {
+          "type": "string"
+        },
+        "motionEaseInOutCirc": {
+          "type": "string"
+        },
+        "motionEaseInOut": {
+          "type": "string"
+        },
+        "motionEaseOutBack": {
+          "type": "string"
+        },
+        "motionEaseInBack": {
+          "type": "string"
+        },
+        "motionEaseInQuint": {
+          "type": "string"
+        },
+        "motionEaseOutQuint": {
+          "type": "string"
+        },
+        "motionEaseOut": {
+          "type": "string"
+        },
+        "wireframe": {
+          "type": "boolean",
+          "default": false
+        },
+        "colorFillContentHover": {
+          "type": "string"
+        },
+        "colorFillAlter": {
+          "type": "string"
+        },
+        "colorFillContent": {
+          "type": "string"
+        },
+        "colorBgContainerDisabled": {
+          "type": "string"
+        },
+        "colorBgTextHover": {
+          "type": "string"
+        },
+        "colorBgTextActive": {
+          "type": "string"
+        },
+        "colorBorderBg": {
+          "type": "string"
+        },
+        "colorSplit": {
+          "type": "string"
+        },
+        "colorTextPlaceholder": {
+          "type": "string"
+        },
+        "colorTextDisabled": {
+          "type": "string"
+        },
+        "colorTextHeading": {
+          "type": "string"
+        },
+        "colorTextLabel": {
+          "type": "string"
+        },
+        "colorTextDescription": {
+          "type": "string"
+        },
+        "colorTextLightSolid": {
+          "type": "string"
+        },
+        "colorIcon": {
+          "type": "string",
+          "description": "Weak action. Such as `allowClear` or Alert close button"
+        },
+        "colorIconHover": {
+          "type": "string",
+          "description": "Weak action hover color. Such as `allowClear` or Alert close button"
+        },
+        "colorLink": {
+          "type": "string"
+        },
+        "colorLinkHover": {
+          "type": "string"
+        },
+        "colorLinkActive": {
+          "type": "string"
+        },
+        "colorHighlight": {
+          "type": "string"
+        },
+        "controlOutline": {
+          "type": "string"
+        },
+        "colorWarningOutline": {
+          "type": "string"
+        },
+        "colorErrorOutline": {
+          "type": "string"
+        },
+        "fontSizeIcon": {
+          "type": "number",
+          "description": "Operation icon in Select, Cascader, etc. icon fontSize. Normal is same as fontSizeSM"
+        },
+        "fontWeightStrong": {
+          "type": "number",
+          "description": "For heading like h1, h2, h3 or option selected item"
+        },
+        "controlOutlineWidth": {
+          "type": "number"
+        },
+        "controlItemBgHover": {
+          "type": "string"
+        },
+        "controlItemBgActive": {
+          "type": "string"
+        },
+        "controlItemBgActiveHover": {
+          "type": "string"
+        },
+        "controlInteractiveSize": {
+          "type": "number"
+        },
+        "controlItemBgActiveDisabled": {
+          "type": "string"
+        },
+        "paddingXXS": {
+          "type": "number"
+        },
+        "paddingXS": {
+          "type": "number"
+        },
+        "paddingSM": {
+          "type": "number"
+        },
+        "padding": {
+          "type": "number"
+        },
+        "paddingMD": {
+          "type": "number"
+        },
+        "paddingLG": {
+          "type": "number"
+        },
+        "paddingXL": {
+          "type": "number"
+        },
+        "paddingContentHorizontalLG": {
+          "type": "number"
+        },
+        "paddingContentHorizontal": {
+          "type": "number"
+        },
+        "paddingContentHorizontalSM": {
+          "type": "number"
+        },
+        "paddingContentVerticalLG": {
+          "type": "number"
+        },
+        "paddingContentVertical": {
+          "type": "number"
+        },
+        "paddingContentVerticalSM": {
+          "type": "number"
+        },
+        "marginXXS": {
+          "type": "number"
+        },
+        "marginXS": {
+          "type": "number"
+        },
+        "marginSM": {
+          "type": "number"
+        },
+        "margin": {
+          "type": "number"
+        },
+        "marginMD": {
+          "type": "number"
+        },
+        "marginLG": {
+          "type": "number"
+        },
+        "marginXL": {
+          "type": "number"
+        },
+        "marginXXL": {
+          "type": "number"
+        },
+        "opacityLoading": {
+          "type": "number"
+        },
+        "boxShadow": {
+          "type": "string"
+        },
+        "boxShadowSecondary": {
+          "type": "string"
+        },
+        "boxShadowTertiary": {
+          "type": "string"
+        },
+        "linkDecoration": {
+          "type": "string",
+          "description": "The **`text-decoration`** shorthand CSS property sets the appearance of decorative lines on text. It is a shorthand for `text-decoration-line`, `text-decoration-color`, `text-decoration-style`, and the newer `text-decoration-thickness` property.\n\n**Syntax**: `<'text-decoration-line'> || <'text-decoration-style'> || <'text-decoration-color'> || <'text-decoration-thickness'>`\n\n| Chrome | Firefox | Safari |  Edge  |  IE   | | :----: | :-----: | :----: | :----: | :---: | | **1**  |  **1**  | **1**  | **12** | **3** |"
+        },
+        "linkHoverDecoration": {
+          "type": "string",
+          "description": "The **`text-decoration`** shorthand CSS property sets the appearance of decorative lines on text. It is a shorthand for `text-decoration-line`, `text-decoration-color`, `text-decoration-style`, and the newer `text-decoration-thickness` property.\n\n**Syntax**: `<'text-decoration-line'> || <'text-decoration-style'> || <'text-decoration-color'> || <'text-decoration-thickness'>`\n\n| Chrome | Firefox | Safari |  Edge  |  IE   | | :----: | :-----: | :----: | :----: | :---: | | **1**  |  **1**  | **1**  | **12** | **3** |"
+        },
+        "linkFocusDecoration": {
+          "type": "string",
+          "description": "The **`text-decoration`** shorthand CSS property sets the appearance of decorative lines on text. It is a shorthand for `text-decoration-line`, `text-decoration-color`, `text-decoration-style`, and the newer `text-decoration-thickness` property.\n\n**Syntax**: `<'text-decoration-line'> || <'text-decoration-style'> || <'text-decoration-color'> || <'text-decoration-thickness'>`\n\n| Chrome | Firefox | Safari |  Edge  |  IE   | | :----: | :-----: | :----: | :----: | :---: | | **1**  |  **1**  | **1**  | **12** | **3** |"
+        },
+        "controlPaddingHorizontal": {
+          "type": "number"
+        },
+        "controlPaddingHorizontalSM": {
+          "type": "number"
+        },
+        "screenXS": {
+          "type": "number"
+        },
+        "screenXSMin": {
+          "type": "number"
+        },
+        "screenXSMax": {
+          "type": "number"
+        },
+        "screenSM": {
+          "type": "number"
+        },
+        "screenSMMin": {
+          "type": "number"
+        },
+        "screenSMMax": {
+          "type": "number"
+        },
+        "screenMD": {
+          "type": "number"
+        },
+        "screenMDMin": {
+          "type": "number"
+        },
+        "screenMDMax": {
+          "type": "number"
+        },
+        "screenLG": {
+          "type": "number"
+        },
+        "screenLGMin": {
+          "type": "number"
+        },
+        "screenLGMax": {
+          "type": "number"
+        },
+        "screenXL": {
+          "type": "number"
+        },
+        "screenXLMin": {
+          "type": "number"
+        },
+        "screenXLMax": {
+          "type": "number"
+        },
+        "screenXXL": {
+          "type": "number"
+        },
+        "screenXXLMin": {
+          "type": "number"
+        },
+        "controlTmpOutline": {
+          "type": "string",
+          "description": "Used for DefaultButton, Switch which has default outline"
+        }
+      },
+      "required": [
+        "blue",
+        "blue-1",
+        "blue-10",
+        "blue-2",
+        "blue-3",
+        "blue-4",
+        "blue-5",
+        "blue-6",
+        "blue-7",
+        "blue-8",
+        "blue-9",
+        "borderRadius",
+        "borderRadiusLG",
+        "borderRadiusOuter",
+        "borderRadiusSM",
+        "borderRadiusXS",
+        "boxShadow",
+        "boxShadowSecondary",
+        "boxShadowTertiary",
+        "colorBgBase",
+        "colorBgContainer",
+        "colorBgContainerDisabled",
+        "colorBgElevated",
+        "colorBgLayout",
+        "colorBgMask",
+        "colorBgSpotlight",
+        "colorBgTextActive",
+        "colorBgTextHover",
+        "colorBorder",
+        "colorBorderBg",
+        "colorBorderSecondary",
+        "colorError",
+        "colorErrorActive",
+        "colorErrorBg",
+        "colorErrorBgHover",
+        "colorErrorBorder",
+        "colorErrorBorderHover",
+        "colorErrorHover",
+        "colorErrorOutline",
+        "colorErrorText",
+        "colorErrorTextActive",
+        "colorErrorTextHover",
+        "colorFill",
+        "colorFillAlter",
+        "colorFillContent",
+        "colorFillContentHover",
+        "colorFillQuaternary",
+        "colorFillSecondary",
+        "colorFillTertiary",
+        "colorHighlight",
+        "colorIcon",
+        "colorIconHover",
+        "colorInfo",
+        "colorInfoActive",
+        "colorInfoBg",
+        "colorInfoBgHover",
+        "colorInfoBorder",
+        "colorInfoBorderHover",
+        "colorInfoHover",
+        "colorInfoText",
+        "colorInfoTextActive",
+        "colorInfoTextHover",
+        "colorLink",
+        "colorLinkActive",
+        "colorLinkHover",
+        "colorPrimary",
+        "colorPrimaryActive",
+        "colorPrimaryBg",
+        "colorPrimaryBgHover",
+        "colorPrimaryBorder",
+        "colorPrimaryBorderHover",
+        "colorPrimaryHover",
+        "colorPrimaryText",
+        "colorPrimaryTextActive",
+        "colorPrimaryTextHover",
+        "colorSplit",
+        "colorSuccess",
+        "colorSuccessActive",
+        "colorSuccessBg",
+        "colorSuccessBgHover",
+        "colorSuccessBorder",
+        "colorSuccessBorderHover",
+        "colorSuccessHover",
+        "colorSuccessText",
+        "colorSuccessTextActive",
+        "colorSuccessTextHover",
+        "colorText",
+        "colorTextBase",
+        "colorTextDescription",
+        "colorTextDisabled",
+        "colorTextHeading",
+        "colorTextLabel",
+        "colorTextLightSolid",
+        "colorTextPlaceholder",
+        "colorTextQuaternary",
+        "colorTextSecondary",
+        "colorTextTertiary",
+        "colorWarning",
+        "colorWarningActive",
+        "colorWarningBg",
+        "colorWarningBgHover",
+        "colorWarningBorder",
+        "colorWarningBorderHover",
+        "colorWarningHover",
+        "colorWarningOutline",
+        "colorWarningText",
+        "colorWarningTextActive",
+        "colorWarningTextHover",
+        "colorWhite",
+        "controlHeight",
+        "controlHeightLG",
+        "controlHeightSM",
+        "controlHeightXS",
+        "controlInteractiveSize",
+        "controlItemBgActive",
+        "controlItemBgActiveDisabled",
+        "controlItemBgActiveHover",
+        "controlItemBgHover",
+        "controlOutline",
+        "controlOutlineWidth",
+        "controlPaddingHorizontal",
+        "controlPaddingHorizontalSM",
+        "controlTmpOutline",
+        "cyan",
+        "cyan-1",
+        "cyan-10",
+        "cyan-2",
+        "cyan-3",
+        "cyan-4",
+        "cyan-5",
+        "cyan-6",
+        "cyan-7",
+        "cyan-8",
+        "cyan-9",
+        "fontFamily",
+        "fontFamilyCode",
+        "fontSize",
+        "fontSizeHeading1",
+        "fontSizeHeading2",
+        "fontSizeHeading3",
+        "fontSizeHeading4",
+        "fontSizeHeading5",
+        "fontSizeIcon",
+        "fontSizeLG",
+        "fontSizeSM",
+        "fontSizeXL",
+        "fontWeightStrong",
+        "geekblue",
+        "geekblue-1",
+        "geekblue-10",
+        "geekblue-2",
+        "geekblue-3",
+        "geekblue-4",
+        "geekblue-5",
+        "geekblue-6",
+        "geekblue-7",
+        "geekblue-8",
+        "geekblue-9",
+        "gold",
+        "gold-1",
+        "gold-10",
+        "gold-2",
+        "gold-3",
+        "gold-4",
+        "gold-5",
+        "gold-6",
+        "gold-7",
+        "gold-8",
+        "gold-9",
+        "green",
+        "green-1",
+        "green-10",
+        "green-2",
+        "green-3",
+        "green-4",
+        "green-5",
+        "green-6",
+        "green-7",
+        "green-8",
+        "green-9",
+        "lime",
+        "lime-1",
+        "lime-10",
+        "lime-2",
+        "lime-3",
+        "lime-4",
+        "lime-5",
+        "lime-6",
+        "lime-7",
+        "lime-8",
+        "lime-9",
+        "lineHeight",
+        "lineHeightHeading1",
+        "lineHeightHeading2",
+        "lineHeightHeading3",
+        "lineHeightHeading4",
+        "lineHeightHeading5",
+        "lineHeightLG",
+        "lineHeightSM",
+        "lineType",
+        "lineWidth",
+        "lineWidthBold",
+        "magenta",
+        "magenta-1",
+        "magenta-10",
+        "magenta-2",
+        "magenta-3",
+        "magenta-4",
+        "magenta-5",
+        "magenta-6",
+        "magenta-7",
+        "magenta-8",
+        "magenta-9",
+        "margin",
+        "marginLG",
+        "marginMD",
+        "marginSM",
+        "marginXL",
+        "marginXS",
+        "marginXXL",
+        "marginXXS",
+        "motionBase",
+        "motionDurationFast",
+        "motionDurationMid",
+        "motionDurationSlow",
+        "motionEaseInBack",
+        "motionEaseInOut",
+        "motionEaseInOutCirc",
+        "motionEaseInQuint",
+        "motionEaseOut",
+        "motionEaseOutBack",
+        "motionEaseOutCirc",
+        "motionEaseOutQuint",
+        "motionUnit",
+        "opacityImage",
+        "opacityLoading",
+        "orange",
+        "orange-1",
+        "orange-10",
+        "orange-2",
+        "orange-3",
+        "orange-4",
+        "orange-5",
+        "orange-6",
+        "orange-7",
+        "orange-8",
+        "orange-9",
+        "padding",
+        "paddingContentHorizontal",
+        "paddingContentHorizontalLG",
+        "paddingContentHorizontalSM",
+        "paddingContentVertical",
+        "paddingContentVerticalLG",
+        "paddingContentVerticalSM",
+        "paddingLG",
+        "paddingMD",
+        "paddingSM",
+        "paddingXL",
+        "paddingXS",
+        "paddingXXS",
+        "pink",
+        "pink-1",
+        "pink-10",
+        "pink-2",
+        "pink-3",
+        "pink-4",
+        "pink-5",
+        "pink-6",
+        "pink-7",
+        "pink-8",
+        "pink-9",
+        "purple",
+        "purple-1",
+        "purple-10",
+        "purple-2",
+        "purple-3",
+        "purple-4",
+        "purple-5",
+        "purple-6",
+        "purple-7",
+        "purple-8",
+        "purple-9",
+        "red",
+        "red-1",
+        "red-10",
+        "red-2",
+        "red-3",
+        "red-4",
+        "red-5",
+        "red-6",
+        "red-7",
+        "red-8",
+        "red-9",
+        "screenLG",
+        "screenLGMax",
+        "screenLGMin",
+        "screenMD",
+        "screenMDMax",
+        "screenMDMin",
+        "screenSM",
+        "screenSMMax",
+        "screenSMMin",
+        "screenXL",
+        "screenXLMax",
+        "screenXLMin",
+        "screenXS",
+        "screenXSMax",
+        "screenXSMin",
+        "screenXXL",
+        "screenXXLMin",
+        "size",
+        "sizeLG",
+        "sizeMD",
+        "sizeMS",
+        "sizePopupArrow",
+        "sizeSM",
+        "sizeStep",
+        "sizeUnit",
+        "sizeXL",
+        "sizeXS",
+        "sizeXXL",
+        "sizeXXS",
+        "volcano",
+        "volcano-1",
+        "volcano-10",
+        "volcano-2",
+        "volcano-3",
+        "volcano-4",
+        "volcano-5",
+        "volcano-6",
+        "volcano-7",
+        "volcano-8",
+        "volcano-9",
+        "wireframe",
+        "yellow",
+        "yellow-1",
+        "yellow-10",
+        "yellow-2",
+        "yellow-3",
+        "yellow-4",
+        "yellow-5",
+        "yellow-6",
+        "yellow-7",
+        "yellow-8",
+        "yellow-9",
+        "zIndexBase",
+        "zIndexPopupBase"
+      ],
+      "additionalProperties": false
+    },
+    "Property.TextDecoration<(string|number)>": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/Globals"
+        },
+        {
+          "$ref": "#/definitions/DataType.Color"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "string",
+          "const": "auto"
+        },
+        {
+          "type": "string",
+          "const": "blink"
+        },
+        {
+          "type": "string",
+          "const": "dashed"
+        },
+        {
+          "type": "string",
+          "const": "dotted"
+        },
+        {
+          "type": "string",
+          "const": "double"
+        },
+        {
+          "type": "string",
+          "const": "from-font"
+        },
+        {
+          "type": "string",
+          "const": "grammar-error"
+        },
+        {
+          "type": "string",
+          "const": "line-through"
+        },
+        {
+          "type": "string",
+          "const": "none"
+        },
+        {
+          "type": "string",
+          "const": "overline"
+        },
+        {
+          "type": "string",
+          "const": "solid"
+        },
+        {
+          "type": "string",
+          "const": "spelling-error"
+        },
+        {
+          "type": "string",
+          "const": "underline"
+        },
+        {
+          "type": "string",
+          "const": "wavy"
+        }
+      ]
+    },
+    "Globals": {
+      "type": "string",
+      "enum": [
+        "-moz-initial",
+        "inherit",
+        "initial",
+        "revert",
+        "revert-layer",
+        "unset"
+      ]
+    },
+    "DataType.Color": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/DataType.NamedColor"
+        },
+        {
+          "$ref": "#/definitions/DataType.DeprecatedSystemColor"
+        },
+        {
+          "type": "string",
+          "const": "currentcolor"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "DataType.NamedColor": {
+      "type": "string",
+      "enum": [
+        "aliceblue",
+        "antiquewhite",
+        "aqua",
+        "aquamarine",
+        "azure",
+        "beige",
+        "bisque",
+        "black",
+        "blanchedalmond",
+        "blue",
+        "blueviolet",
+        "brown",
+        "burlywood",
+        "cadetblue",
+        "chartreuse",
+        "chocolate",
+        "coral",
+        "cornflowerblue",
+        "cornsilk",
+        "crimson",
+        "cyan",
+        "darkblue",
+        "darkcyan",
+        "darkgoldenrod",
+        "darkgray",
+        "darkgreen",
+        "darkgrey",
+        "darkkhaki",
+        "darkmagenta",
+        "darkolivegreen",
+        "darkorange",
+        "darkorchid",
+        "darkred",
+        "darksalmon",
+        "darkseagreen",
+        "darkslateblue",
+        "darkslategray",
+        "darkslategrey",
+        "darkturquoise",
+        "darkviolet",
+        "deeppink",
+        "deepskyblue",
+        "dimgray",
+        "dimgrey",
+        "dodgerblue",
+        "firebrick",
+        "floralwhite",
+        "forestgreen",
+        "fuchsia",
+        "gainsboro",
+        "ghostwhite",
+        "gold",
+        "goldenrod",
+        "gray",
+        "green",
+        "greenyellow",
+        "grey",
+        "honeydew",
+        "hotpink",
+        "indianred",
+        "indigo",
+        "ivory",
+        "khaki",
+        "lavender",
+        "lavenderblush",
+        "lawngreen",
+        "lemonchiffon",
+        "lightblue",
+        "lightcoral",
+        "lightcyan",
+        "lightgoldenrodyellow",
+        "lightgray",
+        "lightgreen",
+        "lightgrey",
+        "lightpink",
+        "lightsalmon",
+        "lightseagreen",
+        "lightskyblue",
+        "lightslategray",
+        "lightslategrey",
+        "lightsteelblue",
+        "lightyellow",
+        "lime",
+        "limegreen",
+        "linen",
+        "magenta",
+        "maroon",
+        "mediumaquamarine",
+        "mediumblue",
+        "mediumorchid",
+        "mediumpurple",
+        "mediumseagreen",
+        "mediumslateblue",
+        "mediumspringgreen",
+        "mediumturquoise",
+        "mediumvioletred",
+        "midnightblue",
+        "mintcream",
+        "mistyrose",
+        "moccasin",
+        "navajowhite",
+        "navy",
+        "oldlace",
+        "olive",
+        "olivedrab",
+        "orange",
+        "orangered",
+        "orchid",
+        "palegoldenrod",
+        "palegreen",
+        "paleturquoise",
+        "palevioletred",
+        "papayawhip",
+        "peachpuff",
+        "peru",
+        "pink",
+        "plum",
+        "powderblue",
+        "purple",
+        "rebeccapurple",
+        "red",
+        "rosybrown",
+        "royalblue",
+        "saddlebrown",
+        "salmon",
+        "sandybrown",
+        "seagreen",
+        "seashell",
+        "sienna",
+        "silver",
+        "skyblue",
+        "slateblue",
+        "slategray",
+        "slategrey",
+        "snow",
+        "springgreen",
+        "steelblue",
+        "tan",
+        "teal",
+        "thistle",
+        "tomato",
+        "transparent",
+        "turquoise",
+        "violet",
+        "wheat",
+        "white",
+        "whitesmoke",
+        "yellow",
+        "yellowgreen"
+      ]
+    },
+    "DataType.DeprecatedSystemColor": {
+      "type": "string",
+      "enum": [
+        "ActiveBorder",
+        "ActiveCaption",
+        "AppWorkspace",
+        "Background",
+        "ButtonFace",
+        "ButtonHighlight",
+        "ButtonShadow",
+        "ButtonText",
+        "CaptionText",
+        "GrayText",
+        "Highlight",
+        "HighlightText",
+        "InactiveBorder",
+        "InactiveCaption",
+        "InactiveCaptionText",
+        "InfoBackground",
+        "InfoText",
+        "Menu",
+        "MenuText",
+        "Scrollbar",
+        "ThreeDDarkShadow",
+        "ThreeDFace",
+        "ThreeDHighlight",
+        "ThreeDLightShadow",
+        "ThreeDShadow",
+        "Window",
+        "WindowFrame",
+        "WindowText"
+      ]
+    }
+  }
+}

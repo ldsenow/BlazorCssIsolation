@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$ref": "#/definitions/PresetColorType",
+  "definitions": {
+    "PresetColorType": {
+      "type": "object",
+      "properties": {
+        "blue": {
+          "type": "string"
+        },
+        "purple": {
+          "type": "string"
+        },
+        "cyan": {
+          "type": "string"
+        },
+        "green": {
+          "type": "string"
+        },
+        "magenta": {
+          "type": "string"
+        },
+        "pink": {
+          "type": "string"
+        },
+        "red": {
+          "type": "string"
+        },
+        "orange": {
+          "type": "string"
+        },
+        "yellow": {
+          "type": "string"
+        },
+        "volcano": {
+          "type": "string"
+        },
+        "geekblue": {
+          "type": "string"
+        },
+        "lime": {
+          "type": "string"
+        },
+        "gold": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "blue",
+        "purple",
+        "cyan",
+        "green",
+        "magenta",
+        "pink",
+        "red",
+        "orange",
+        "yellow",
+        "volcano",
+        "geekblue",
+        "lime",
+        "gold"
+      ],
+      "additionalProperties": false
+    }
+  }
+}
