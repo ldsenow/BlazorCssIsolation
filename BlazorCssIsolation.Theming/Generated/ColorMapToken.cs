@@ -551,5 +551,22 @@ namespace BlazorCssIsolation.Theming.Tokens
         public string ColorBgMask { get; init; }
 
 
+        public string ToJson()
+        {
+
+            var options = new System.Text.Json.JsonSerializerOptions();
+
+            return System.Text.Json.JsonSerializer.Serialize(this, options);
+
+        }
+        public static ColorMapToken FromJson(string data)
+        {
+
+            var options = new System.Text.Json.JsonSerializerOptions();
+
+            return System.Text.Json.JsonSerializer.Deserialize<ColorMapToken>(data, options);
+
+        }
+
     }
 }

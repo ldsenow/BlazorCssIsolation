@@ -5,12 +5,12 @@ namespace BlazorCssIsolation.Theming.Themes;
 
 public interface IThemeGenerator
 {
-    ThemeTokenCollection Generate(SeedToken seedToken, params IThemeAlgorithm[] algorithms);
+    ThemeToken Generate(SeedToken seedToken, IThemeAlgorithm algorithm);
 }
 
 public class DerivativeThemeGenerator : IThemeGenerator
 {
-    public ThemeTokenCollection Generate(SeedToken seedToken, params IThemeAlgorithm[] algorithms)
+    public ThemeToken Generate(SeedToken seedToken, IThemeAlgorithm algorithm)
     {
         throw new NotImplementedException();
         //if (algorithms == null || !algorithms.Any())

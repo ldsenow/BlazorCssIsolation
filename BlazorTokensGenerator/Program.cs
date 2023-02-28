@@ -32,16 +32,17 @@ class Program
     {
         Console.WriteLine($"********Reading Json Schema from {inputPath}********");
 
-        var schema = await NJsonSchema.JsonSchema.FromFileAsync(inputPath);
+        var schema = await JsonSchema.FromFileAsync(inputPath);
         var generator = new CSharpGenerator(schema, new CSharpGeneratorSettings
         {
             Namespace = outputTypeNamespace,
-            SchemaType = NJsonSchema.SchemaType.JsonSchema,
+            SchemaType = SchemaType.JsonSchema,
             JsonLibrary = CSharpJsonLibrary.SystemTextJson,
             GenerateDataAnnotations = false,
             GenerateNativeRecords = true,
             GenerateOptionalPropertiesAsNullable = true,
             GenerateNullableReferenceTypes = true,
+            GenerateJsonMethods = true,
             TypeNameGenerator = new StaticTypeNameGenerator(outputTypeName),
             ClassStyle = CSharpClassStyle.Record,
         });

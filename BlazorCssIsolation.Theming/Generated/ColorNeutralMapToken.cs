@@ -135,5 +135,22 @@ namespace BlazorCssIsolation.Theming.Tokens
         public string ColorBgSpotlight { get; init; }
 
 
+        public string ToJson()
+        {
+
+            var options = new System.Text.Json.JsonSerializerOptions();
+
+            return System.Text.Json.JsonSerializer.Serialize(this, options);
+
+        }
+        public static ColorNeutralMapToken FromJson(string data)
+        {
+
+            var options = new System.Text.Json.JsonSerializerOptions();
+
+            return System.Text.Json.JsonSerializer.Deserialize<ColorNeutralMapToken>(data, options);
+
+        }
+
     }
 }

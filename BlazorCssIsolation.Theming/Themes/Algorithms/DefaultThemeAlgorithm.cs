@@ -15,7 +15,7 @@ public class DefaultThemeAlgorithm : IThemeAlgorithm
         this.colorDerivative = colorDerivative;
     }
 
-    public ThemeTokenCollection Derive(SeedToken seedToken, ThemeTokenCollection? derivedFrom = null)
+    public ThemeToken Derive(SeedToken seedToken, ThemeToken? derivedFrom = null)
     {
         var colorPalettes = BuildColorPalettes(seedToken);
         var colorMapToken = BuildColorMapTokens(seedToken);
@@ -33,12 +33,7 @@ public class DefaultThemeAlgorithm : IThemeAlgorithm
             fontMapToken: fontMapToken,
             heightMapToken: heightMapToken);
 
-        var collection = new ThemeTokenCollection(aliasToken);
-
-        if (derivedFrom != null)
-        {
-            collection = derivedFrom.Merge(collection);
-        }
+        var collection = new ThemeToken(aliasToken);
 
         return collection;
     }

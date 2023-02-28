@@ -8,6 +8,10 @@ public class DesignTokenCollection : Dictionary<string, DesignToken>
     {
     }
 
+    public DesignTokenCollection(IEnumerable<KeyValuePair<string, DesignToken>> pairs) : base(pairs)
+    {
+    }
+
     public DesignTokenCollection(Dictionary<string, object?> pairs)
     {
         foreach (var p in pairs)
@@ -44,19 +48,17 @@ public class DesignTokenCollection : Dictionary<string, DesignToken>
             Add(token.Name, token);
         }
     }
+}
 
-    public string ToCssVars(string prefix)
+public record DesignToken(string Name, object? Value)
+{
+    public string ToCssVar(string prefix)
     {
         var varPrefix = string.IsNullOrEmpty(prefix) ? "--" : $"--{prefix}-";
-        var sb = new StringBuilder();
 
-        foreach (var p in this)
-        {
-            var name = ToKebabCase(p.Value.Name, separator: "-");
-            sb.Append($"{varPrefix}{name}:{p.Value.Value};");
-        }
+        var name = ToKebabCase(Name, separator: "-");
 
-        return sb.ToString();
+        return $"{varPrefix}{name}:{Value ?? ""};";
     }
 
     //https://github.com/J0rgeSerran0/JsonNamingPolicy/blob/master/JsonKebabCaseNamingPolicy.cs
@@ -136,5 +138,3 @@ public class DesignTokenCollection : Dictionary<string, DesignToken>
         return stringBuilder.ToString().ToLower();
     }
 }
-
-public record DesignToken(string Name, object? Value);

@@ -65,5 +65,23 @@ namespace BlazorCssIsolation.Tests
                 WriteIndented = true,
             }));
         }
+
+        [TestMethod]
+        public void TestMethod2()
+        {
+            var collectionA = new DefaultThemeAlgorithm(new ColorDerivative()).Derive(SeedToken.Default);
+
+            var collectionB = new DefaultThemeAlgorithm(new ColorDerivative()).Derive(SeedToken.Default);
+
+            collectionB.Set(x => x.Blue10, "#f00");
+
+            var diff = collectionA.CompareChanges(collectionB);
+
+            var prefix = SeedToken.Default.VarPrefix;
+
+            var cssVars = diff.Where(x => x.Status == ChangeStatus.Modified || x.Status == ChangeStatus.Added)
+                  .Select(x => (x.TargetValue ?? new DesignToken(x.Key, null)).ToCssVar(prefix))
+                  .ToList();
+        }
     }
 }

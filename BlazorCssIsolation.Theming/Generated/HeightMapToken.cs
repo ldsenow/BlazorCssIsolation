@@ -47,5 +47,22 @@ namespace BlazorCssIsolation.Theming.Tokens
         public double ControlHeightLG { get; init; }
 
 
+        public string ToJson()
+        {
+
+            var options = new System.Text.Json.JsonSerializerOptions();
+
+            return System.Text.Json.JsonSerializer.Serialize(this, options);
+
+        }
+        public static HeightMapToken FromJson(string data)
+        {
+
+            var options = new System.Text.Json.JsonSerializerOptions();
+
+            return System.Text.Json.JsonSerializer.Deserialize<HeightMapToken>(data, options);
+
+        }
+
     }
 }

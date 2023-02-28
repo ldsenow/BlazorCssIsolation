@@ -87,5 +87,22 @@ namespace BlazorCssIsolation.Theming.Tokens
         public string MotionDurationSlow { get; init; }
 
 
+        public string ToJson()
+        {
+
+            var options = new System.Text.Json.JsonSerializerOptions();
+
+            return System.Text.Json.JsonSerializer.Serialize(this, options);
+
+        }
+        public static CommonMapToken FromJson(string data)
+        {
+
+            var options = new System.Text.Json.JsonSerializerOptions();
+
+            return System.Text.Json.JsonSerializer.Deserialize<CommonMapToken>(data, options);
+
+        }
+
     }
 }

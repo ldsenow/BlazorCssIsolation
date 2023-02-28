@@ -1063,5 +1063,22 @@ namespace BlazorCssIsolation.Theming.Tokens
         public string Gold10 { get; init; }
 
 
+        public string ToJson()
+        {
+
+            var options = new System.Text.Json.JsonSerializerOptions();
+
+            return System.Text.Json.JsonSerializer.Serialize(this, options);
+
+        }
+        public static ColorPalettes FromJson(string data)
+        {
+
+            var options = new System.Text.Json.JsonSerializerOptions();
+
+            return System.Text.Json.JsonSerializer.Deserialize<ColorPalettes>(data, options);
+
+        }
+
     }
 }
