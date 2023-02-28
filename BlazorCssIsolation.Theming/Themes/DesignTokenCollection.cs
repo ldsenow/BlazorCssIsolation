@@ -56,85 +56,56 @@ public record DesignToken(string Name, object? Value)
     {
         var varPrefix = string.IsNullOrEmpty(prefix) ? "--" : $"--{prefix}-";
 
-        var name = ToKebabCase(Name, separator: "-");
+        var name = ToKebabCase(Name, separator: '-');
 
-        return $"{varPrefix}{name}:{Value ?? ""};";
+        return $"{varPrefix}{name}: {Value ?? ""};";
     }
 
-    //https://github.com/J0rgeSerran0/JsonNamingPolicy/blob/master/JsonKebabCaseNamingPolicy.cs
-    private static string ToKebabCase(string name, string separator)
+    //https://stackoverflow.com/questions/37301287/how-do-i-convert-pascalcase-to-kebab-case-with-c
+    private static string ToKebabCase(string name, char separator = '-')
     {
-        if (string.IsNullOrEmpty(name) || string.IsNullOrWhiteSpace(name)) return string.Empty;
+        if (name is null) return string.Empty;
 
-        ReadOnlySpan<char> spanName = name.Trim();
+        if (name.Length == 0) return string.Empty;
 
-        var stringBuilder = new StringBuilder();
-        var addCharacter = true;
-        var isNextLower = false;
-        var isNextUpper = false;
-        var isNextSpace = false;
+        StringBuilder builder = new();
 
-        for (int position = 0; position < spanName.Length; position++)
+        for (var i = 0; i < name.Length; i++)
         {
-            if (position != 0)
+            var currentChar = name[i];
+
+            if (i == 0) // if current char is the first char
             {
-                bool isCurrentSpace = spanName[position] == 32;
-                bool isPreviousSpace = spanName[position - 1] == 32;
-                bool isPreviousSeparator = spanName[position - 1] == 95;
-
-                if (position + 1 != spanName.Length)
-                {
-                    isNextLower = spanName[position + 1] > 96 && spanName[position + 1] < 123;
-                    isNextUpper = spanName[position + 1] > 64 && spanName[position + 1] < 91;
-                    isNextSpace = spanName[position + 1] == 32;
-                }
-
-                if (isCurrentSpace &&
-                    (isPreviousSpace ||
-                    isPreviousSeparator ||
-                    isNextUpper ||
-                    isNextSpace))
-                {
-                    addCharacter = false;
-                }
-                else
-                {
-                    var isCurrentUpper = spanName[position] > 64 && spanName[position] < 91;
-                    var isPreviousLower = spanName[position - 1] > 96 && spanName[position - 1] < 123;
-                    var isPreviousNumber = spanName[position - 1] > 47 && spanName[position - 1] < 58;
-
-                    if (isCurrentUpper &&
-                    (isPreviousLower ||
-                    isPreviousNumber ||
-                    isNextLower ||
-                    isNextSpace ||
-                    isNextLower && !isPreviousSpace))
-                    {
-                        _ = stringBuilder.Append(separator);
-                    }
-                    else
-                    {
-                        if (isCurrentSpace &&
-                            !isPreviousSpace &&
-                            !isNextSpace)
-                        {
-                            _ = stringBuilder.Append(separator);
-                            addCharacter = false;
-                        }
-                    }
-                }
+                builder.Append(char.ToLower(currentChar));
             }
-
-            if (addCharacter)
+            else if (char.IsLower(currentChar)) // if current char is lower
             {
-                stringBuilder.Append(spanName[position]);
+                builder.Append(currentChar);
             }
-            else
+            else if (char.IsUpper(currentChar)) // if current char is upper 
             {
-                addCharacter = true;
+                if (char.IsLower(name[i - 1]) || char.IsDigit(name[i - 1])) // and previous char is lower or is a number
+                {
+                    builder.Append(separator);
+                }
+
+                builder.Append(char.ToLower(currentChar));
+            }
+            else if (char.IsDigit(currentChar)) // if current char is a number
+            {
+                if (!char.IsDigit(name[i - 1])) // and previous char is not a number
+                {
+                    builder.Append(separator);
+                }
+
+                builder.Append(currentChar);
+            }
+            else // if current char is a symbol or punctuation etc.
+            {
+                builder.Append(currentChar);
             }
         }
 
-        return stringBuilder.ToString().ToLower();
+        return builder.ToString();
     }
 }

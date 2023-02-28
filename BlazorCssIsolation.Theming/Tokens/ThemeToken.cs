@@ -1,5 +1,4 @@
 ﻿using BlazorCssIsolation.Theming.Themes;
-using System.Linq.Expressions;
 using System.Reflection;
 
 namespace BlazorCssIsolation.Theming.Tokens;
@@ -8,24 +7,6 @@ public record ThemeToken : AliasToken
 {
     public ThemeToken(AliasToken original) : base(original)
     {
-    }
-
-    public readonly DesignTokenCollection DesignTokenCollection = new();
-
-    public ThemeToken Set<TProperty>(Expression<Func<ThemeToken, TProperty>> expression, TProperty? value)
-    {
-        if (expression is null)
-            throw new ArgumentNullException(nameof(expression));
-
-        MemberExpression? member = expression.Body as MemberExpression;
-        PropertyInfo? propInfo = member?.Member as PropertyInfo;
-        if (propInfo == null)
-            throw new InvalidOperationException("Expression is either not a MemberExpression type or Expression body member not a PropertyInfo type.");
-
-        propInfo.SetValue(this, value);
-        DesignTokenCollection.Set(propInfo.Name, value);
-
-        return this;
     }
 
     public DesignTokenCollection GetDesignTokens()

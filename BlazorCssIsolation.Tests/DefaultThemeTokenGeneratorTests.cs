@@ -73,7 +73,7 @@ namespace BlazorCssIsolation.Tests
 
             var collectionB = new DefaultThemeAlgorithm(new ColorDerivative()).Derive(SeedToken.Default);
 
-            collectionB.Set(x => x.Blue10, "#f00");
+            collectionB = collectionB with { Blue10 = "#f00" };
 
             var diff = collectionA.CompareChanges(collectionB);
 
@@ -82,6 +82,8 @@ namespace BlazorCssIsolation.Tests
             var cssVars = diff.Where(x => x.Status == ChangeStatus.Modified || x.Status == ChangeStatus.Added)
                   .Select(x => (x.TargetValue ?? new DesignToken(x.Key, null)).ToCssVar(prefix))
                   .ToList();
+
+            var cssVars2 = collectionB.GetDesignTokens().Select(x=>x.Value.ToCssVar(prefix)).ToList();
         }
     }
 }
