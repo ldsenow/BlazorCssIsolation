@@ -1,12 +1,11 @@
-﻿
-@*<CascadingValue Value=@Theme>
-    <container class="ant" style=@Theme.Base.ToCssStyle()>
-        @ChildContent
-    </container>
-</CascadingValue>*@
+﻿@if (RenderCssVars) {
+<style>
+    @ThemeToken.ToCssVars()
+</style>
+}
 
 <CascadingValue Value=@ThemeToken>
-    <container>
+    <container class="@SeedToken.VarPrefix" style="@(string.Join(" ", DesignTokenChanges))">
         @ChildContent
     </container>
 </CascadingValue>

@@ -1,18 +1,16 @@
 ﻿@page "/"
+@using BlazorCssIsolation.Theming.Tokens;
 
 <h1>Hello, world!</h1>
 <BlazorCssIsolation.Button Text="Click Me"></BlazorCssIsolation.Button>
 
-@*<BlazorCssIsolation.ConfigProvider Theme=@CustomTheme>
+<BlazorCssIsolation.ConfigProvider Customize="@customizeTheme">
     <BlazorCssIsolation.Button Text="Tap Me"></BlazorCssIsolation.Button>
-</BlazorCssIsolation.ConfigProvider>*@
+</BlazorCssIsolation.ConfigProvider>
 
 @code {
-    //BlazorCssIsolation.ThemeOptions CustomTheme = new()
-    //{
-    //    Button = new()
-    //    {
-    //        ButtonPrimaryBorderColor = "red"
-    //    }
-    //};
+    Func<ThemeToken, ThemeToken> customizeTheme = (themeToken) =>
+    {
+        return themeToken with { Blue = "blue" };
+    };
 }

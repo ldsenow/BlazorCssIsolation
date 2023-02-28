@@ -1,5 +1,6 @@
 ﻿using BlazorCssIsolation.Theming.Themes;
 using System.Reflection;
+using System.Text;
 
 namespace BlazorCssIsolation.Theming.Tokens;
 
@@ -7,6 +8,19 @@ public record ThemeToken : AliasToken
 {
     public ThemeToken(AliasToken original) : base(original)
     {
+    }
+
+    public string ToCssVars()
+    {
+        var sb = new StringBuilder();
+        var tokens = GetDesignTokens();
+
+        foreach (var t in tokens)
+        {
+            sb.AppendLine((t.Value ?? new DesignToken(t.Key, null)).ToCssVar(VarPrefix));
+        }
+
+        return sb.ToString();
     }
 
     public DesignTokenCollection GetDesignTokens()
@@ -24,6 +38,9 @@ public record ThemeToken : AliasToken
 
     public IReadOnlyCollection<DesignTokenChange> CompareChanges(ThemeToken target)
     {
+        if (target is null)
+            throw new ArgumentNullException(nameof(target));
+
         var sourceTokens = GetDesignTokens();
         var targetTokens = target.GetDesignTokens();
 

@@ -4,5 +4,7 @@ namespace BlazorCssIsolation.Theming.Themes.Algorithms;
 
 public interface IThemeAlgorithm
 {
-    ThemeToken Derive(SeedToken seedToken, IThemeAlgorithm? derivedFrom = null);
+    IThemeAlgorithm? DerivedFrom { get; set; }
+
+    ThemeToken Derive(SeedToken seedToken);
 }

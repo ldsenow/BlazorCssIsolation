@@ -7,13 +7,14 @@ namespace BlazorCssIsolation.Theming.Themes.Algorithms;
 public class DefaultThemeAlgorithm : IThemeAlgorithm
 {
     private readonly IColorDerivative colorDerivative;
-
     public DefaultThemeAlgorithm(IColorDerivative colorDerivative)
     {
         this.colorDerivative = colorDerivative;
     }
 
-    public ThemeToken Derive(SeedToken seedToken, IThemeAlgorithm? derivedFrom = null)
+    public IThemeAlgorithm? DerivedFrom { get; set; }
+
+    public ThemeToken Derive(SeedToken seedToken)
     {
         var colorPalettes = BuildColorPalettes(seedToken);
         var colorMapToken = BuildColorMapTokens(seedToken);

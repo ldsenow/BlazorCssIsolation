@@ -5,16 +5,14 @@ using Microsoft.AspNetCore.Components;
 
 namespace BlazorCssIsolation;
 
+//TODO: We may support cascade ConfigProvider
 public partial class ConfigProvider
 {
     [Inject]
-    public IThemeGenerator ThemeGenerator { get; set; } = default!;
+    private IThemeGenerator ThemeGenerator { get; set; } = default!;
 
-    //[Inject]
-    //public IThemeAlgorithm[] AvailableAlgorithms { get; set; } = Array.Empty<IThemeAlgorithm>();
-
-    //[Parameter]
-    //public IThemeAlgorithm[] AppliedAlgorithms { get; set; } = Array.Empty<IThemeAlgorithm>();
+    [Parameter]
+    public IThemeAlgorithm ThemeAlgorithm { get; set; } = new DefaultThemeAlgorithm(new ColorDerivative());
 
     [Parameter]
     public SeedToken SeedToken { get; set; } = SeedToken.Default;
@@ -22,28 +20,38 @@ public partial class ConfigProvider
     [Parameter]
     public RenderFragment? ChildContent { get; set; }
 
-    public ThemeToken ThemeToken { get; }
+    [Parameter]
+    public Func<ThemeToken, ThemeToken>? Customize { get; set; }
 
     [Parameter]
-    public Action<ThemeToken>? Config { get; set; }
+    public bool RenderCssVars { get; set; }
 
-    public ConfigProvider()
+    public ThemeToken ThemeToken { get; private set; } = default!;
+
+    public IReadOnlyCollection<string> DesignTokenChanges { get; private set; } = new List<string>();
+
+    protected override void OnInitialized()
     {
-        //AppliedAlgorithms = AvailableAlgorithms.Any()
-        //    ? new[] { AvailableAlgorithms.First() }
-        //    : Array.Empty<IThemeAlgorithm>();
+        base.OnInitialized();
 
-        //TODO: Allow to customize it
-        ThemeToken = ThemeGenerator.Generate(seedToken: SeedToken,
-            new DefaultThemeAlgorithm(new ColorDerivative()));
+        ThemeToken = ThemeGenerator.Generate(SeedToken, ThemeAlgorithm);
 
-        Config?.Invoke(ThemeToken);
+        var customizedThemeToken = Customize?.Invoke(ThemeToken);
+        if (customizedThemeToken is not null)
+        {
+            DesignTokenChanges = ThemeToken.CompareChanges(customizedThemeToken)
+                .Where(x => x.Status == ChangeStatus.Modified || x.Status == ChangeStatus.Added)
+                .Select(x => (x.TargetValue ?? new DesignToken(x.Key, null)).ToCssVar(SeedToken.VarPrefix))
+                .ToList()
+                .AsReadOnly();
+
+            ThemeToken = customizedThemeToken;
+        }
+    }
+
+    //TODO: monitor props changes
+    protected override void OnParametersSet()
+    {
+        base.OnParametersSet();
     }
 }
-
-//public class ThemeOptions
-//{
-//    public Type[] Algorithms { get; set; } = new[] { typeof(DefaultThemeAlgorithm) };
-//    public ThemeTokenCollection Base { get; set; } = default!;
-//    public ButtonDesignTokens Button { get; set; } = new();
-//}
