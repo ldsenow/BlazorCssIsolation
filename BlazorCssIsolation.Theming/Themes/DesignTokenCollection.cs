@@ -24,6 +24,18 @@ public class DesignTokenCollection : Dictionary<string, DesignToken>
             Add(token.Name, token);
         }
     }
+
+    public string ToCssVars(string prefix)
+    {
+        var sb = new StringBuilder();
+
+        foreach(var kv in this)
+        {
+            sb.AppendLine(kv.Value.ToCssVar(prefix));
+        }
+
+        return sb.ToString();
+    }
 }
 
 public record DesignToken(string Name, object? Value)
@@ -60,7 +72,9 @@ public record DesignToken(string Name, object? Value)
             }
             else if (char.IsUpper(currentChar)) // if current char is upper 
             {
-                if (char.IsLower(name[i - 1]) || char.IsDigit(name[i - 1])) // and previous char is lower or is a number
+                if (char.IsLower(name[i - 1]) || // previous char is lower
+                    char.IsDigit(name[i - 1]) || // previous char is a number
+                    (i + 1 < name.Length && !char.IsUpper(name[i + 1]))) // and is last and next char is not upper
                 {
                     builder.Append(separator);
                 }

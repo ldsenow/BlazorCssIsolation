@@ -1,6 +1,8 @@
 ﻿@page "/"
 @using BlazorCssIsolation.Theming.Tokens;
 
+<PageTitle>Hello, world</PageTitle>
+
 <h1>Hello, world!</h1>
 <BlazorCssIsolation.Button Text="Click Me"></BlazorCssIsolation.Button>
 
@@ -8,9 +10,11 @@
     <BlazorCssIsolation.Button Text="Tap Me"></BlazorCssIsolation.Button>
 </BlazorCssIsolation.ConfigProvider>
 
+<BlazorCssIsolation.Button Text="Hit Me"></BlazorCssIsolation.Button>
+
 @code {
     Func<ThemeToken, ThemeToken> customizeTheme = (themeToken) =>
     {
-        return themeToken with { Blue = "blue" };
+        return themeToken with { ColorPrimary = "red" };
     };
 }

@@ -22,5 +22,4 @@
 	<ItemGroup>
 	  <ProjectReference Include="..\BlazorCssIsolation.Theming\BlazorCssIsolation.Theming.csproj" />
 	</ItemGroup>
-
 </Project>

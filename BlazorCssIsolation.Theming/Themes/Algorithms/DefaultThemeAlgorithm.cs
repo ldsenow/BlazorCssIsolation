@@ -12,6 +12,7 @@ public class DefaultThemeAlgorithm : IThemeAlgorithm
         this.colorDerivative = colorDerivative;
     }
 
+    public string Name => "default";
     public IThemeAlgorithm? DerivedFrom { get; set; }
 
     public ThemeToken Derive(SeedToken seedToken)

@@ -1,0 +1,26 @@
+﻿@using System.Collections.Concurrent;
+
+<HeadContent>
+    @foreach (var fragment in contentFragments)
+    {
+        @fragment.Value
+    }
+</HeadContent>
+
+@code {
+    private static readonly ConcurrentDictionary<string, RenderFragment> contentFragments = new();
+
+    [Parameter]
+    public string Key { get; set; } = default!;
+
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+        if (ChildContent is not null)
+            contentFragments.TryAdd(Key, ChildContent);
+    }
+}

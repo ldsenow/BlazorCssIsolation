@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorTokensGenerator", "Bl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorCssIsolation.Tests", "BlazorCssIsolation.Tests\BlazorCssIsolation.Tests.csproj", "{87848011-E0A1-4464-A94E-B8D43909FF9E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorCssIsolation.Theming", "BlazorCssIsolation.Theming\BlazorCssIsolation.Theming.csproj", "{F799E890-E044-4D41-B364-028AD1D38D96}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorCssIsolation.Theming", "BlazorCssIsolation.Theming\BlazorCssIsolation.Theming.csproj", "{F799E890-E044-4D41-B364-028AD1D38D96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorThemesGenerator", "BlazorThemesGenerator\BlazorThemesGenerator.csproj", "{9D4B92DD-4509-4893-A2C0-8385B7745A09}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{F799E890-E044-4D41-B364-028AD1D38D96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F799E890-E044-4D41-B364-028AD1D38D96}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F799E890-E044-4D41-B364-028AD1D38D96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D4B92DD-4509-4893-A2C0-8385B7745A09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D4B92DD-4509-4893-A2C0-8385B7745A09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D4B92DD-4509-4893-A2C0-8385B7745A09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D4B92DD-4509-4893-A2C0-8385B7745A09}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

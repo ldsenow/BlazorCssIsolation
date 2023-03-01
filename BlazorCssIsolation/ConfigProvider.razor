@@ -1,11 +1,5 @@
-﻿@if (RenderCssVars) {
-<style>
-    @ThemeToken.ToCssVars()
-</style>
-}
-
-<CascadingValue Value=@ThemeToken>
-    <container class="@SeedToken.VarPrefix" style="@(string.Join(" ", DesignTokenChanges))">
+﻿<CascadingValue Value=@ThemeToken>
+    <container class="@ComponentCssClass" style="@(string.Join(" ", DesignTokenChanges))">
         @ChildContent
     </container>
 </CascadingValue>

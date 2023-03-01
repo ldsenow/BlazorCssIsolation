@@ -1,10 +1,9 @@
 ﻿@using BlazorCssIsolation
 @using BlazorCssIsolation.Theming
 @using BlazorCssIsolation.Theming.Tokens;
-
 <button type="button" style="border-color: var(--ant-blue)">Outside button</button>
 
-<BlazorCssIsolation.ConfigProvider Customize="@customizeTheme" RenderCssVars="@true">
+<BlazorCssIsolation.ConfigProvider>
     <Router AppAssembly="@typeof(App).Assembly">
         <Found Context="routeData">
             <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
@@ -20,8 +19,4 @@
 </BlazorCssIsolation.ConfigProvider>
 
 @code {
-    Func<ThemeToken, ThemeToken> customizeTheme = (themeToken) =>
-    {
-        return themeToken with { };
-    };
 }

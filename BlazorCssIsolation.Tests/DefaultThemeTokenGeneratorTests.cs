@@ -5,6 +5,7 @@ using System.Text.Json;
 
 namespace BlazorCssIsolation.Tests
 {
+    //TODO: Write proper unit tests one day
     [TestClass]
     public class DefaultThemeTokenGeneratorTests
     {
@@ -84,6 +85,16 @@ namespace BlazorCssIsolation.Tests
                   .ToList();
 
             var cssVars2 = collectionB.GetDesignTokens().Select(x=>x.Value.ToCssVar(prefix)).ToList();
+        }
+
+        [TestMethod]
+        public void TestMethod3()
+        {
+            var t = new DesignToken("ScreenXSMin", 1000);
+
+            var s = t.ToCssVar("ant");
+
+            Assert.IsTrue(s.StartsWith("--ant-screen-xs-min"));
         }
     }
 }

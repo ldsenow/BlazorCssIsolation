@@ -16,10 +16,7 @@ public partial class Button
 
     private string ComponentPrefix => ThemeToken.VarPrefix;
 
-    private string GetCssClass()
-    {
-        return $"{ComponentPrefix}-btn --{Type}";
-    }
+    private string ComponentCssClass => $"{ComponentPrefix}-btn {ComponentPrefix}-btn-{Type}";
 }
 
 public record ButtonDesignToken : TokenBase

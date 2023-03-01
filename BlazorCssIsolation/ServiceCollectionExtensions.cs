@@ -6,7 +6,7 @@ public static class ServiceCollectionExtensions
 {
     public static IServiceCollection AddBlazorCssIsolationComponents(this IServiceCollection services)
     {
-        services.AddTheming();
+        services.AddBlazorCssIsolationTheming();
 
         return services;
     }

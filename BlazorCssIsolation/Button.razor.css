@@ -1,1 +1,6 @@
-﻿
+﻿.ant-btn {
+    --ant-btn-color: var(--ant-color-primary);
+    --ant-btn-border-color: var(--ant-color-primary);
+    color: purple;
+    border-color: var(--ant-btn-border-color);
+}

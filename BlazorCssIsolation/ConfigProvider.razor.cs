@@ -23,12 +23,14 @@ public partial class ConfigProvider
     [Parameter]
     public Func<ThemeToken, ThemeToken>? Customize { get; set; }
 
-    [Parameter]
-    public bool RenderCssVars { get; set; }
-
     public ThemeToken ThemeToken { get; private set; } = default!;
 
     public IReadOnlyCollection<string> DesignTokenChanges { get; private set; } = new List<string>();
+
+    private string ComponentPrefix => ThemeToken.VarPrefix;
+
+    //TODO: What if it is multiple algorithms?
+    private string ComponentCssClass => $"{ComponentPrefix} {ComponentPrefix}-{ThemeAlgorithm.Name}";
 
     protected override void OnInitialized()
     {

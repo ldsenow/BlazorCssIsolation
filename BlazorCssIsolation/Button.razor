@@ -1,10 +1,14 @@
-﻿
-<button class=@GetCssClass()>
+﻿<button type="button" class="@ComponentCssClass">
     @Text
 </button>
 
-<style scoped>
-    .ant-btn {
-        --ant-button-primary-border-color: var(--ant-color-primary);
+@code {
+    private string BorderColor = "red";
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+        _ = await Task.Delay(10_000).ContinueWith((t) => BorderColor = "green");
     }
-</style>
+}
